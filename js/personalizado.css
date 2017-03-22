@@ -1,0 +1,880 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  padding-top: 65px;
+  padding-bottom: 0px;
+  color: #666;
+  background-color:#fff;
+}
+
+
+.container h1{
+	margin-top:0px;
+}
+
+.form-horizontal .form-group{
+	margin-left:0px;
+	margin-right:0px;
+}
+
+.img-linea{
+	border-bottom:#0c8aff solid 3px; 
+}
+
+p{
+	color:#666;
+}
+
+.opacidad{
+	opacity: 1;
+}
+
+.opacidad:hover{
+	opacity: 0.8;
+}
+
+.redes_top{
+	margin-top:-8px;
+}
+
+blockquote {
+  border-left: 5px solid #ddd;
+}
+
+hr {
+  border-top: 1px solid #ccc;
+}
+
+.flex-caption {
+  width: 100%;
+  padding: 2%;
+  left: 0;
+  bottom: 0;
+  background: #333;
+  color: #fff;
+  font-size: 20px;
+  text-align:center;
+  line-height: 20px;
+  border:thin solid #444;
+}
+
+h2.featurette-heading2{
+    font-size: 20px;
+	background-color:#333;
+	margin-top:0px;
+	padding:6px;
+	text-align:center;
+	border-top:#0c8aff solid 4px;
+  }
+
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-default{
+	background-color:#176f2b;
+	border-color:transparent;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #ffffff; /*Color de los enlaces de la botonera*/
+	
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    color: #ddd; /*Color de los enlaces de la botonera*/
+}
+
+.navbar-default .navbar-nav > .active > a{
+	background-color:#ddd;	
+	color: #787878;
+}
+.navbar-default .navbar-nav > .active > a:hover{
+	color: #2aa145;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+.navbar-default .navbar-nav > li > a:hover{
+	color: #2aa145;
+    background-color: #dff0d8;
+    border-color: #d6e9c6
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: #48637c;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #48637c;
+}
+
+.navbar-inverse{
+	background-color:#f29940;
+	border:none;
+}
+
+
+
+.alineamiento{
+	margin-left:30%;
+}
+
+.navbar-wrapper {
+	position: absolute;
+	top: -1px;
+	right: 0;
+	left: 0;
+	z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  color: #262626;
+  text-decoration: none;
+  background-color: #bddaf4;
+}
+
+.navbar-toggle {
+	margin-top:18px;
+}
+
+/*.navbar-header{
+	height:64px;
+}*/
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  margin-bottom:0px;
+}
+
+
+
+
+#Carousel2 > .carousel-control.left, #Carousel2 > .carousel-control.right, #Carousel3 > .carousel-control.left, #Carousel3 >.carousel-control.right,#Carousel4 > .carousel-control.right,#Carousel4 > .carousel-control.left,#Carousel5 > .carousel-control.left, #Carousel5 > .carousel-control.right,#Carousel6 > .carousel-control.left, #Carousel6 > .carousel-control.right,#Carousel7 > .carousel-control.left, #Carousel7 > .carousel-control.right,#Carousel8 > .carousel-control.left, #Carousel8 > .carousel-control.right  {
+	background-image:none;
+	/*opacity:0;*/
+}
+
+#Carousel2 > .carousel-indicators, #Carousel3 > .carousel-indicators,#Carousel4 > .carousel-indicators,#Carousel5 > .carousel-indicators,#Carousel6 > .carousel-indicators,#Carousel7 > .carousel-indicators,#Carousel8 > .carousel-indicators{
+	opacity:0;
+}
+
+.carousel p{
+	color:#fff;
+}
+
+/* Since positioning the image, we need to help out the caption 
+.carousel-caption {
+  z-index: 10;
+}*/
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  background-color: #fff;
+  overflow:hidden;
+}
+.carousel-inner > .item > img {
+  width:100%;
+  max-height:500px;
+}
+
+#myCarousel > .carousel-inner > .item > img {
+   min-height:100px;
+}
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4, .marketing .col-lg-3, .marketing .col-xs-12, .marketing .col-sm-6, .marketing .col-md-6{
+  margin-bottom: 0px;
+  text-align: center;
+  color:#CCC;
+  padding-right: 0px;
+  padding-left: 0px;
+  border:thin #555 solid;
+}
+.marketing h2 {
+  text-align:center;
+  font-weight: normal;
+  color:#CCC;
+  margin-top: 0px;
+  background-color:#333;
+  font-size:25px;
+}
+
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+  text-align:center;
+  color:#CCC;
+}
+
+.marketing .col-lg-3 p.contenido_beta{
+  margin-right: 10px;
+  margin-left: 10px;
+  text-align:left;
+  color:#CCC;
+}
+
+.fondo_verde{
+	background-color:#9C0;
+	margin: 0px;
+	padding-bottom:20px;
+}
+
+.fondo_verde h2 {
+  font-weight: normal;
+  color:#333;
+  text-align:left;
+  margin-left:10px;
+}
+.fondo_verde .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+  text-align: left;
+  color:#555;
+}
+
+/* Botones
+------------------------- */
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 6px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading,  .featurette-heading2{
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+h2.titulo_diapo{
+	color:#fff;
+	background-color:#9C0;
+	padding:15px 10px;
+	text-align:center;
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+ .pinta1{
+	  color:#fff;
+	background-color:#2aa145;  
+	}
+  .pinta2{
+	   color:#2aa145;
+	background-color:#176f2b;
+}
+
+@media (min-width: 300px) and (max-width: 600px){
+  .carousel {
+  margin-bottom:20px;
+  }
+  
+  .carousel-caption p.contenido_alfa, .carousel-indicators{
+    display: none !important;
+  }
+  
+  .carousel-inner > .item > img {
+	  width:100%;
+  }
+
+  .carousel-caption h1{
+	  font-size:22px;
+  }
+  .carousel-caption a{
+	  font-size:15px;
+  }
+  
+  h2.titulo_diapo{
+	  font-size:22px;
+  }
+  
+
+
+}
+
+
+@media (min-width: 768px) {
+  /* Navbar positioning foo */
+  .navbar {
+	  min-height:20px;
+  }
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 35px;
+  }
+  
+  
+ 
+}
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 20px;
+  }
+  
+  .navbar-nav > li > a {
+	  padding-top:25px;
+	  padding-bottom:20px;
+	  border-color:#2aa145;
+	  
+	}
+	
+  
+}
+
+@media (max-width: 990px) {
+ 	.items{
+		display:none;!important
+		
+	}
+	.elemento_off{
+		display:none;!important
+	}
+  
+  .alineamiento{
+		margin-left:0px;
+	}
+  
+  .navbar-default .navbar-nav > li > a {
+    color: #ffffff; /*Color de los enlaces de la botonera*/
+	font-weight:bold;
+	padding:12px 10px 12px 10px;
+  }
+}
+
+/* Personalizar paginacion*/
+
+nav.pagina{
+	text-align:center;
+}
+
+.pagination > .active > a{
+	background-color:#9C0;
+	border-color:#83af00
+}
+
+.pagination > .active > a:hover{
+	background-color:#9C0;
+	border-color:#83af00
+}
+
+.pagination > li > a{
+	color:#666;
+}
+
+.pagination > li > a:hover{
+	color:#333;
+}
+
+.no_margin{
+	margin-left:0px;
+	margin-right:0px;
+}
+
+.no_margin2{
+	margin-top:0px;
+	margin-bottom:0px;
+}
+
+.no_margin3{
+	margin-bottom:0px;
+}
+.no_padding{
+	padding-left:0px;
+	padding-right:0px;
+}
+.no_padding2{
+	padding-top:0px;
+	padding-bottom:0px;
+}
+.panel-buscador{
+	border-radius: 0px;
+	border-color: #1b4259;
+	/*margin-bottom:0px;*/
+}
+
+.panel-buscador > .panel-heading {
+   
+    border-bottom: 1px solid #1b4259;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+	color: #fff;
+    background-color: #1b4259;
+    border-color: ##1b4259;
+}
+
+.panel-buscador > .panel-footer  {
+    border-bottom: 1px solid #1b4259;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-color: #1b4259;
+    border-color: #1b4259;
+}
+
+.panel-buscador > .panel-footer > .btn-default {
+   background-color: #1b4259;
+   border-color: #1b4259;
+   color: #fff;
+}
+.panel-hotel{
+	border-radius: 0px;
+	border-color:#176f2b;
+	margin-top:20px;
+    
+}
+
+.panel-buscador {
+    margin-bottom: 0px;
+	border-color:#1b4259;
+   
+}	
+
+.panel-hotel > .panel-heading {
+	padding: 0px 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+	background-color:#2fc71c; 
+	background-image:url(/imagenes/degrade_verde.jpg);
+	background-repeat:repeat-y;
+	color:#fff;
+	border-color:transparent;
+}
+
+#especial-heading{
+	padding: 10px 15px;!important
+}
+.panel-hotel > .panel-footer {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+	color: #fff;
+	background-color:#2fc81c;
+	background-image:url(/imagenes/degrade_verde.jpg);
+	background-repeat:repeat-y;
+    border-color: transparent;
+}
+.panel-hotel > .panel-footer > .btn-default {
+   background-color: transparent;
+   border-color: transparent;
+   color: #fff;
+}
+.panel-hotel > .panel-footer > .btn-default:hover {
+   background-color: transparent;
+   border-color: transparent;
+   color: #176f2b;
+}
+.panel-facebook > .panel-heading{
+	background-color:#3a5795;
+	color:#fff;
+}
+
+.panel-twitter > .panel-heading{
+	background-color:#029bbb;
+	color:#fff;
+}
+.panel-instagram > .panel-heading{
+	background-color:#144f75;
+	color:#fff;
+}
+.panel-noticias{
+	border-radius: 0px;
+	border-color: #2f9cbd;
+	/*margin-bottom:0px;*/
+}
+
+.panel-noticias > .panel-heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+	
+	color: #004784;
+    background-color: #2bb5df;
+    border-color: #2f9cbd;
+}
+
+.panel-noticias > .panel-footer {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+	
+	color: #004784;
+    background-color: #2bb5df;
+    border-color: #2f9cbd;
+}
+
+.panel-excursiones{
+	border-radius: 0px;
+	border-color: #084365;
+}
+
+.panel-excursiones > .panel-heading {
+    padding:0px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+	color: #fff;
+	background-color:#42d1f2;
+	background-image:url(/imagenes/degrade_azul.jpg);
+	background-repeat:repeat-y;
+    border-color: transparent;
+}
+
+.panel-excursiones > .panel-footer {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+	color: #fff;
+    background-color:#42d1f2;
+	background-image:url(/imagenes/degrade_azul.jpg);
+	background-repeat:repeat-y;
+    border-color: transparent;
+}
+.panel-excursiones > .panel-footer > .btn-default {
+   background-color: transparent;
+   border-color: transparent;
+   color: #fff;
+}
+.panel-excursiones > .panel-footer > .btn-default:hover {
+   background-color: transparent;
+   border-color: transparent;
+   color: #084365;
+}
+
+.panel-destinos{
+	border-radius: 0px;
+	border-color: #8d5da8;
+}
+
+.panel-destinos > .panel-heading {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+	
+	color: #c776f5;
+    background-color: #603877;
+    border-color: transparent;
+}
+
+.panel-destinos > .panel-footer {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+	
+	color: #c776f5;
+    background-color: #603877;
+    border-color: transparent;
+}
+
+.panel-paquetes{
+	border-radius: 0px;
+	border-color: #9f2a24;
+}
+
+.panel-paquetes > .panel-heading {
+    padding: 0px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+	color: #fff;
+    background-color: #f67127;
+    border-color: transparent;
+	background-image:url(/imagenes/degrade_rojo.jpg);
+	background-repeat:repeat-y;
+}
+
+ .panel-paquetes > .panel-footer {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+	color: #fff;
+	background-image:url(/imagenes/degrade_rojo.jpg);
+	background-repeat:repeat-y;
+    background-color: #f67127;
+    border-color: transparent;
+}
+.panel-paquetes > .panel-footer > .btn-default {
+   background-color: transparent;
+   border-color: transparent;
+   color: #fff;
+}
+.panel-paquetes > .panel-footer > .btn-default:hover {
+   background-color: transparent;
+   border-color: transparent;
+   color: #9f2a24;
+}
+.panel-servicios{
+	border-radius: 0px;
+	border-color: #9e7e0d;
+}
+
+.panel-servicios > .panel-heading {
+    padding: 0px 0px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+	background-image:url(/imagenes/degrade_amarillo.jpg);
+	background-repeat:repeat-y;
+	color: #fff;
+    background-color: #f6cc08;
+    border-color:transparent;
+}
+
+.panel-servicios > .panel-footer {
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+	color: #fff;
+    background-color: #f6cd07;
+	background-image:url(/imagenes/degrade_amarillo.jpg);
+	background-repeat:repeat-y;
+    
+}
+.panel-servicios > .panel-footer > .btn-default {
+   background-color: transparent;
+   border-color: transparent;
+   color: #fff;
+}
+.panel-servicios > .panel-footer > .btn-default:hover {
+   background-color: transparent;
+   border-color: transparent;
+   color: #9e7e0d;
+}
+.panel-reserva > .panel-body{
+	border-left:1px solid #bfbdbd;
+	border-right:1px solid #bfbdbd;
+	border-top:	1px solid #bfbdbd;
+}
+.panel-reserva > .panel-footer{
+	border-left:1px solid #bfbdbd;
+	border-right:1px solid #bfbdbd;
+	border-bottom:	1px solid #bfbdbd;
+}
+.panel-reserva > .panel-heading {
+	color:#fff;
+	background-color:#2aa145;
+	border-left:1px solid #53ac6a;
+	border-right:1px solid #53ac6a;
+	border-bottom:1px solid #bfbdbd;
+	border-top-color:#2aa145;
+	
+	border-right-color:#2aa145;
+	border-radius:0px;	
+}
+ .btn-registro{
+	 background-color:#176f2b;	
+	 border-radius:0px;
+	 border-color:#176f2b;	
+}
+.btn-registro2{
+	background-color: #ccc;
+	border-color: #ccc;
+	border-radius:0px;
+	
+}
+.btn-registro2:hover{
+	background-color: #fff;
+	border-color: #fff;
+	border-radius:0px;
+	
+}
+
+
+
+/* Pie de pagina
+------------------------- */
+
+
+footer p{
+	color:#fff;
+}
+
+footer a{
+	color:#fff;		
+	text-decoration:none;		
+}
+
+footer a:hover{
+	color:#176f2b;			
+}
+
+.items{
+	list-style-type: none;	
+	padding-left:15px;				
+}
+
+.items a{
+	font-size:13px;
+	text-decoration:none;		
+}
+
+.items a:hover{
+	font-size:13px;
+	color:#176f2b;			
+}
+
+.searchboxContainer{
+	margin: 50px 0px 0px 0px !important;
+}
+
+/*---------------------------------*/
+
+.verde{
+	background-color:#2aa145;
+}
+
+.ir-arriba:hover{
+	color:#176f2b;	
+}
+.enlace{
+	color:#fff;	
+	text-decoration:none;
+}
+.enlace:hover{
+	color:#66b57a;	
+	text-decoration:none;
+}
+.fondo_redes{
+	background-image:url(/imagenes/fondo-redes.jpg);
+	background-repeat:no-repeat;
+	padding-top:30px;
+	
+}
+
+#imagen-1 {
+    background-image: url("/imagenes/hoteless.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+}
+
+#imagen-2 {
+    background-image: url("/imagenes/excursiones.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+}
+
+#imagen-3 {
+    background-image: url("/imagenes/paquetes.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+}
+#imagen-4 {
+    background-image: url("/imagenes/servicios.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+}
+
+#form_ordenar > .col-xs-6 > h5 >.form-group > label {
+	color:#176f2b;	
+}
+#form_ordenar > .col-xs-6 > h5 >.form-group > .form-control {
+	color: #3c763d;
+    background-color: #fff;
+    border-color: #d6e9c6;	
+}
+#form_ordenar > .col-xs-6 > h5 >.form-group > .form-control:hover {
+	color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;	
+}
+.seleccion{
+background-color:#2aa145;
+border-color:#2aa145;
+color#fff;	
+}
+.panel > .panel-body > .list-group > .list-group-item > .row > .col-xs-1 {
+	margin-left:3px;	
+}
+
+#color-user,.noticia{
+	color:#2aa145;	
+}
+.form-control {
+    border-radius: 0px;
+    border-color: #ddd;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+.input-group-addon {
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1;
+    color: #555;
+    text-align: center;
+    background-color:transparent;
+	border-top:1px solid transparent;
+    border-bottom: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+    border-radius: 0px;
+}
+.btn-contacto{
+	background-color:#176f2b;
+	border-color:#176f2b;
+	border-radius:0px;
+	color:#fff;	
+	
+}
+/*---------------------------------------------------------------------*/
+/*-----------------------------GALLERY---------------------------------*/
+/*---------------------------------------------------------------------*/

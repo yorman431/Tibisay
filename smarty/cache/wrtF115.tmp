@@ -1,0 +1,1200 @@
+140
+a:4:{s:8:"template";a:1:{s:18:"catalogo_hotel.tpl";b:1;}s:9:"timestamp";i:1458054187;s:7:"expires";i:1458057787;s:13:"cache_serials";a:0:{}}<!DOCTYPE html>
+<html><!-- InstanceBegin template="/Templates/plantilla_padre2.dwt" codeOutsideHTMLIsLocked="false" -->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="title" content=" | Agencia de Viajes | Venezuela" />
+    <meta name="author" content="SCAPE TRAVEL, Agencia de Viajes | Venezuela" />
+    <meta name="subject" content=" | Agencia de Viajes | Venezuela" />
+    <meta name="description" content="" />
+    
+    <meta name="Keywords" content="" /> 
+
+    <link rel="icon" href="/imagenes/icono.ico" /> 
+    <meta name="Language" content="Spanish" />
+    <meta name="Revisit" content="2 days" />
+    <meta name="Distribution" content="Global"/>
+    <meta name="Robots" content="All" />
+    <title> | Agencia de Viajes | Venezuela</title>
+    
+    <script src="/js/validar.js"></script>
+    <link href="/dist/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="/assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="/css/navbar-fixed-top.css" rel="stylesheet">
+    <link href="/css/personalizado/personalizado.css" rel="stylesheet">
+    <link  href="/font-awesome-4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <script src="/js/jquery.js"></script>
+      
+    <!-- InstanceBeginEditable name="head" -->
+    <!-- InstanceEndEditable -->
+    
+    <script>
+	
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	
+	  ga('create', 'UA-6623041-31', 'auto');
+	  ga('send', 'pageview');
+	
+	</script>
+     
+  </head>
+<!-- Fin Cabecera
+================================================== -->
+  <body class="secundario">
+  <!--NavBar 1 
+        ===============================================-->
+  <nav class="navbar navbar-default altura-2 navbar-fixed-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button> 
+             <a title="Scape travel" href="/index.php" id="logo1"><img src="/imagenes/logo.png"></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse" align="center">
+              <ul class="nav navbar-nav">
+              	 
+                	                                          	                        	                            	                    	
+                    <li ><a title="Home | Página de Inicio" href="/contenido.php?cont=51"><i class="fa fa-home fa-2x"></i>   Inicio</a></li>
+                    	                                                           
+                                	 
+                	                                         <li ><a title="Hoteles | Hospedaje" href="/hoteles.php?cont=52"><i class="fa fa-hospital-o fa-2x"></i> Hoteles</a></li>
+                     
+                                	 
+                	                                          	                    <li ><a title="Promociones Vigentes" href="/catalogo_opcion.php?cont=53&cat=9"><i class="fa fa-gift fa-2x"></i> Promociones</a></li> 
+                    	                  
+                                	 
+                	                                          	                        	                            <li ><a title="Cruceros" href="/catalogo_opcion.php?cont=54&cat=5"><i class="fa fa-ship fa-2x"></i>   Cruceros</a></li>
+                                                                 
+                                	 
+                	                                          	                        	                            	                            <li ><a title="Excursiones" href="/catalogo_opcion.php?cont=55&cat=4"><i class="fa fa-camera fa-2x"></i>   Excursiones</a></li>
+                           
+                           
+                            	                                                           
+                                	              </ul>
+              <a title="Scape travel" href="/index.php" id="logo2"><img src="/imagenes/logotipo2.png"></a>
+               <ul class="nav navbar-nav navbar-right">
+                	                	<li ><a title="Boletos" href="/contenido.php?cont=57"><i class="fa fa-plane fa-2x"></i> Boletos</a></li>
+                	                	<li ><a title="Translados" href="/contenido.php?cont=58"><i class="fa fa-bus fa-2x"></i> Translados</a></li>
+                	                	<li ><a title="Servicios" href="/contenido.php?cont=59"><i class="fa fa-child fa-2x"></i> Servicios</a></li>
+                	                	<li ><a title="Registro de Usuario" href="/contenido.php?cont=60"><i class="fa fa-pencil fa-2x"></i> Registro</a></li>
+                	                	<li ><a title="Contacto" href="/contenido.php?cont=62"><i class="fa fa-phone fa-2x"></i>   Contacto</a></li>
+                	                    
+              </ul>
+              
+            </div>
+            
+          </div>
+        </nav> <!--Fin NavBar 1 
+        ===============================================--> 
+        
+        <!--NavBar 2 
+        ===============================================-->
+        <nav class="navbar navbar-inverse barra2">
+        <div class="navbar-header">
+          <span class="texto_navbar hidden">Reserva con Scape Travel</span>
+          <button type="button" class="navbar-toggle collapsed" id="boton-navegacion2" data-toggle="collapse" data-target="#navbar2" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>  
+        </div>
+                       
+        <div id="navbar2" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                  <li><a title="Añade productos al carrito" href="" style="padding-top:10px; padding-bottom:10px;"><i class="fa fa-shopping-cart fa-2x"></i></a></li>
+                  <li><a title="cantidad de productos" href="">Items</a></li>
+                  <li><a title="Total a Pagar" href="" class="separador-izq">Total Bs:</a></li>            
+            </ul>
+        <!--<a title="Scape Travel" href="/index.php" style="color:#6b5500; text-align:center; font-weight: bold;">Tour Operador</a>-->
+            <ul class="nav navbar-nav navbar-right">
+            	<li><a title="" href="https://www.facebook.com/Scape-Travel-Marketing-CA-337376754709/?fref=ts" style="padding-top:10px; padding-bottom:10px;"><i class="fa fa-facebook-square fa-2x"></i>
+</a></li>
+                <li><a title="" href="https://twitter.com/scapetravel" style="padding-top:10px; padding-bottom:10px;"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+                <li><a title="" href="https://www.instagram.com/scapetravelmarketing/" style="padding-top:10px; padding-bottom:10px;"><i class="fa fa-instagram fa-2x"></i></a></li>
+            </ul>
+        </div>
+            
+</nav>
+     <!--Fin NavBar 2
+        ===============================================-->   
+       
+    
+     
+	<!--/. Buscador -->
+   
+    
+    <!-- Contenido -->
+	<div class="container-fluid vista-previa no_padding">
+    
+	<!-- InstanceBeginEditable name="contenido" -->
+    <div class="row no_padding">
+    	<div class="col-xs-12" align="center">
+        	<ol class="breadcrumb no_margin2">
+  				<li><a href="#">Home</a></li>
+  				<li><a href="#">Library</a></li>
+  				<li class="active">Data</li>
+			</ol>
+
+        </div>
+    </div>
+
+     <div class="row">
+    
+    	<div class="col-xs-12 col-sm-4"> 
+           
+            <h3 style="margin-top:10px"></h3>
+            
+        </div>
+        
+    	<div class="col-xs-12 col-sm-8 "> 
+        	<div class="row">
+            	<form action="" method="post" name="form_ordenar" id="form_ordenar" class="form-inline"> 
+            	<div class="col-xs-6"> 
+                     <h5 align="right">
+                        <div class="form-group form-group-sm">
+                            <label for="orden"><i class="fa fa-chevron-circle-down fa-lg"></i> Ordenar: </label>
+                            <select class="form-control" id="orden" name="orden" onchange="javascripts: document.form_ordenar.submit();">
+                                <option  selected='selected' value=""><-- Seleccione --></option>
+                                <option  value="vistas_hot DESC">M&aacute;s elegidos</option>
+                                <option  value="categoria_hot DESC">Estrellas: Mayor a menor </option>
+                                <option  value="categoria_hot ASC">Estrellas: Menor a mayor </option>
+                                <option  value="categoria_hot DESC, nombre_hot">Precio: Mayor a menor</option>
+                                <option  value="categoria_hot ASC, nombre_hot">Precio: Menor a mayor</option>
+                            </select>
+                        </div>
+                    </h5>
+                </div>
+                <div class="col-xs-6">
+                	<h5 align="right">
+                        <div class="form-group form-group-sm">
+                        <label for="localidad"><i class="fa fa-map-marker fa-lg"></i> Ubicación:</label>
+                            <select class="form-control" name="localidad" id="localidad" onchange="javascripts: document.form_ordenar.submit();">
+                                <option  selected='selected' value=""><-- Todas --></option>
+                                                                <option  value="afga">afga</option>
+                                                                <option  value="Arenillas">Arenillas</option>
+                                                                <option  value="Centro Metropolitano">Centro Metropolitano</option>
+                                                                <option  value="Macanao">Macanao</option>
+                                                                <option  value="Porlamar">Porlamar</option>
+                                 
+                            </select>
+                        </div>
+                   </h5>
+                </div>
+                </form>
+            </div>
+        </div>
+        
+        <hr class="featurette-divider"></div>
+   <div class="row" style="background-color:#fff;" id="hoteles">
+    	                            	<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12" style="margin-bottom:15px;  margin-top:15px; ">
+          
+                  	
+                <div class="panel panel-default panel-cotizacion">
+                    <div class="panel-header" style="background-color:#0073c4; color:#fff;">
+                    	<h4 align="center" style="height:30px; padding-top:5px;"class="no_margin2">Hesperia Isla Margarita</h4>	
+                    </div>
+                	<div class="panel-body no_padding no_padding2">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 no_padding no_padding2" align="center"> 
+                    	<a title="Hesperia Isla Margarita" href="hotel_detalle.php?id=10">
+                	                            <img class="img-responsive opacidad" alt="Hesperia Isla Margarita, hoteles Venezuela, hoteles en Venezuela, paquetes para Venezuela, alojamiento en Venezuela" src="/imagenes/hotel/1457872369.jpg"/>
+                                               </a>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 no_padding no_padding2">
+                    	<div class="panel panel-default panel-cotizacion">
+                        <div class="panel-body no_padding no_padding2" align="center">
+                    	<ul class="list-group">
+                              <li class="list-group-item text-center titulo"><h4 style="margin-bottom:0px; margin-top:0px;">Desde BsF. 800</h4></li>
+                              <li class="list-group-item center-block"><img class="img-responsive" src="/imagenes/5.png" alt="hotel con categoria 5"/></li>
+                              <li class="list-group-item center-block">                            <div class="row">
+                                                                <div class="col-xs-2 no_padding center-block">
+                                     
+                                    <img alt="El Hesperia Isla Margarita cuenta con Discapacidad hoteles de Ecuador" title="Discapacidad" border="0" src="/imagenes/miniaturas/facilidad/1442589233.png" class="img-responsive opacidad"/>
+                                                                    </div>
+                                                                <div class="col-xs-2 no_padding center-block">
+                                     
+                                    <img alt="El Hesperia Isla Margarita cuenta con Zona Wifi hoteles de Ecuador" title="Zona Wifi" border="0" src="/imagenes/miniaturas/facilidad/1442591531.png" class="img-responsive opacidad"/>
+                                                                    </div>
+                                                                <div class="col-xs-2 no_padding center-block">
+                                     
+                                    <img alt="El Hesperia Isla Margarita cuenta con Aire Acond. hoteles de Ecuador" title="Aire Acond." border="0" src="/imagenes/miniaturas/facilidad/1442592088.png" class="img-responsive opacidad"/>
+                                                                    </div>
+                                                            </div>
+                            </li>
+                            </ul>
+                              </div>
+                             
+                            </div>
+                            
+                       </div>
+                       
+                    </div>
+                     <div class="panel-footer">
+                              		<a class="btn btn-default btn-block" title="Hesperia Isla Margarita" href="hotel_detalle.php?id=10">Ver más  &nbsp; <i class="fa fa-arrow-circle-right"></i></a>
+                       		</div>
+                </div>
+           
+        </div>
+                       	<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12" style="margin-bottom:15px;  margin-top:15px; ">
+          
+                  	
+                <div class="panel panel-default panel-cotizacion">
+                    <div class="panel-header" style="background-color:#0073c4; color:#fff;">
+                    	<h4 align="center" style="height:30px; padding-top:5px;"class="no_margin2">Hillary Nature Resort </h4>	
+                    </div>
+                	<div class="panel-body no_padding no_padding2">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 no_padding no_padding2" align="center"> 
+                    	<a title="Hillary Nature Resort " href="hotel_detalle.php?id=1">
+                	                            <img class="img-responsive opacidad" alt="Hillary Nature Resort , hoteles Venezuela, hoteles en Venezuela, paquetes para Venezuela, alojamiento en Venezuela" src="/imagenes/hotel/1457872411.jpg"/>
+                                               </a>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 no_padding no_padding2">
+                    	<div class="panel panel-default panel-cotizacion">
+                        <div class="panel-body no_padding no_padding2" align="center">
+                    	<ul class="list-group">
+                              <li class="list-group-item text-center titulo"><h4 style="margin-bottom:0px; margin-top:0px;">Desde BsF. 800</h4></li>
+                              <li class="list-group-item center-block"><img class="img-responsive" src="/imagenes/5.png" alt="hotel con categoria 5"/></li>
+                              <li class="list-group-item center-block">                            <div class="row">
+                                                                <div class="col-xs-2 no_padding center-block">
+                                     
+                                    <img alt="El Hillary Nature Resort  cuenta con Zona Abierta hoteles de Ecuador" title="Zona Abierta" border="0" src="/imagenes/miniaturas/facilidad/1442591206.png" class="img-responsive opacidad"/>
+                                                                    </div>
+                                                                <div class="col-xs-2 no_padding center-block">
+                                     
+                                    <img alt="El Hillary Nature Resort  cuenta con Zona Wifi hoteles de Ecuador" title="Zona Wifi" border="0" src="/imagenes/miniaturas/facilidad/1442591531.png" class="img-responsive opacidad"/>
+                                                                    </div>
+                                                                <div class="col-xs-2 no_padding center-block">
+                                     
+                                    <img alt="El Hillary Nature Resort  cuenta con Musica hoteles de Ecuador" title="Musica" border="0" src="/imagenes/miniaturas/facilidad/1442591720.png" class="img-responsive opacidad"/>
+                                                                    </div>
+                                                                <div class="col-xs-2 no_padding center-block">
+                                     
+                                    <img alt="El Hillary Nature Resort  cuenta con Aire Acond. hoteles de Ecuador" title="Aire Acond." border="0" src="/imagenes/miniaturas/facilidad/1442592088.png" class="img-responsive opacidad"/>
+                                                                    </div>
+                                                                <div class="col-xs-2 no_padding center-block">
+                                     
+                                    <img alt="El Hillary Nature Resort  cuenta con Tv/Cables hoteles de Ecuador" title="Tv/Cables" border="0" src="/imagenes/miniaturas/facilidad/1442592239.png" class="img-responsive opacidad"/>
+                                                                    </div>
+                                                                <div class="col-xs-2 no_padding center-block">
+                                     
+                                    <img alt="El Hillary Nature Resort  cuenta con Piscina hoteles de Ecuador" title="Piscina" border="0" src="/imagenes/miniaturas/facilidad/1442592591.png" class="img-responsive opacidad"/>
+                                                                    </div>
+                                                                <div class="col-xs-2 no_padding center-block">
+                                     
+                                    <img alt="El Hillary Nature Resort  cuenta con Restaurantes hoteles de Ecuador" title="Restaurantes" border="0" src="/imagenes/miniaturas/facilidad/1442594543.png" class="img-responsive opacidad"/>
+                                                                    </div>
+                                                                <div class="col-xs-2 no_padding center-block">
+                                     
+                                    <img alt="El Hillary Nature Resort  cuenta con Agua Caliente hoteles de Ecuador" title="Agua Caliente" border="0" src="/imagenes/miniaturas/facilidad/1442594664.png" class="img-responsive opacidad"/>
+                                                                    </div>
+                                                                <div class="col-xs-2 no_padding center-block">
+                                     
+                                    <img alt="El Hillary Nature Resort  cuenta con Estacionamiento hoteles de Ecuador" title="Estacionamiento" border="0" src="/imagenes/miniaturas/facilidad/1442594800.png" class="img-responsive opacidad"/>
+                                                                    </div>
+                                                                <div class="col-xs-2 no_padding center-block">
+                                     
+                                    <img alt="El Hillary Nature Resort  cuenta con Tenis hoteles de Ecuador" title="Tenis" border="0" src="/imagenes/miniaturas/facilidad/1442595031.png" class="img-responsive opacidad"/>
+                                                                    </div>
+                                                            </div>
+                            </li>
+                            </ul>
+                              </div>
+                             
+                            </div>
+                            
+                       </div>
+                       
+                    </div>
+                     <div class="panel-footer">
+                              		<a class="btn btn-default btn-block" title="Hillary Nature Resort " href="hotel_detalle.php?id=1">Ver más  &nbsp; <i class="fa fa-arrow-circle-right"></i></a>
+                       		</div>
+                </div>
+           
+        </div>
+                       	<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12" style="margin-bottom:15px;  margin-top:15px; ">
+          
+                  	
+                <div class="panel panel-default panel-cotizacion">
+                    <div class="panel-header" style="background-color:#0073c4; color:#fff;">
+                    	<h4 align="center" style="height:30px; padding-top:5px;"class="no_margin2">Hilton Margarita</h4>	
+                    </div>
+                	<div class="panel-body no_padding no_padding2">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 no_padding no_padding2" align="center"> 
+                    	<a title="Hilton Margarita" href="hotel_detalle.php?id=9">
+                	                            <img class="img-responsive opacidad" alt="Hilton Margarita, hoteles Venezuela, hoteles en Venezuela, paquetes para Venezuela, alojamiento en Venezuela" src="/imagenes/hotel/1457872445.jpg"/>
+                                               </a>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 no_padding no_padding2">
+                    	<div class="panel panel-default panel-cotizacion">
+                        <div class="panel-body no_padding no_padding2" align="center">
+                    	<ul class="list-group">
+                              <li class="list-group-item text-center titulo"><h4 style="margin-bottom:0px; margin-top:0px;">Desde BsF. 800</h4></li>
+                              <li class="list-group-item center-block"><img class="img-responsive" src="/imagenes/5.png" alt="hotel con categoria 5"/></li>
+                              <li class="list-group-item center-block">                            <div class="row">
+                                                                <div class="col-xs-2 no_padding center-block">
+                                     
+                                    <img alt="El Hilton Margarita cuenta con Discapacidad hoteles de Ecuador" title="Discapacidad" border="0" src="/imagenes/miniaturas/facilidad/1442589233.png" class="img-responsive opacidad"/>
+                                                                    </div>
+                                                                <div class="col-xs-2 no_padding center-block">
+                                     
+                                    <img alt="El Hilton Margarita cuenta con Animales hoteles de Ecuador" title="Animales" border="0" src="/imagenes/miniaturas/facilidad/1442589609.png" class="img-responsive opacidad"/>
+                                                                    </div>
+                                                                <div class="col-xs-2 no_padding center-block">
+                                     
+                                    <img alt="El Hilton Margarita cuenta con Licores hoteles de Ecuador" title="Licores" border="0" src="/imagenes/miniaturas/facilidad/1442589994.png" class="img-responsive opacidad"/>
+                                                                    </div>
+                                                            </div>
+                            </li>
+                            </ul>
+                              </div>
+                             
+                            </div>
+                            
+                       </div>
+                       
+                    </div>
+                     <div class="panel-footer">
+                              		<a class="btn btn-default btn-block" title="Hilton Margarita" href="hotel_detalle.php?id=9">Ver más  &nbsp; <i class="fa fa-arrow-circle-right"></i></a>
+                       		</div>
+                </div>
+           
+        </div>
+                        	<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12" style="margin-bottom:15px; ">
+          
+                  	
+                <div class="panel panel-default panel-cotizacion">
+                    <div class="panel-header" style="background-color:#0073c4; color:#fff;">
+                    	<h4 align="center" style="height:30px; padding-top:5px;"class="no_margin2">Hotel Rizzo</h4>	
+                    </div>
+                	<div class="panel-body no_padding no_padding2">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 no_padding no_padding2" align="center"> 
+                    	<a title="Hotel Rizzo" href="hotel_detalle.php?id=2">
+                	                            <img class="img-responsive opacidad" alt="Hotel Rizzo, hoteles Venezuela, hoteles en Venezuela, paquetes para Venezuela, alojamiento en Venezuela" src="/imagenes/hotel/1457872485.jpg"/>
+                                               </a>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 no_padding no_padding2">
+                    	<div class="panel panel-default panel-cotizacion">
+                        <div class="panel-body no_padding no_padding2" align="center">
+                    	<ul class="list-group">
+                              <li class="list-group-item text-center titulo"><h4 style="margin-bottom:0px; margin-top:0px;">Desde BsF. 800</h4></li>
+                              <li class="list-group-item center-block"><img class="img-responsive" src="/imagenes/2.png" alt="hotel con categoria 2"/></li>
+                              <li class="list-group-item center-block">                            <div class="row">
+                                                                <div class="col-xs-2 no_padding center-block">
+                                     
+                                    <img alt="El Hotel Rizzo cuenta con Licores hoteles de Ecuador" title="Licores" border="0" src="/imagenes/miniaturas/facilidad/1442589994.png" class="img-responsive opacidad"/>
+                                                                    </div>
+                                                                <div class="col-xs-2 no_padding center-block">
+                                     
+                                    <img alt="El Hotel Rizzo cuenta con Zona Wifi hoteles de Ecuador" title="Zona Wifi" border="0" src="/imagenes/miniaturas/facilidad/1442591531.png" class="img-responsive opacidad"/>
+                                                                    </div>
+                                                                <div class="col-xs-2 no_padding center-block">
+                                     
+                                    <img alt="El Hotel Rizzo cuenta con Musica hoteles de Ecuador" title="Musica" border="0" src="/imagenes/miniaturas/facilidad/1442591720.png" class="img-responsive opacidad"/>
+                                                                    </div>
+                                                                <div class="col-xs-2 no_padding center-block">
+                                     
+                                    <img alt="El Hotel Rizzo cuenta con Tv/Cables hoteles de Ecuador" title="Tv/Cables" border="0" src="/imagenes/miniaturas/facilidad/1442592239.png" class="img-responsive opacidad"/>
+                                                                    </div>
+                                                                <div class="col-xs-2 no_padding center-block">
+                                     
+                                    <img alt="El Hotel Rizzo cuenta con Gimnasio hoteles de Ecuador" title="Gimnasio" border="0" src="/imagenes/miniaturas/facilidad/1442594089.png" class="img-responsive opacidad"/>
+                                                                    </div>
+                                                                <div class="col-xs-2 no_padding center-block">
+                                     
+                                    <img alt="El Hotel Rizzo cuenta con Restaurantes hoteles de Ecuador" title="Restaurantes" border="0" src="/imagenes/miniaturas/facilidad/1442594543.png" class="img-responsive opacidad"/>
+                                                                    </div>
+                                                                <div class="col-xs-2 no_padding center-block">
+                                     
+                                    <img alt="El Hotel Rizzo cuenta con Agua Caliente hoteles de Ecuador" title="Agua Caliente" border="0" src="/imagenes/miniaturas/facilidad/1442594664.png" class="img-responsive opacidad"/>
+                                                                    </div>
+                                                                <div class="col-xs-2 no_padding center-block">
+                                     
+                                    <img alt="El Hotel Rizzo cuenta con Internet hoteles de Ecuador" title="Internet" border="0" src="/imagenes/miniaturas/facilidad/1442605895.png" class="img-responsive opacidad"/>
+                                                                    </div>
+                                                            </div>
+                            </li>
+                            </ul>
+                              </div>
+                             
+                            </div>
+                            
+                       </div>
+                       
+                    </div>
+                     <div class="panel-footer">
+                              		<a class="btn btn-default btn-block" title="Hotel Rizzo" href="hotel_detalle.php?id=2">Ver más  &nbsp; <i class="fa fa-arrow-circle-right"></i></a>
+                       		</div>
+                </div>
+           
+        </div>
+                       	<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12" style="margin-bottom:15px; ">
+          
+                  	
+                <div class="panel panel-default panel-cotizacion">
+                    <div class="panel-header" style="background-color:#0073c4; color:#fff;">
+                    	<h4 align="center" style="height:30px; padding-top:5px;"class="no_margin2">Lido Hotel</h4>	
+                    </div>
+                	<div class="panel-body no_padding no_padding2">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 no_padding no_padding2" align="center"> 
+                    	<a title="Lido Hotel" href="hotel_detalle.php?id=7">
+                	                            <img class="img-responsive opacidad" alt="Lido Hotel, hoteles Venezuela, hoteles en Venezuela, paquetes para Venezuela, alojamiento en Venezuela" src="/imagenes/hotel/1457872611.jpg"/>
+                                               </a>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 no_padding no_padding2">
+                    	<div class="panel panel-default panel-cotizacion">
+                        <div class="panel-body no_padding no_padding2" align="center">
+                    	<ul class="list-group">
+                              <li class="list-group-item text-center titulo"><h4 style="margin-bottom:0px; margin-top:0px;">Desde BsF. 800</h4></li>
+                              <li class="list-group-item center-block"><img class="img-responsive" src="/imagenes/3.png" alt="hotel con categoria 3"/></li>
+                              <li class="list-group-item center-block">                            <div class="row">
+                                                                <div class="col-xs-2 no_padding center-block">
+                                     
+                                    <img alt="El Lido Hotel cuenta con Animales hoteles de Ecuador" title="Animales" border="0" src="/imagenes/miniaturas/facilidad/1442589609.png" class="img-responsive opacidad"/>
+                                                                    </div>
+                                                                <div class="col-xs-2 no_padding center-block">
+                                     
+                                    <img alt="El Lido Hotel cuenta con Área de Niños hoteles de Ecuador" title="Área de Niños" border="0" src="/imagenes/miniaturas/facilidad/1442590557.png" class="img-responsive opacidad"/>
+                                                                    </div>
+                                                                <div class="col-xs-2 no_padding center-block">
+                                     
+                                    <img alt="El Lido Hotel cuenta con Zona Wifi hoteles de Ecuador" title="Zona Wifi" border="0" src="/imagenes/miniaturas/facilidad/1442591531.png" class="img-responsive opacidad"/>
+                                                                    </div>
+                                                            </div>
+                            </li>
+                            </ul>
+                              </div>
+                             
+                            </div>
+                            
+                       </div>
+                       
+                    </div>
+                     <div class="panel-footer">
+                              		<a class="btn btn-default btn-block" title="Lido Hotel" href="hotel_detalle.php?id=7">Ver más  &nbsp; <i class="fa fa-arrow-circle-right"></i></a>
+                       		</div>
+                </div>
+           
+        </div>
+                       	<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12" style="margin-bottom:15px; ">
+          
+                  	
+                <div class="panel panel-default panel-cotizacion">
+                    <div class="panel-header" style="background-color:#0073c4; color:#fff;">
+                    	<h4 align="center" style="height:30px; padding-top:5px;"class="no_margin2">Sheraton</h4>	
+                    </div>
+                	<div class="panel-body no_padding no_padding2">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 no_padding no_padding2" align="center"> 
+                    	<a title="Sheraton" href="hotel_detalle.php?id=8">
+                	                            <img class="img-responsive opacidad" alt="Sheraton, hoteles Venezuela, hoteles en Venezuela, paquetes para Venezuela, alojamiento en Venezuela" src="/imagenes/hotel/1457872529.jpg"/>
+                                               </a>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 no_padding no_padding2">
+                    	<div class="panel panel-default panel-cotizacion">
+                        <div class="panel-body no_padding no_padding2" align="center">
+                    	<ul class="list-group">
+                              <li class="list-group-item text-center titulo"><h4 style="margin-bottom:0px; margin-top:0px;">Desde BsF. 800</h4></li>
+                              <li class="list-group-item center-block"><img class="img-responsive" src="/imagenes/5.png" alt="hotel con categoria 5"/></li>
+                              <li class="list-group-item center-block">                            <div class="row">
+                                                                <div class="col-xs-2 no_padding center-block">
+                                     
+                                    <img alt="El Sheraton cuenta con Zona Wifi hoteles de Ecuador" title="Zona Wifi" border="0" src="/imagenes/miniaturas/facilidad/1442591531.png" class="img-responsive opacidad"/>
+                                                                    </div>
+                                                                <div class="col-xs-2 no_padding center-block">
+                                     
+                                    <img alt="El Sheraton cuenta con Musica hoteles de Ecuador" title="Musica" border="0" src="/imagenes/miniaturas/facilidad/1442591720.png" class="img-responsive opacidad"/>
+                                                                    </div>
+                                                                <div class="col-xs-2 no_padding center-block">
+                                     
+                                    <img alt="El Sheraton cuenta con Tv/Cables hoteles de Ecuador" title="Tv/Cables" border="0" src="/imagenes/miniaturas/facilidad/1442592239.png" class="img-responsive opacidad"/>
+                                                                    </div>
+                                                            </div>
+                            </li>
+                            </ul>
+                              </div>
+                             
+                            </div>
+                            
+                       </div>
+                       
+                    </div>
+                     <div class="panel-footer">
+                              		<a class="btn btn-default btn-block" title="Sheraton" href="hotel_detalle.php?id=8">Ver más  &nbsp; <i class="fa fa-arrow-circle-right"></i></a>
+                       		</div>
+                </div>
+           
+        </div>
+                        	<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12" style="margin-bottom:15px; ">
+          
+                  	
+                <div class="panel panel-default panel-cotizacion">
+                    <div class="panel-header" style="background-color:#0073c4; color:#fff;">
+                    	<h4 align="center" style="height:30px; padding-top:5px;"class="no_margin2">Sunsol</h4>	
+                    </div>
+                	<div class="panel-body no_padding no_padding2">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 no_padding no_padding2" align="center"> 
+                    	<a title="Sunsol" href="hotel_detalle.php?id=5">
+                	                            <img class="img-responsive opacidad" alt="Sunsol, hoteles Venezuela, hoteles en Venezuela, paquetes para Venezuela, alojamiento en Venezuela" src="/imagenes/hotel/1457872561.jpg"/>
+                                               </a>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 no_padding no_padding2">
+                    	<div class="panel panel-default panel-cotizacion">
+                        <div class="panel-body no_padding no_padding2" align="center">
+                    	<ul class="list-group">
+                              <li class="list-group-item text-center titulo"><h4 style="margin-bottom:0px; margin-top:0px;">Desde BsF. 800</h4></li>
+                              <li class="list-group-item center-block"><img class="img-responsive" src="/imagenes/7.png" alt="hotel con categoria 7"/></li>
+                              <li class="list-group-item center-block">                            <div class="row">
+                                                                <div class="col-xs-2 no_padding center-block">
+                                     
+                                    <img alt="El Sunsol cuenta con Ambiente hoteles de Ecuador" title="Ambiente" border="0" src="/imagenes/miniaturas/facilidad/1442591868.png" class="img-responsive opacidad"/>
+                                                                    </div>
+                                                                <div class="col-xs-2 no_padding center-block">
+                                     
+                                    <img alt="El Sunsol cuenta con Teléfono hoteles de Ecuador" title="Teléfono" border="0" src="/imagenes/miniaturas/facilidad/1442592339.png" class="img-responsive opacidad"/>
+                                                                    </div>
+                                                            </div>
+                            </li>
+                            </ul>
+                              </div>
+                             
+                            </div>
+                            
+                       </div>
+                       
+                    </div>
+                     <div class="panel-footer">
+                              		<a class="btn btn-default btn-block" title="Sunsol" href="hotel_detalle.php?id=5">Ver más  &nbsp; <i class="fa fa-arrow-circle-right"></i></a>
+                       		</div>
+                </div>
+           
+        </div>
+               </div> 
+
+    <!-- InstanceEndEditable -->
+    <!-- Fin contenido -->
+    </div>
+    
+    <!-- Publicidad Rotativa Agencia -->
+  
+    <div class="container-fluid">    
+          <div class="row rotativas"> 
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 no_padding">
+                	<div id="Carousel2" class="carousel slide carousel-fade" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                                                                                                   <li data-target="#Carousel2" data-slide-to="0" class="active"></li>
+                                                                                                   <li data-target="#Carousel2" data-slide-to="1" ></li>
+                                                                 
+                        </ol>
+                
+                        <div class="carousel-inner">
+                                                                                    <div class="item active" align="center">
+                                                                    <a title="Banner-publicidad2" href="#">
+                                        <img src="/imagenes/publicidad/1457544548.jpg" alt="Banner-publicidad2" class="img-responsive" />
+                                    </a>
+                                                            </div>
+                                                                                    <div class="item " align="center">
+                                                                    <a title="Banner-publicidad1" href="#">
+                                        <img src="/imagenes/publicidad/1457544524.jpg" alt="Banner-publicidad1" class="img-responsive" />
+                                    </a>
+                                                            </div>
+                                                                                </div>
+                        
+                        <a class="left carousel-control" href="#Carousel2" data-slide="prev">
+                            <!--<span class="glyphicon glyphicon-chevron-left"></span>-->
+                        </a>
+                        <a class="right carousel-control" href="#Carousel2" data-slide="next">
+                            <!--<span class="glyphicon glyphicon-chevron-right"></span>-->
+                        </a>
+                        
+                    </div>
+                  
+                </div>
+                
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 no_padding">
+                	<div id="Carousel3" class="carousel slide carousel-fade" data-ride="carousel">
+        		
+                        <ol class="carousel-indicators">
+                                                                                                    <li data-target="#Carousel3" data-slide-to="0" class="active"></li>
+                                                                                                    <li data-target="#Carousel3" data-slide-to="1" ></li>
+                                                                 
+                        </ol>
+                
+                        <div class="carousel-inner">
+                                                                                    <div class="item active" align="center">
+                                                                    <a title="Publicidad Derecha" href="#">
+                                        <img src="/imagenes/publicidad/1456462878.jpg" alt="Publicidad Derecha" class="img-responsive" />
+                                    </a>
+                                                            </div>
+                                                                                    <div class="item " align="center">
+                                                                    <a title="Publicidad Derecha" href="#">
+                                        <img src="/imagenes/publicidad/1456462840.jpg" alt="Publicidad Derecha" class="img-responsive" />
+                                    </a>
+                                                            </div>
+                                                                                </div>
+                        
+                        <a class="left carousel-control" href="#Carousel3" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
+                        <a class="right carousel-control" href="#Carousel3" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+    	</div>
+    <!-- /Fin Publicidad Rotativa Agencia -->
+    
+   
+     
+    <!-- Promociones -->
+    <div class="container-fluid">
+    	<div class="row promociones">
+        	<div class="col-xs-12" align="center">
+            	<h1 style="color:#fff;">Promociones</h1>
+            </div>
+                                       		        	<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 col-lg-15" style="padding-left:15px; padding-top:20px;">
+            	             
+            	<div class="panel panel-default panel-cotizacion">
+                	<div class="panel-header" style="background-color:#0073c4; color:#fff;" align="center">
+                  		<h3 class="no_margin2" style="padding-bottom:15px; padding-top:15px;">Semana Santa 2016</h3>
+                    </div>
+                    <div class="panel-body titulo" align="center">
+                    	<p> Desde BsF. 30000</p>
+                    </div>
+                    <div class="panel-body no_padding no_padding2" align="center">
+                                                        <img src="/imagenes/producto/1457645050.jpg" alt="" class="img-responsive" />
+                                                    </div>
+                    <div class="panel-footer">
+                    	<a class="btn btn-default btn-block" title="Semana Santa 2016" href="catalogo_detalle.php?id=94">Ver más  &nbsp; <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+            
+            </div>
+            
+            	
+                                		        	<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 col-lg-15" style="padding-left:15px; padding-top:20px;">
+            	             
+            	<div class="panel panel-default panel-cotizacion">
+                	<div class="panel-header" style="background-color:#0073c4; color:#fff;" align="center">
+                  		<h3 class="no_margin2" style="padding-bottom:15px; padding-top:15px;">Vacaciones 2016</h3>
+                    </div>
+                    <div class="panel-body titulo" align="center">
+                    	<p> Desde BsF. 7520</p>
+                    </div>
+                    <div class="panel-body no_padding no_padding2" align="center">
+                                                        <img src="/imagenes/producto/1457645544.jpg" alt="" class="img-responsive" />
+                                                    </div>
+                    <div class="panel-footer">
+                    	<a class="btn btn-default btn-block" title="Vacaciones 2016" href="catalogo_detalle.php?id=95">Ver más  &nbsp; <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+            
+            </div>
+            
+            	
+                                		        	<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 col-lg-15" style="padding-left:15px; padding-top:20px;">
+            	             
+            	<div class="panel panel-default panel-cotizacion">
+                	<div class="panel-header" style="background-color:#0073c4; color:#fff;" align="center">
+                  		<h3 class="no_margin2" style="padding-bottom:15px; padding-top:15px;">Escapate a coro 2016</h3>
+                    </div>
+                    <div class="panel-body titulo" align="center">
+                    	<p> Desde BsF. 1247</p>
+                    </div>
+                    <div class="panel-body no_padding no_padding2" align="center">
+                                                        <img src="/imagenes/producto/1457646147.jpg" alt="" class="img-responsive" />
+                                                    </div>
+                    <div class="panel-footer">
+                    	<a class="btn btn-default btn-block" title="Escapate a coro 2016" href="catalogo_detalle.php?id=96">Ver más  &nbsp; <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+            
+            </div>
+            
+            	
+                                		        	<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 col-lg-15" style="padding-left:15px; padding-top:20px;">
+            	             
+            	<div class="panel panel-default panel-cotizacion">
+                	<div class="panel-header" style="background-color:#0073c4; color:#fff;" align="center">
+                  		<h3 class="no_margin2" style="padding-bottom:15px; padding-top:15px;">Relampago del...</h3>
+                    </div>
+                    <div class="panel-body titulo" align="center">
+                    	<p> Desde BsF. 54128</p>
+                    </div>
+                    <div class="panel-body no_padding no_padding2" align="center">
+                                                        <img src="/imagenes/producto/1457646629.jpg" alt="" class="img-responsive" />
+                                                    </div>
+                    <div class="panel-footer">
+                    	<a class="btn btn-default btn-block" title="Relampago del catatumbo 2x1" href="catalogo_detalle.php?id=97">Ver más  &nbsp; <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+            
+            </div>
+            
+            	
+                                		        	<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 col-lg-15" style="padding-left:15px; padding-top:20px;">
+            	             
+            	<div class="panel panel-default panel-cotizacion">
+                	<div class="panel-header" style="background-color:#0073c4; color:#fff;" align="center">
+                  		<h3 class="no_margin2" style="padding-bottom:15px; padding-top:15px;">Merida Vacaciones...</h3>
+                    </div>
+                    <div class="panel-body titulo" align="center">
+                    	<p> Desde BsF. 0</p>
+                    </div>
+                    <div class="panel-body no_padding no_padding2" align="center">
+                                                        <img src="/imagenes/producto/1457647056.jpg" alt="" class="img-responsive" />
+                                                    </div>
+                    <div class="panel-footer">
+                    	<a class="btn btn-default btn-block" title="Merida Vacaciones 2016" href="catalogo_detalle.php?id=98">Ver más  &nbsp; <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+            
+            </div>
+            
+            	
+                                    
+            
+                    <div class="col-xs-12" align="center" style="padding-bottom:35px; padding-top:30px;">
+                        <a class="btn btn-primary"><i class="fa fa-gift"></i>&nbsp;Ver Paquetes</a>
+                    </div>	
+    	</div>
+   </div>
+     <!-- Fin promociones -->
+     
+     
+      <!-- Publicidad Instagram -->
+    <div class="container-fluid  no_padding">
+    	<div class="row">
+        	<div class="col-xs-12">
+            	<!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/b601946dbb17578696edcf6e46f99551.html" id="lightwidget_b601946dbb" name="lightwidget_b601946dbb"  scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+            </div>
+        </div>
+    </div>
+     <!-- Fin instagram -->
+
+     
+     
+   <!-- Excursiones -->
+      <div class="container-fluid no_padding">
+    	  <div class="row excursiones">
+                <div class="col-xs-12" align="center">
+                        <h1 style="color:#fff;">Excursiones</h1>
+                </div>
+         		        		                                                   
+        		<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 col-lg-15" style="padding-left:15px; padding-top:20px;">
+             	            	<div class="panel panel-default panel-cotizacion">
+                	<div class="panel-header" style="background-color:#0073c4; color:#fff;" align="center">
+                    	<h3 class="no_margin2" style="padding-bottom:15px; padding-top:15px;">				Mitad Mundo</h3>
+                    </div>
+                    <div class="panel-body titulo" align="center" style="padding-top:10px; padding-bottom:0px;">
+                    	<p style="font-size:16px;"> Desde BsF. 45212</p>
+                    </div>
+                    <div class="panel-body no_padding no_padding2" align="center">
+                                                        <img src="/imagenes/producto/1457550774.jpg" alt="" class="img-responsive" />
+                                                    </div>
+                    <div class="panel-footer">
+                    	<a class="btn btn-default btn-block" title="Mitad Mundo" href="catalogo_detalle.php?id=6">Ver más  &nbsp; <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+            
+            </div>
+            
+            	
+                                                                           
+        		<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 col-lg-15" style="padding-left:15px; padding-top:20px;">
+             	            	<div class="panel panel-default panel-cotizacion">
+                	<div class="panel-header" style="background-color:#0073c4; color:#fff;" align="center">
+                    	<h3 class="no_margin2" style="padding-bottom:15px; padding-top:15px;">				Amazonas</h3>
+                    </div>
+                    <div class="panel-body titulo" align="center" style="padding-top:10px; padding-bottom:0px;">
+                    	<p style="font-size:16px;"> Desde BsF. 852</p>
+                    </div>
+                    <div class="panel-body no_padding no_padding2" align="center">
+                                                        <img src="/imagenes/producto/1457576552.jpg" alt="" class="img-responsive" />
+                                                    </div>
+                    <div class="panel-footer">
+                    	<a class="btn btn-default btn-block" title="Amazonas" href="catalogo_detalle.php?id=91">Ver más  &nbsp; <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+            
+            </div>
+            
+            	
+                                                                            <!--Relleno para dejar un espacio segun diseño  -->
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 col-lg-15" style="padding-left:15px; padding-top:20px;">
+                    </div>
+                                    	               
+        		<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 col-lg-15" style="padding-left:15px; padding-top:20px;">
+             	            	<div class="panel panel-default panel-cotizacion">
+                	<div class="panel-header" style="background-color:#0073c4; color:#fff;" align="center">
+                    	<h3 class="no_margin2" style="padding-bottom:15px; padding-top:15px;">				Prueba</h3>
+                    </div>
+                    <div class="panel-body titulo" align="center" style="padding-top:10px; padding-bottom:0px;">
+                    	<p style="font-size:16px;"> Desde BsF. 5847</p>
+                    </div>
+                    <div class="panel-body no_padding no_padding2" align="center">
+                                                        <img src="/imagenes/producto/1457996902.jpg" alt="" class="img-responsive" />
+                                                    </div>
+                    <div class="panel-footer">
+                    	<a class="btn btn-default btn-block" title="Prueba" href="catalogo_detalle.php?id=100">Ver más  &nbsp; <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+            
+            </div>
+            
+            	
+                                                                           
+        		<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 col-lg-15" style="padding-left:15px; padding-top:20px;">
+             	            	<div class="panel panel-default panel-cotizacion">
+                	<div class="panel-header" style="background-color:#0073c4; color:#fff;" align="center">
+                    	<h3 class="no_margin2" style="padding-bottom:15px; padding-top:15px;">				Canaima</h3>
+                    </div>
+                    <div class="panel-body titulo" align="center" style="padding-top:10px; padding-bottom:0px;">
+                    	<p style="font-size:16px;"> Desde BsF. 0</p>
+                    </div>
+                    <div class="panel-body no_padding no_padding2" align="center">
+                                                        <img src="/imagenes/producto/1457551082.jpg" alt="" class="img-responsive" />
+                                                    </div>
+                    <div class="panel-footer">
+                    	<a class="btn btn-default btn-block" title="Canaima" href="catalogo_detalle.php?id=42">Ver más  &nbsp; <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+            
+            </div>
+            
+            	
+                                                                
+            
+                    <div class="col-xs-12" align="center" style="padding-bottom:35px; padding-top:30px;">
+                        <a class="btn btn-primary" href="/catalogo_opcion.php?cont=55&cat=4"><i class="fa fa-gift"></i>&nbsp;Ver Excursiones</a>
+                    </div>	
+                 
+         </div>
+       </div>
+      <!-- Fin excursiones -->
+     
+      <!--Categorias --> 
+      <div class="container-fluid no_padding">
+      	<div class="row navbar-categoria" style="background-color:#143058;">
+  						
+                     	                        <div class="col-xs-6 col-sm-15 col-md-15 col-lg-16" align="center" style="padding-top:100px">
+                                                    <a class="text-center iconos-btn" href="/noticias.php">
+                          	<i class="fa fa-newspaper-o fa-3x"></i><br>
+                            <p class="fuente-categoria" style="font-size: 12px;">Noticias</p>
+                          </a>
+                                                 	  
+                          </div>
+                     	                        <div class="col-xs-6 col-sm-15 col-md-15 col-lg-16" align="center" style="padding-top:100px">
+                                                      
+                            <a class="text-center iconos-btn" href="">
+        						<i class="fa fa-hospital-o fa-3x"></i><br>
+                                <p class="fuente-categoria" style="font-size: 12px;">Hoteles</p>
+      					  	</a>
+                                                 	  
+                          </div>
+                     	                        <div class="col-xs-6 col-sm-15 col-md-15 col-lg-16" align="center" style="padding-top:100px">
+                                                      
+                            <a class="text-center iconos-btn" href="">
+        						<i class="fa fa-gift fa-3x"></i><br>
+                                <p class="fuente-categoria" style="font-size: 12px;">Promociones</p>
+      					  	</a>
+                                                 	  
+                          </div>
+                     	                        <div class="col-xs-6 col-sm-15 col-md-15 col-lg-16" align="center" style="padding-top:100px">
+                                                      
+                            <a class="text-center iconos-btn" href="">
+        						<i class="fa fa-ship fa-3x"></i>  <br>
+                                <p class="fuente-categoria" style="font-size: 12px;">Cruceros</p>
+      					  	</a>
+                                                 	  
+                          </div>
+                     	                        <div class="col-xs-6 col-sm-15 col-md-15 col-lg-16" align="center" style="padding-top:100px">
+                                                      
+                            <a class="text-center iconos-btn" href="">
+        						<i class="fa fa-camera fa-3x"></i>  <br>
+                                <p class="fuente-categoria" style="font-size: 12px;">Excursiones</p>
+      					  	</a>
+                                                 	  
+                          </div>
+                     	                        
+                       
+                                                 <div class="col-xs-6 col-sm-15 col-md-15 col-lg-16" align="center" style="padding-top:100px;">
+                          <a class="text-center iconos-btn" href="">
+                           <i class="fa fa-plane fa-3x"></i><br>
+                                <p class="fuente-categoria" style="font-size: 12px;">Boletos</p>
+                          </a>
+                          </div>
+                                                 <div class="col-xs-6 col-sm-15 col-md-15 col-lg-16" align="center" style="padding-top:100px;">
+                          <a class="text-center iconos-btn" href="">
+                           <i class="fa fa-bus fa-3x"></i><br>
+                                <p class="fuente-categoria" style="font-size: 12px;">Translados</p>
+                          </a>
+                          </div>
+                                                 <div class="col-xs-6 col-sm-15 col-md-15 col-lg-16" align="center" style="padding-top:100px;">
+                          <a class="text-center iconos-btn" href="">
+                           <i class="fa fa-child fa-3x"></i><br>
+                                <p class="fuente-categoria" style="font-size: 12px;">Servicios</p>
+                          </a>
+                          </div>
+                                                 <div class="col-xs-6 col-sm-15 col-md-15 col-lg-16" align="center" style="padding-top:100px;">
+                          <a class="text-center iconos-btn" href="">
+                           <i class="fa fa-pencil fa-3x"></i><br>
+                                <p class="fuente-categoria" style="font-size: 12px;">Registro</p>
+                          </a>
+                          </div>
+                                                 <div class="col-xs-6 col-sm-15 col-md-15 col-lg-16" align="center" style="padding-top:100px;">
+                          <a class="text-center iconos-btn" href="">
+                           <i class="fa fa-phone fa-3x"></i>  <br>
+                                <p class="fuente-categoria" style="font-size: 12px;">Contacto</p>
+                          </a>
+                          </div>
+                                               
+      
+			</div>
+      </div>
+      
+       <!-- Fin Categorias -->
+      
+ <!-- Pie de Pagina -->
+   <footer>
+    	<div class="container-fluid">
+            <div class="row pinta1">
+            
+            	<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" id="tam-info">
+                
+                	<div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-12">
+                        <!--<h5>Menú Principal</h5>-->
+                            <ul class="items">
+                            <li><img src="/imagenes/logo-footer.png"></li>
+                           
+                            <li style="padding-top:7px;">
+    							<a class="foot-btn">Scape Travel C.A</a>
+                            </li>
+                             <li style="padding-top:7px;">
+    							<a class="foot-btn">RIF J-30991795-1</a>
+                            </li>
+                              <li style="padding-top:7px;">
+    							<a class="foot-btn">VT:2631 | T</a>
+                            </li>
+                              <li style="padding-top:7px;">
+    							<a class="foot-btn">Todos los Derechos Reservados</a>
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row" id="visible-xs" align="center">
+                    	<div class="col-xs-12">
+                    		<img src="/imagenes/logo-footer.png">
+                        </div>
+                    </div>
+                </div>
+                
+            	<div  class="col-xs-12 col-sm-12 col-md-4 col-lg-2" style="padding-top:30px;">
+                
+                	<div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-12">
+                        <!--<h5>Menú Principal</h5>-->
+                            <ul class="items">
+                            <li><strong>SCAPE TRAVEL</strong></li>
+                                                                                    	 <li style="padding-top:7px;">
+    <a  class="foot-btn" title="Noticias" href="/noticias.php}">Noticias</a>
+                            </li>
+                            	
+                                                                                                               	 <li style="padding-top:7px;">
+    <a  class="foot-btn" title="Hoteles | Hospedaje" href="/contenido.php?cont=52">Hoteles</a>
+                            </li>
+                                                                                                               	 <li style="padding-top:7px;">
+    <a  class="foot-btn" title="Promociones Vigentes" href="/contenido.php?cont=53">Promociones</a>
+                            </li>
+                                                                                                               	 <li style="padding-top:7px;">
+    <a  class="foot-btn" title="Cruceros" href="/contenido.php?cont=54">Cruceros</a>
+                            </li>
+                                                                                                               	 <li style="padding-top:7px;">
+    <a  class="foot-btn" title="Excursiones" href="/contenido.php?cont=55">Excursiones</a>
+                            </li>
+                                                                                                                 <li style="padding-top:7px;"><a class="foot-btn" title="Empresa" href="/contenido.php?cont=64">Empresa</a></li>
+                                                        </ul>
+                        </div>
+                    </div>
+                	
+                </div>
+                <div  class="col-xs-12 col-sm-12 col-md-4 col-lg-2" style="padding-top:30px;">
+                
+                	<div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-12">
+                        <!--<h5>Menú Principal</h5>-->
+                            <ul class="items">
+                            <li><strong>QUE OFRECEMOS</strong></li>
+                                                        <li style="padding-top:7px;">
+    <a  class="foot-btn" title="Boletos" href="/contenido.php?cont=57">Boletos</a>
+                            </li>
+                                                        <li style="padding-top:7px;">
+    <a  class="foot-btn" title="Translados" href="/contenido.php?cont=58">Translados</a>
+                            </li>
+                                                        <li style="padding-top:7px;">
+    <a  class="foot-btn" title="Servicios" href="/contenido.php?cont=59">Servicios</a>
+                            </li>
+                                                        <li style="padding-top:7px;">
+    <a  class="foot-btn" title="Registro de Usuario" href="/contenido.php?cont=60">Registro</a>
+                            </li>
+                                                        <li style="padding-top:7px;">
+    <a  class="foot-btn" title="Contacto" href="/contenido.php?cont=62">Contacto</a>
+                            </li>
+                                                                                    <li style="padding-top:7px;">
+    <a  class="foot-btn" title="Empresa" href="/contenido.php?cont=64">Empresa</a>
+                            </li>
+                                                        </ul>
+                        </div>
+                    </div>
+                	
+                </div>
+                 
+            	<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" align="center" style="padding-top:30px;">
+                	<div class="container-fluid">
+                    	<div class="row">
+                        <div class="col-xs-12" style="padding-top:40px;" align="center">
+                        	<form class="navbar-form navbar-left" role="search">
+                                <div class="form-group">
+                                	<div class="input-group">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+                                  	<input type="text" class="form-control" placeholder="Ingrese su Email">
+                                  </div>
+                                </div>
+                                <button type="submit" class="btn btn-default" style="background-color:#ffcb00;">Suscribirse</button>
+                             </form>
+                        </div>
+                        <div class="col-xs-8" style="padding-top:50px;" align="center">
+                         <h6 class="pull-right">Dise&ntilde;o y Desarrollo:&nbsp; <a class="enlace" href="http://www.diazcreativos.net.ve" target="_blank">D&iacute;az Creativos</a></h6>
+                         </div>
+                        <div class="col-xs-4" style="padding-top:50px;">
+                        	<p align="center" class="pull-right"><i class="fa fa-arrow-circle-up fa-2x ir-arriba"></i></p>
+                        </div>
+                        
+                        
+                        </div>
+                    
+                    
+                    </div>
+                  
+                    
+                </div>
+
+            </div>
+           
+      </div>
+      
+</footer>
+      <!-- Fin pie de Pagina -->
+	
+   
+    
+    <script src="/dist/js/bootstrap.min.js"></script>
+    <script src="/assets/js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="/js/jssor.slider.mini.js"></script>
+    <div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.5";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+    
+    <script type="text/javascript">
+
+			$(document).ready(function(){
+
+		 $('.ir-arriba').click(function(){
+			$('body, html').animate({
+				scrollTop: '0px'
+			}, 300);
+		});
+	 
+		$(window).scroll(function(){
+		if( $(this).scrollTop() > 0 ){
+		$('.ir-arriba').slideDown(300);
+		 } else {
+			$('.ir-arriba').slideUp(300);
+			 }
+		});
+
+	});
+  </script>
+  
+  
+  <script type="text/javascript">
+	$(document).ready(function() {
+		$(".imagen-1").hover(function(){
+			
+		$(this).find('img').stop().fadeTo(400, 0);
+		
+		}, function() {
+			
+		$(this).find('img').stop().fadeTo(400, 1);
+		});	
+	});	
+
+</script>
+
+ <script type="text/javascript">
+	   
+	  	$(document).ready(function(){
+			//nos desplazamos entre todos los divs
+			$('a.visible').click(function(e){
+			e.preventDefault();
+		    enlace  = $(this).attr('href');
+		    $('html, body').animate({
+		        scrollTop: $(enlace).offset().top
+		    }, 1000);
+			});
+		});
+	   
+	  </script>
+      <script type="text/javascript">
+	  
+		function mostrar(){
+			
+		document.getElementById('visible').style.display = 'block';
+		document.getElementById('mostre-todo').style.display = 'none';}
+	  </script>
+       <script type="text/javascript">
+	   
+	  	$(document).ready(function(){
+			//nos desplazamos entre todos los divs
+			$('a.vista-previa').click(function(e){
+			e.preventDefault();
+		    enlace  = $(this).attr('href');
+		    $('html, body').animate({
+		        scrollTop: $(enlace).offset().top
+		    }, 1000);
+			});
+		});
+	   
+	  </script>
+	                 
+	
+  </body>
+<!-- InstanceEnd --></html>

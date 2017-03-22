@@ -1,0 +1,10 @@
+body {
+  /*min-height: 2000px;*/
+  margin-top: 85px;
+}
+
+@media (max-width: 768px){
+	body{
+		margin-top: 50px;
+	}
+}
