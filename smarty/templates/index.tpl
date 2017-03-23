@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<div lang="es"><!-- InstanceBegin template="/Templates/plantilla_padre.dwt" codeOutsideHTMLIsLocked="false" -->
+<div lang="es"></div>
   <head>
     {include './layout/header.tpl'}
   </head>
@@ -294,8 +294,11 @@
           <img class="center-block relative" src="/imagenes/testimonio.png" alt="Testimonios">
         </div>
         <div class="clearfix"></div>
+        <div class="col-md-4 hidden-xs">
+          <img src="/imagenes/tripadvisor1.jpg" alt="Trip Advisor Reward 2016" class="img-responsive center-block">
+        </div>
 
-        <div class="col-xs-4 col-xs-offset-4">
+        <div class="col-md-4 col-xs-12">
           <div class="row">
             <div class="col-sm-12 col-md-9">
               <div id="TA_selfserveprop821" class="TA_selfserveprop">
@@ -308,6 +311,10 @@
               {literal}<script src="https://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=821&amp;locationId=4275246&amp;lang=es_VE&amp;rating=true&amp;nreviews=4&amp;writereviewlink=true&amp;popIdx=false&amp;iswide=true&amp;border=false&amp;display_version=2"></script>{/literal}
             </div>
           </div>
+        </div>
+
+        <div class="col-md-4 col-xs-12">
+          <img src="/imagenes/tripadvisor2.jpg" alt="" class="img-responsive center-block">
         </div>
       </div>
     </div>
@@ -518,19 +525,6 @@
                   <div class="panel panel-default panelP">
                     <div class="panel-body no_padding no_padding2"">
                       <a href="/contenido.php?id={$promocion[i].id_con}"><img class="img-responsive center-block banner" src="/imagenes/{$promocion[i].directorio_image}"/></a>
-                      <div class="col-xs-12" style="min-height: 108px;">
-                        <h3 style="color:#7c7201;">{$promocion[i].nombre_con}</h3>
-                      </div>
-                    </div>
-                    <div class="panel-body no_padding" style="border-top: #cfb652 solid 1px; margin-right: -20px; margin-left: -20px;"></div>
-                    <div class="panel-body" style="min-height: 301px">
-                        {$promocion[i].contenido_con|truncate:280:"(...)":true}
-                    </div>
-                    <div class="panel-body no_padding">
-                      <img src="/imagenes/divisionPromo.png" alt="" class="img-responsive imgMarginDivision">
-                    </div>
-                    <div class="panel-body padding-off">
-                      <h4 class="text-center margin-off"><a class="btn btn-promocion" href="/contenido.php?id={$promocion[i].id_con}"><strong>VER <i class="fa fa-mail-reply fa-flip-horizontal"></i></strong></a></h4>
                     </div>
                   </div>
                 </div>
@@ -687,7 +681,7 @@
                   <strong>Gerentes de Eventos y Banquetes: </strong><br>
                   <i class="fa fa-envelope"></i> eventos@tibisayhotelboutique.com<br>
                   <strong>Coordinadora de Banquetes: </strong><br>
-                  <i class="fa fa-envelope"></i> ventas@tibisayhotelboutique.com<br>
+                  <i class="fa fa-envelope"></i> ventas1@tibisayhotelboutique.com<br>
                 </blockquote>
               </address>
             </div>
