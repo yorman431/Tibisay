@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-21 20:06:50
+/* Smarty version 3.1.30, created on 2017-03-23 23:30:58
   from "D:\Websites\tibisay\smarty\templates\layout\botonera.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58d179ca49a363_12126272',
+  'unifunc' => 'content_58d44ca22921f2_62554797',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f9cc4f08f32f6fb281cd8a6e830fb2f631bd2472' => 
     array (
       0 => 'D:\\Websites\\tibisay\\smarty\\templates\\layout\\botonera.tpl',
-      1 => 1489764516,
+      1 => 1490283024,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58d179ca49a363_12126272 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '1117958d179ca45d7f5_88565060';
+function content_58d44ca22921f2_62554797 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '1665658d44ca2254968_10236024';
 ?>
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">

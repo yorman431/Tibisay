@@ -1,45 +1,45 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-21 20:06:50
+/* Smarty version 3.1.30, created on 2017-03-23 23:30:58
   from "D:\Websites\tibisay\smarty\templates\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58d179ca71d904_80051631',
+  'unifunc' => 'content_58d44ca24c3940_68342570',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8502e2c667bdaf4aa27202a8d7c0209ac6fe7727' => 
     array (
       0 => 'D:\\Websites\\tibisay\\smarty\\templates\\index.tpl',
-      1 => 1490021811,
+      1 => 1490298735,
       2 => 'file',
     ),
     '9a3e520260453c80091977efd0e94ebd4896a78e' => 
     array (
       0 => 'D:\\Websites\\tibisay\\smarty\\templates\\layout\\header.tpl',
-      1 => 1489769068,
+      1 => 1490283024,
       2 => 'file',
     ),
     'f9cc4f08f32f6fb281cd8a6e830fb2f631bd2472' => 
     array (
       0 => 'D:\\Websites\\tibisay\\smarty\\templates\\layout\\botonera.tpl',
-      1 => 1489764516,
+      1 => 1490283024,
       2 => 'file',
     ),
     '0e078d480fae897c630805204355f635627441af' => 
     array (
       0 => 'D:\\Websites\\tibisay\\smarty\\templates\\layout\\banner.tpl',
-      1 => 1487191152,
+      1 => 1490283024,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 3600,
 ),true)) {
-function content_58d179ca71d904_80051631 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58d44ca24c3940_68342570 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
-<div lang="es"><!-- InstanceBegin template="/Templates/plantilla_padre.dwt" codeOutsideHTMLIsLocked="false" -->
+<div lang="es">
   <head>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -548,7 +548,7 @@ function content_58d179ca71d904_80051631 (Smarty_Internal_Template $_smarty_tpl)
     </div>
 
     <div class="container-fluid ">
-      <div class="row RESERVAS" id="RESERVAS">
+      <form class="row RESERVAS" id="RESERVAS">
         <div class="col-xs-12 text-center">
           <h2 class="tituloSeccion">RESERVAS</h2>
         </div>
@@ -557,24 +557,16 @@ function content_58d179ca71d904_80051631 (Smarty_Internal_Template $_smarty_tpl)
         </div>
 
         <div class="clearfix"></div>
-
-        <div class="col-xs-6 col-xs-offset-3" style="border: 1px solid #ccc;">
-          <a class="btn btn-default btn-block" title="Reservar Hotel" href="#" onClick="mostrar_formulario_reserva();"> <i class="fa fa-calendar-check-o"></i> Solicitar Reserva</a>
-        </div>
-
-        <a id="reserva"></a>
-
-        <hr class="divider" />
-
-        <div id="formulario_reserva" class="row" hidden="">
+        <form action="" name="formreservas" id="formreservastibisay" class="form-horizontal">
+        <div id="formulario_reserva" class="row">
           <div class="col-xs-8 col-xs-offset-2">
-            <h3>Solicitud de Reserva </h3>
+            <h3>Solicitud de Reserva</h3>
 
             <div class="row">
               <div class="col-sm-4">
                 <div class="form-group">
                   <label for="numero_habitaciones">Seleccione Nº de Habitaciones:</label>
-                  <select class="form-control" name="numero_habitaciones" id="numero_habitaciones" onchange="asignNumeroHabitacion();">
+                  <select class="form-control form-contacto" name="numero_habitaciones" id="numero_habitaciones" onchange="asignNumeroHabitacion();">
                     <option selected hidden value="">Seleccione Habitación</option>
                     <option value="1">1 Habitación</option>
                     <option value="2">2 Habitaciones</option>
@@ -592,10 +584,8 @@ function content_58d179ca71d904_80051631 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="form-group">
                   <label for="llegada">Fecha de entrada</label>
                   <div class='input-group date' id='datetimepicker1'>
-                    <input type="text" class="form-control" name="llegada" id="llegada" placeholder="Fecha de entrada*" value="">
-                    <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-calendar"></span>
-                                </span>
+                    <input type="text" class="form-control form-contacto" name="llegada" id="llegada" placeholder="Fecha de entrada*" value="">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
                   </div>
                 </div>
               </div>
@@ -604,7 +594,7 @@ function content_58d179ca71d904_80051631 (Smarty_Internal_Template $_smarty_tpl)
                 <div class="form-group">
                   <label for="salida">Fecha de salida</label>
                   <div class='input-group date' id='datetimepicker2'>
-                    <input type="text" class="form-control" name="salida" id="salida" placeholder="Fecha de salida*" value="">
+                    <input type="text" class="form-control form-contacto" name="salida" id="salida" placeholder="Fecha de salida*" value="">
                     <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
                                 </span>
@@ -685,12 +675,18 @@ function content_58d179ca71d904_80051631 (Smarty_Internal_Template $_smarty_tpl)
             <div class="col-xs-12 text-right" id="total">
             </div>
 
-            <input name="id_hotel" id="id_hotel" type="hidden" value="">
+            <input name="id_hotel" id="id_hotel" type="hidden" value="1">
 
 
           </div><!-- End Row -->
 
         </div>
+
+        <a id="reserva"></a>
+
+        <hr class="divider" />
+
+        </form>
       </div>
     </div>
 

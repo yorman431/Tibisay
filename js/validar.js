@@ -6,12 +6,12 @@ function MM_validateForm() { //v4.0
     for (i=0; i<(args.length-2); i+=3) { test=args[i+2]; val=document.getElementById(args[i]);
       if (val) { nm=val.name; if ((val=val.value)!="") {
         if (test.indexOf('isEmail')!=-1) { p=val.indexOf('@'); p=val.indexOf('.');
-          if (p<1 || p==(val.length-1)) errors+='- '+nm+' debe contener una direcciï¿½n de e-mail vï¿½lida.\n';
+          if (p<1 || p==(val.length-1)) errors+='- '+nm+' debe contener una dirección de e-mail válida.\n';
         } else if (test!='R') { num = parseFloat(val);
-          if (isNaN(val)) errors+='- '+nm+' debe contener un nï¿½mero.\n';
+          if (isNaN(val)) errors+='- '+nm+' debe contener un número.\n';
           if (test.indexOf('inRange') != -1) { p=test.indexOf(':');
             min=test.substring(8,p); max=test.substring(p+1);
-            if (num<min || max<num) errors+='- '+nm+' debe contener un nï¿½mero entre '+min+' y '+max+'.\n';
+            if (num<min || max<num) errors+='- '+nm+' debe contener un número entre '+min+' y '+max+'.\n';
       } } } else if (test.charAt(0) == 'R') errors += '- '+nm+' es requerido.\n'; }
     } if (errors) alert('Los siguientes errores han ocurrido:\n'+errors);
     document.MM_returnValue = (errors == '');
@@ -29,7 +29,7 @@ function validarnum(e) {
 function validarletras(e) {
     tecla = (document.all) ? e.keyCode : e.which;
     if (tecla==8 || tecla==0 || tecla==9 || tecla==13) return true;
-    patron =/[A-Za-zï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\s]/;
+    patron =/[A-Za-zñÑíáíóúéÁÉÍÓÚ\s]/;
     te = String.fromCharCode(tecla);
     return patron.test(te);
 }
@@ -37,7 +37,7 @@ function validarletras(e) {
 function validarletrasnum(e) {
     tecla = (document.all) ? e.keyCode : e.which;
     if (tecla==8 || tecla==0 || tecla==9 || tecla==13) return true;
-    patron = /[A-Za-zï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\s\d]/; 
+    patron = /[A-Za-zñÑíáíóúéÁÉÍÓÚ\s\d]/; 
     te = String.fromCharCode(tecla);
     return patron.test(te);
 }
@@ -45,7 +45,7 @@ function validarletrasnum(e) {
 function validarletrasnum2(e) {
     tecla = (document.all) ? e.keyCode : e.which;
     if (tecla==8 || tecla==0 || tecla==9 || tecla==13) return true;
-    patron = /[A-Za-zï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.-_\s\d]/; 
+    patron = /[A-Za-zñÑíáíóúéÁÉÍÓÚ.-_\s\d]/; 
     te = String.fromCharCode(tecla);
     return patron.test(te);
 }
@@ -68,29 +68,29 @@ function confirmar(mensaje){
 
 function validarnoticia(mensaje){
 	if (document.form1.categoria.value==""){
-		alert("Para poder hacer el envï¿½o, debe seleccionar una Categorï¿½a");
+		alert("Para poder hacer el envío, debe seleccionar una Categoría");
 	 	return false;
 	}
 	if (document.form1.titulo.value==""){
-		alert("Para poder hacer el envï¿½o, debe insertar un Tï¿½tulo!");
+		alert("Para poder hacer el envío, debe insertar un Título!");
 	 	return false;
 	}
 	if (document.form1.subtitulo.value==""){
-		alert("Para poder hacer el envï¿½o, debe insertar un Subtï¿½tulo!");
+		alert("Para poder hacer el envío, debe insertar un Subtítulo!");
 	 	return false;
 	}
 	if (document.form1.fecha.value==""){
-		alert("Para poder hacer el envï¿½o, debe seleccionar una Fecha!");
+		alert("Para poder hacer el envío, debe seleccionar una Fecha!");
 	 	return false;
 	}
 	if (document.form1.autor.value==""){
-		alert("Para poder hacer el envï¿½o, debe insertar un Autor!");
+		alert("Para poder hacer el envío, debe insertar un Autor!");
 	 	return false;
 	}
 	
 	var editor = CKEDITOR.instances['contenido'].getData().replace(/<[^>]*>/gi, '');
     if (!editor.length){
-    	alert("Para poder hacer el envï¿½o, debe insertar un Contenido a la Noticia!");
+    	alert("Para poder hacer el envío, debe insertar un Contenido a la Noticia!");
 		return false;
     }
 
@@ -99,18 +99,18 @@ function validarnoticia(mensaje){
 
 function validarevento(mensaje){
 	if (document.form1.categoria.value==""){
-		alert("Para poder hacer el envï¿½o, debe seleccionar una Categorï¿½a");
+		alert("Para poder hacer el envío, debe seleccionar una Categoría");
 	 	return false;
 	}
 	
 	if (document.form1.nombre.value==""){
-		alert("Para poder hacer el envï¿½o, debe insertar un Autor!");
+		alert("Para poder hacer el envío, debe insertar un Autor!");
 	 	return false;
 	}
 	
 	var editor = CKEDITOR.instances['contenido'].getData().replace(/<[^>]*>/gi, '');
     if (!editor.length){
-    	alert("Para poder hacer el envï¿½o, debe insertar un Contenido a la Noticia!");
+    	alert("Para poder hacer el envío, debe insertar un Contenido a la Noticia!");
 		return false;
     }
 
@@ -119,22 +119,22 @@ function validarevento(mensaje){
 
 function validarcombos(){
 	if (document.form1.categoria.value=="" || document.form1.subcategoria.value==""){
-	alert("Para poder hacer el envï¿½o, debe seleccionar una categorï¿½a y una subcategorï¿½a");
+	alert("Para poder hacer el envío, debe seleccionar una categoría y una subcategoría");
 	 return false;
 	}
-	return confirmar('ï¿½Estï¿½ seguro que desea guardar?');
+	return confirmar('¿Está seguro que desea guardar?');
 }
 
 function validarcontenido(mensaje){
 	
 	if (document.form1.enlace.value==0){
-		alert("Para poder hacer el envï¿½o, debe seleccionar una categorï¿½a");
+		alert("Para poder hacer el envío, debe seleccionar una categoría");
 	 	return false;
 	}
 	
 	var editor = CKEDITOR.instances['contenido'].getData().replace(/<[^>]*>/gi, '');
     if (!editor.length){
-    	alert("Para poder hacer el envï¿½o, debe llenar el Contenido!");
+    	alert("Para poder hacer el envío, debe llenar el Contenido!");
 		return false;
     }
 
@@ -145,7 +145,7 @@ function validarbanner(mensaje){
 	
 	var editor = CKEDITOR.instances['contenido'].getData().replace(/<[^>]*>/gi, '');
     if (!editor.length){
-    	alert("Para poder hacer el envï¿½o, debe llenar el Contenido!");
+    	alert("Para poder hacer el envío, debe llenar el Contenido!");
 		return false;
     }
 
@@ -155,13 +155,13 @@ function validarbanner(mensaje){
 function validardocumento(mensaje){
 	
 	if (document.form1.categoria.value==""){
-		alert("Para poder hacer el envï¿½o, debe seleccionar una categorï¿½a");
+		alert("Para poder hacer el envío, debe seleccionar una categoría");
 	 	return false;
 	}
 	
 	var editor = CKEDITOR.instances['contenido'].getData().replace(/<[^>]*>/gi, '');
     if (!editor.length){
-    	alert("Para poder hacer el envï¿½o, debe llenar el Contenido!");
+    	alert("Para poder hacer el envío, debe llenar el Contenido!");
 		return false;
     }
 
@@ -171,51 +171,51 @@ function validardocumento(mensaje){
 
 function validarcombos3(){
 	if (document.form1.estado.value==""){
-		alert("Para poder hacer el envï¿½o, debe seleccionar un estado");
+		alert("Para poder hacer el envío, debe seleccionar un estado");
 	 	return false;
 	}
 	
 	if (document.form1.municipio.value==""){
-		alert("Para poder hacer el envï¿½o, debe seleccionar un municipio");
+		alert("Para poder hacer el envío, debe seleccionar un municipio");
 	 	return false;
 	}
 	
 	if (document.form1.No.checked==true){
-		alert("Para poder hacer el envï¿½o, debe aceptar los terminos y condiciones!");
+		alert("Para poder hacer el envío, debe aceptar los terminos y condiciones!");
 		return false;
 	}else if (document.form1.Si.checked==true){
     	return true; 
 	}
 	
-	return confirmar('ï¿½Estï¿½ seguro que desea guardar?');
+	return confirmar('¿Está seguro que desea guardar?');
 }
 
 function validar_pago(){
 	if (document.form1.pedido.value==""){
-		alert("Para poder hacer el envï¿½o, debe seleccionar un pedido, si no tiene debe generar uno!");
+		alert("Para poder hacer el envío, debe seleccionar un pedido, si no tiene debe generar uno!");
 	 	return false;
 	}
 
-	return confirmar('ï¿½Estï¿½ seguro que desea guardar?');
+	return confirmar('¿Está seguro que desea guardar?');
 }
 
 function validarperfil(){
 	if (document.form1.estado.value==""){
-		alert("Para poder hacer el envï¿½o, debe seleccionar un estado");
+		alert("Para poder hacer el envío, debe seleccionar un estado");
 	 	return false;
 	}
 	
 	if (document.form1.municipio.value==""){
-		alert("Para poder hacer el envï¿½o, debe seleccionar un municipio");
+		alert("Para poder hacer el envío, debe seleccionar un municipio");
 	 	return false;
 	}
 	
-	return confirmar('ï¿½Estï¿½ seguro que desea guardar?');
+	return confirmar('¿Está seguro que desea guardar?');
 }
 
 function mostrarImagenes() {
 /** recolocar indica que se recoloque el documento **/
-/** si no recolocamos, solo ocultamos las imï¿½genes **/
+/** si no recolocamos, solo ocultamos las imágenes **/
 	document.imagen1.className = "imagen";
    /**document.imagen1.style.visibility = "visible"; **/
   
@@ -224,7 +224,7 @@ function mostrarImagenes() {
 function ocultarImagenes(recolocar) {
 
 /** recolocar indica que se recoloque el documento **/
-/** si no recolocamos, solo ocultamos las imï¿½genes **/
+/** si no recolocamos, solo ocultamos las imágenes **/
 	document.imagen1.className = "imagenNO";
     /**document.imagen1.style.visibility = "hidden"; **/
   
@@ -266,7 +266,7 @@ function contar_palabras(num,e){
 
 function terminos(){
 	if (document.form1.No.checked==true){
-	alert("Para poder hacer el envï¿½o, debe aceptar los terminos y condiciones!");
+	alert("Para poder hacer el envío, debe aceptar los terminos y condiciones!");
 	 return false;
 	}else if (document.form1.Si.checked==true){
     	return true; 
@@ -275,7 +275,7 @@ function terminos(){
 
 function verificarmonto(){
 	if (document.form1.No.checked==true){
-	alert("Para poder hacer el envï¿½o, debe aceptar los terminos y condiciones!");
+	alert("Para poder hacer el envío, debe aceptar los terminos y condiciones!");
 	 return false;
 	}else if (document.form1.Si.checked==true){
     	return true; 
@@ -359,32 +359,27 @@ function MM_swapImage() { //v3.0
 
 function validar_insertar_plan(formulario){
 	if(document.getElementById('maxadultos'+formulario).value == ""){
-		alert("Para poder hacer el envï¿½o, debe insertar el mï¿½ximo de adultos");
+		alert("Para poder hacer el envío, debe insertar el máximo de adultos");
 	 	return false;
 	}
 	
 	if(document.getElementById('nombre_plan'+formulario).value == ""){
-		alert("Para poder hacer el envï¿½o, debe insertar el nombre del plan");
+		alert("Para poder hacer el envío, debe insertar el nombre del plan");
 	 	return false;
 	}
 	
-	if(document.getElementById('maxAdc'+formulario).value == ""){
-		alert("Para poder hacer el envÃ­o, debe insertar una la cantidad mÃ¡xima de huespedes en esta habitaciÃ³n");
-	 	return false;
-	}
-
-	if(document.getElementById('precioAdc'+formulario).value == ""){
-		alert("Para poder hacer el envÃ­o, debe insertar el precio del huesped adicional");
+	if(document.getElementById('descripcion_plan'+formulario).value == ""){
+		alert("Para poder hacer el envío, debe insertar una breve descripción");
 	 	return false;
 	}
 	
 	if(document.getElementById('precio_plan'+formulario).value == ""){
-		alert("Para poder hacer el envï¿½o, debe insertar el precio");
+		alert("Para poder hacer el envío, debe insertar el precio");
 	 	return false;
 	}
 	
 	if(document.getElementById('prioridad'+formulario).value == ""){
-		alert("Para poder hacer el envï¿½o, debe insertar numero para ordenar");
+		alert("Para poder hacer el envío, debe insertar numero para ordenar");
 	 	return false;
 	}
 	
@@ -394,7 +389,7 @@ function validar_insertar_plan(formulario){
 function validar_insertar_rango(){
 	
 	if(document.getElementById('categoria_nuevo').value == ""){
-		alert("Para poder continuar, debe seleccionar una categorï¿½a");
+		alert("Para poder continuar, debe seleccionar una categoría");
 	 	return false;
 	}
 	
@@ -414,7 +409,7 @@ function validar_insertar_rango(){
 	}
 	
 	if(document.getElementById('precio_nuevo').value == ""){
-		alert("Para poder hacer el envï¿½o, debe insertar una tarifa");
+		alert("Para poder hacer el envío, debe insertar una tarifa");
 	 	return false;
 	}
 	

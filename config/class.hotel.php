@@ -168,7 +168,7 @@ class Hotel{
 		$this->id=$_POST['id'];
 		$this->temporada=$_POST['temporada'];
 		$this->nombre=$_POST['nombre_plan'];
-		$this->descripcion=$_POST['descripcion_plan'];
+		$this->descripcion='';
 		$this->precio=$_POST['precio_plan'];
 		$this->weekend=$_POST['weekend_plan'];
 		$this->regimen=$_POST['regimen_plan'];
@@ -1247,7 +1247,7 @@ class Hotel{
 			$this->descripcion=utf8_decode($this->descripcion);
 			$this->nombre=utf8_decode($this->nombre);
 			//error_log("¡La base de datos de Oracle ".$this->nombre." no está disponible!", 0);
-			$sql="INSERT INTO habitaciones VALUES ('', '$this->id', '$this->temporada', '$this->nombre', '$this->regimen', '$this->prioridad', '$this->mostrar', '$this->precio', '$this->weekend', '$this->descripcion', '$this->tipotarifa', '$this->maxadultos', '$this->precioAdc', '$this->maxAdc', 'NULL')";
+			$sql="INSERT INTO habitaciones VALUES ('', '$this->id', '$this->temporada', '$this->nombre', '$this->regimen', '$this->prioridad', '$this->mostrar', '$this->precio', '$this->weekend', '$this->descripcion', '$this->tipotarifa', '$this->maxadultos', '$this->precioAdc', '$this->maxAdc', 'NULL','0')";
 			$id=$this->id;
 			$consulta=mysql_query($sql) or die(mysql_error());
 			header("location:/admin/hotel/detalle.php?id=$id#tarifas$this->temporada");

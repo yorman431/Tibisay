@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-14 04:36:20
+/* Smarty version 3.1.30, created on 2017-03-23 23:20:24
   from "D:\Websites\tibisay\smarty\templates\admin\hotel\detalle.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58c765340867c7_66571411',
+  'unifunc' => 'content_58d44a283a6a87_43626822',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '10fa307cc6ae4574a3bd2f53175487d8c8e00d13' => 
     array (
       0 => 'D:\\Websites\\tibisay\\smarty\\templates\\admin\\hotel\\detalle.tpl',
-      1 => 1489462504,
+      1 => 1490307619,
       2 => 'file',
     ),
   ),
@@ -23,13 +23,32 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../layout/pie.tpl' => 1,
   ),
 ),false)) {
-function content_58c765340867c7_66571411 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58d44a283a6a87_43626822 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/plantilla_admin.dwt" codeOutsideHTMLIsLocked="false" --> 
 <head>
-    <?php $_smarty_tpl->_subTemplateRender("file:../layout/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+<?php $_smarty_tpl->_subTemplateRender("file:../layout/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
+
+
+<?php echo '<script'; ?>
+ type="text/javascript" src="http://maps.google.com/maps/api/js?libraries=places&sensor=true"><?php echo '</script'; ?>
+>
+
+<?php echo '<script'; ?>
+ src="/src/js/jscal2.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="/src/js/lang/es.js"><?php echo '</script'; ?>
+>
+<link rel="stylesheet" type="text/css" href="/src/css/jscal2.css" />
+<link rel="stylesheet" type="text/css" href="/src/css/border-radius.css" />
+<link rel="stylesheet" type="text/css" href="/src/css/steel/steel.css" />
+<link rel="stylesheet" type="text/css" href="/src/css/reduce-spacing.css" />
+
+
+<!-- InstanceEndEditable -->
 
 </head>  
 <body>
@@ -256,7 +275,7 @@ for ($__section_i_2_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']-
 " title="Publicar"> <img src="/imagenes/no.png" width="20" height="20" border="0" /></a> <?php } else { ?> <a onclick="javascript: return confirmar('&iquest; Seguro desea ocultar &eacute;ste temporada?');" href="editar3.php?id=<?php echo $_smarty_tpl->tpl_vars['temporadas']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['id'];?>
 &valor=0&back=<?php echo $_smarty_tpl->tpl_vars['id']->value;?>
 " title="Ocultar"> <img src="/imagenes/si.png" width="20" height="20" border="0" /></a> <?php }?> </td>
-    	        <td class="titulo_alt" colspan="8" bgcolor="#CCCCCC">
+    	        <td class="titulo_alt" colspan="6" bgcolor="#CCCCCC">
                 <form action="editar_plan3.php" method="post" name="form<?php echo $_smarty_tpl->tpl_vars['temporadas']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['id'];?>
 " id="form<?php echo $_smarty_tpl->tpl_vars['temporadas']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['id'];?>
 ">
@@ -403,7 +422,7 @@ for ($__section_i_2_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']-
   	        </tr>
             <?php if ($_smarty_tpl->tpl_vars['temporadas']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['rangokids'] != '') {?>
             <tr  bgcolor="#eee">
-            	<td colspan="10" class="titulo_alt">
+            	<td colspan="8" class="titulo_alt">
                      <?php
 $__section_j_3_saved = isset($_smarty_tpl->tpl_vars['__smarty_section_j']) ? $_smarty_tpl->tpl_vars['__smarty_section_j'] : false;
 $__section_j_3_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['temporadas']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['rangokids']) ? count($_loop) : max(0, (int) $_loop));
@@ -431,7 +450,7 @@ $_smarty_tpl->tpl_vars['__smarty_section_j'] = $__section_j_3_saved;
             </tr>
             <?php } else { ?>
             	<tr>
-                	<td colspan='10' align='center' class='error'>No hay rango de tarifas de ni&ntilde;os asignadas a esta temporada!</td>
+                	<td colspan='8' align='center' class='error'>No hay rango de tarifas de ni&ntilde;os asignadas a esta temporada!</td>
                     <td colspan="2" align="center" class='error'><a href="lista_rangos.php?temp=<?php echo $_smarty_tpl->tpl_vars['temporadas']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['id'];?>
 &id=<?php echo $_smarty_tpl->tpl_vars['id']->value;?>
 " title="Tarifas Niños"><img src="/imagenes/editar.png" width="25" height="25" border="0" /></a></td>
@@ -440,14 +459,11 @@ $_smarty_tpl->tpl_vars['__smarty_section_j'] = $__section_j_3_saved;
     	      <tr>
     	        <td width="10" align="center" class="subtituloWeb3">P&uacute;blico</td>
     	        <td width="20" class="subtituloWeb3">N&ordm; Adultos</td>
-    	        <td width="90" class="subtituloWeb3">Habitaci&oacute;n</td>
+    	        <td width="280" class="subtituloWeb3">Habitaci&oacute;n</td>
                 <td width="80" class="subtituloWeb3">R&eacute;gimen</td>
-    	        <td width="80" class="subtituloWeb3">Pax Adicional Max</td>
-                <td width="80" class="subtituloWeb3">Precio Pax Adicional</td>
                 <td width="80" class="subtituloWeb3">Tipo Tarifa</td>
-    	        <td width="80" class="subtituloWeb3">Semana</td>
-                <td width="80" class="subtituloWeb3">Fin Semana</td>
-    	        <td width="50" class="subtituloWeb3">Orden</td>
+    	        <td width="110" class="subtituloWeb3">Semana</td>
+    	        <td width="20" class="subtituloWeb3">Orden</td>
     	        <td colspan="3" align="center" class="subtituloWeb3">Acciones</td>
   	        </tr>
     	      <?php if ($_smarty_tpl->tpl_vars['mensaje3']->value == '') {?>
@@ -498,23 +514,10 @@ for ($__section_j_4_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_j']-
 ">
                         <option <?php if ($_smarty_tpl->tpl_vars['temporadas']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['habitacion'][(isset($_smarty_tpl->tpl_vars['__smarty_section_j']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_j']->value['index'] : null)]['regimen'] == "Todo Incluido") {?> selected='selected'<?php }?> value="Todo Incluido">Todo Incluido</option>
                         <option <?php if ($_smarty_tpl->tpl_vars['temporadas']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['habitacion'][(isset($_smarty_tpl->tpl_vars['__smarty_section_j']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_j']->value['index'] : null)]['regimen'] == "Solo Desayuno") {?> selected='selected'<?php }?> value="Solo Desayuno">Solo Desayuno</option>
-                        <option <?php if ($_smarty_tpl->tpl_vars['temporadas']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['habitacion'][(isset($_smarty_tpl->tpl_vars['__smarty_section_j']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_j']->value['index'] : null)]['regimen'] == "Solo Hospedaje") {?> selected='selected'<?php }?> value="Solo Hospedaje">Solo Hospedaje</option>
-                        <option <?php if ($_smarty_tpl->tpl_vars['temporadas']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['habitacion'][(isset($_smarty_tpl->tpl_vars['__smarty_section_j']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_j']->value['index'] : null)]['regimen'] == "Desayuno / Almuerzo / Cena") {?> selected='selected'<?php }?> value="Desayuno / Almuerzo / Cena">Desayuno / Almuerzo / Cena</option>
+                        <option <?php if ($_smarty_tpl->tpl_vars['temporadas']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['habitacion'][(isset($_smarty_tpl->tpl_vars['__smarty_section_j']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_j']->value['index'] : null)]['regimen'] == "Desayuno Y Cena") {?> selected='selected'<?php }?> value="Desayuno Y Cena">Desayuno Y Cena</option>
                         <option <?php if ($_smarty_tpl->tpl_vars['temporadas']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['habitacion'][(isset($_smarty_tpl->tpl_vars['__smarty_section_j']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_j']->value['index'] : null)]['regimen'] == "Pension Completa") {?> selected='selected'<?php }?> value="Pension Completa">Pensi&oacute;n Completa</option>
                   	</select>
                 </td>
-
-                  <td class="adminContenido">
-                      <input class="interno editar_ajax<?php echo $_smarty_tpl->tpl_vars['temporadas']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['habitacion'][(isset($_smarty_tpl->tpl_vars['__smarty_section_j']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_j']->value['index'] : null)]['id'];?>
-" type="text" name="maxAdc" id="maxAdc" value="<?php echo $_smarty_tpl->tpl_vars['temporadas']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['habitacion'][(isset($_smarty_tpl->tpl_vars['__smarty_section_j']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_j']->value['index'] : null)]['maxNumPaxAdic'];?>
-" />
-                  </td>
-
-                  <td class="adminContenido">
-                      <input class="interno editar_ajax<?php echo $_smarty_tpl->tpl_vars['temporadas']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['habitacion'][(isset($_smarty_tpl->tpl_vars['__smarty_section_j']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_j']->value['index'] : null)]['id'];?>
-" type="text" name="precioAdc" id="precioAdc" value="<?php echo $_smarty_tpl->tpl_vars['temporadas']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['habitacion'][(isset($_smarty_tpl->tpl_vars['__smarty_section_j']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_j']->value['index'] : null)]['precio_pax_adic'];?>
-" />
-                  </td>
                 
                 <td class="adminContenido">
                 	<select name="tipotarifa_plan" id="tipotarifa_plan" class="interno_select editar_ajax<?php echo $_smarty_tpl->tpl_vars['temporadas']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['habitacion'][(isset($_smarty_tpl->tpl_vars['__smarty_section_j']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_j']->value['index'] : null)]['id'];?>
@@ -530,16 +533,10 @@ for ($__section_j_4_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_j']-
 " />
                 </td>
                 
-                <td class="adminContenido">Bs.
-    	          <input onkeypress="javascript: return validarnum(event);" class="interno_precio editar_ajax<?php echo $_smarty_tpl->tpl_vars['temporadas']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['habitacion'][(isset($_smarty_tpl->tpl_vars['__smarty_section_j']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_j']->value['index'] : null)]['id'];?>
-" type="text" name="weekend_plan" id="weekend_plan" value="<?php echo $_smarty_tpl->tpl_vars['temporadas']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['habitacion'][(isset($_smarty_tpl->tpl_vars['__smarty_section_j']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_j']->value['index'] : null)]['weekend'];?>
-" />
-                </td>
-                
     	        <td class="adminContenido">
                 	<input onkeypress="javascript: return validarnum(event);" class="interno_precio editar_ajax<?php echo $_smarty_tpl->tpl_vars['temporadas']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['habitacion'][(isset($_smarty_tpl->tpl_vars['__smarty_section_j']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_j']->value['index'] : null)]['id'];?>
 " type="text" name="prioridad" id="prioridad" value="<?php echo $_smarty_tpl->tpl_vars['temporadas']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['habitacion'][(isset($_smarty_tpl->tpl_vars['__smarty_section_j']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_j']->value['index'] : null)]['orden'];?>
-" />
+"/>
                 </td>
                 
     	        <td width="30" align="center">
@@ -630,20 +627,9 @@ $_smarty_tpl->tpl_vars['__smarty_section_j'] = $__section_j_4_saved;
 " class="interno_select">
                         <option selected='selected' value="Todo Incluido">Todo Incluido</option>
                         <option value="Solo Desayuno">Solo Desayuno</option>
-                        <option value="Solo Hospedaje">Solo Hospedaje</option>
-                        <option value="Desayuno / Almuerzo / Cena">Desayuno / Almuerzo / Cena</option>
+                        <option value="Desayuno Y Cena">Desayuno Y Cena</option>
                         <option value="Pension Completa">Pensi&oacute;n Completa</option>
                       </select>
-                  </td>
-
-                  <td class="adminContenido">
-                      <input class="interno" type="text" name="maxAdc" id="maxAdc<?php echo $_smarty_tpl->tpl_vars['temporadas']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['id'];?>
-" value="" placeholder="Pax Adc. Max" />
-                  </td>
-
-                  <td class="adminContenido">
-                      <input class="interno" type="text" name="precioAdc" id="precioAdc<?php echo $_smarty_tpl->tpl_vars['temporadas']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['id'];?>
-" value="" placeholder="Precio Pax Adc" />
                   </td>
                 
                   <td class="adminContenido">
@@ -659,11 +645,6 @@ $_smarty_tpl->tpl_vars['__smarty_section_j'] = $__section_j_4_saved;
 " value="" placeholder="Precio" />
                   </td>
                   
-                  <td class="adminContenido">Bs. 
-    	          	<input onkeypress="javascript: return validarnum(event);" class="interno_precio" type="text" name="weekend_plan" id="weekend_plan<?php echo $_smarty_tpl->tpl_vars['temporadas']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['id'];?>
-" value="" placeholder="Precio" />
-                  </td>
-                  
     	          <td class="adminContenido"><input onkeypress="javascript: return validarnum(event);" class="interno_precio" type="text" name="prioridad" id="prioridad<?php echo $_smarty_tpl->tpl_vars['temporadas']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['id'];?>
 " value="" placeholder="Num" /></td>
     	       <td width="30" align="center">
@@ -672,7 +653,7 @@ $_smarty_tpl->tpl_vars['__smarty_section_j'] = $__section_j_4_saved;
 "src="/imagenes/loading_back.gif" width="22" height="21" align="absmiddle" style="display: none;" /></td>
     	        <td width="30" align="center">
                 
-                <a  onclick="return validar_insertar_plan(<?php echo $_smarty_tpl->tpl_vars['temporadas']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['id'];?>
+                <a  onclick="javascript: return validar_insertar_plan(<?php echo $_smarty_tpl->tpl_vars['temporadas']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['id'];?>
 );" href="#tarifas<?php echo $_smarty_tpl->tpl_vars['temporadas']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['id'];?>
 " title="Insertar"><img  src="/imagenes/guardar.png" width="25" height="24" border="0" /></a>
                 
@@ -752,7 +733,7 @@ $_smarty_tpl->tpl_vars['__smarty_section_i'] = $__section_i_2_saved;
   <tr>
     <td colspan="3" align="center">&nbsp;</td>
   </tr>
-    <?php $_smarty_tpl->_subTemplateRender("file:../layout/pie.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+  <?php $_smarty_tpl->_subTemplateRender("file:../layout/pie.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 </table>
