@@ -11,3 +11,5 @@
 <script src="/Scripts/swfobject_modified.js" type="text/javascript"></script>
 <script src="/assets/js/ie-emulation-modes-warning.js"></script>
 <script type="text/javascript" src="/datetimepicker/src/js/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript" src="/js/validar.js"></script>
+

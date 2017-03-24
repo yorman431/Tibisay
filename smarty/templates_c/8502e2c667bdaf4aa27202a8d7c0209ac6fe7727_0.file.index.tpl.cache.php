@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-21 20:06:49
+/* Smarty version 3.1.30, created on 2017-03-23 23:30:57
   from "D:\Websites\tibisay\smarty\templates\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58d179c96091f2_38209226',
+  'unifunc' => 'content_58d44ca17b1985_78505621',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8502e2c667bdaf4aa27202a8d7c0209ac6fe7727' => 
     array (
       0 => 'D:\\Websites\\tibisay\\smarty\\templates\\index.tpl',
-      1 => 1490021811,
+      1 => 1490298735,
       2 => 'file',
     ),
   ),
@@ -23,12 +23,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:./layout/banner.tpl' => 1,
   ),
 ),false)) {
-function content_58d179c96091f2_38209226 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58d44ca17b1985_78505621 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_modifier_truncate')) require_once 'D:\\Websites\\tibisay\\smarty\\libs\\plugins\\modifier.truncate.php';
-$_smarty_tpl->compiled->nocache_hash = '925358d179c942fba1_38418267';
+$_smarty_tpl->compiled->nocache_hash = '403458d44ca15d7056_50060087';
 ?>
 <!DOCTYPE html>
-<div lang="es"><!-- InstanceBegin template="/Templates/plantilla_padre.dwt" codeOutsideHTMLIsLocked="false" -->
+<div lang="es">
   <head>
     <?php $_smarty_tpl->_subTemplateRender("file:./layout/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -154,7 +154,7 @@ $_smarty_tpl->tpl_vars['__smarty_section_i'] = $__section_i_0_saved;
     </div>
 
     <div class="container-fluid ">
-      <div class="row RESERVAS" id="RESERVAS">
+      <form class="row RESERVAS" id="RESERVAS">
         <div class="col-xs-12 text-center">
           <h2 class="tituloSeccion">RESERVAS</h2>
         </div>
@@ -163,25 +163,16 @@ $_smarty_tpl->tpl_vars['__smarty_section_i'] = $__section_i_0_saved;
         </div>
 
         <div class="clearfix"></div>
-
-        <div class="col-xs-6 col-xs-offset-3" style="border: 1px solid #ccc;">
-          <a class="btn btn-default btn-block" title="Reservar Hotel" href="#" onClick="mostrar_formulario_reserva();"> <i class="fa fa-calendar-check-o"></i> Solicitar Reserva</a>
-        </div>
-
-        <a id="reserva"></a>
-
-        <hr class="divider" />
-
-        <div id="formulario_reserva" class="row" hidden="">
+        <form action="" name="formreservas" id="formreservastibisay" class="form-horizontal">
+        <div id="formulario_reserva" class="row">
           <div class="col-xs-8 col-xs-offset-2">
-            <h3>Solicitud de Reserva <?php echo $_smarty_tpl->tpl_vars['nombre_hotel']->value;?>
-</h3>
+            <h3>Solicitud de Reserva</h3>
 
             <div class="row">
               <div class="col-sm-4">
                 <div class="form-group">
                   <label for="numero_habitaciones">Seleccione Nº de Habitaciones:</label>
-                  <select class="form-control" name="numero_habitaciones" id="numero_habitaciones" onchange="asignNumeroHabitacion();">
+                  <select class="form-control form-contacto" name="numero_habitaciones" id="numero_habitaciones" onchange="asignNumeroHabitacion();">
                     <option selected hidden value="">Seleccione Habitación</option>
                     <option value="1">1 Habitación</option>
                     <option value="2">2 Habitaciones</option>
@@ -199,11 +190,9 @@ $_smarty_tpl->tpl_vars['__smarty_section_i'] = $__section_i_0_saved;
                 <div class="form-group">
                   <label for="llegada">Fecha de entrada</label>
                   <div class='input-group date' id='datetimepicker1'>
-                    <input type="text" class="form-control" name="llegada" id="llegada" placeholder="Fecha de entrada*" value="<?php echo $_smarty_tpl->tpl_vars['llegada']->value;?>
+                    <input type="text" class="form-control form-contacto" name="llegada" id="llegada" placeholder="Fecha de entrada*" value="<?php echo $_smarty_tpl->tpl_vars['llegada']->value;?>
 ">
-                    <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-calendar"></span>
-                                </span>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
                   </div>
                 </div>
               </div>
@@ -212,7 +201,7 @@ $_smarty_tpl->tpl_vars['__smarty_section_i'] = $__section_i_0_saved;
                 <div class="form-group">
                   <label for="salida">Fecha de salida</label>
                   <div class='input-group date' id='datetimepicker2'>
-                    <input type="text" class="form-control" name="salida" id="salida" placeholder="Fecha de salida*" value="<?php echo $_smarty_tpl->tpl_vars['salida']->value;?>
+                    <input type="text" class="form-control form-contacto" name="salida" id="salida" placeholder="Fecha de salida*" value="<?php echo $_smarty_tpl->tpl_vars['salida']->value;?>
 ">
                     <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
@@ -294,13 +283,18 @@ $_smarty_tpl->tpl_vars['__smarty_section_i'] = $__section_i_0_saved;
             <div class="col-xs-12 text-right" id="total">
             </div>
 
-            <input name="id_hotel" id="id_hotel" type="hidden" value="<?php echo $_smarty_tpl->tpl_vars['id']->value;?>
-">
+            <input name="id_hotel" id="id_hotel" type="hidden" value="1">
 
 
           </div><!-- End Row -->
 
         </div>
+
+        <a id="reserva"></a>
+
+        <hr class="divider" />
+
+        </form>
       </div>
     </div>
 

@@ -1,7 +1,20 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/plantilla_admin.dwt" codeOutsideHTMLIsLocked="false" --> 
 <head>
-    {include '../layout/header.tpl'}
+{include '../layout/header.tpl'}
+{literal}
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?libraries=places&sensor=true"></script>
+
+<script src="/src/js/jscal2.js"></script>
+<script src="/src/js/lang/es.js"></script>
+<link rel="stylesheet" type="text/css" href="/src/css/jscal2.css" />
+<link rel="stylesheet" type="text/css" href="/src/css/border-radius.css" />
+<link rel="stylesheet" type="text/css" href="/src/css/steel/steel.css" />
+<link rel="stylesheet" type="text/css" href="/src/css/reduce-spacing.css" />
+
+{/literal}
+<!-- InstanceEndEditable -->
+
 </head>  
 <body>
 <br />
@@ -153,7 +166,7 @@
             <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="normal">
     	      <tr>
     	        <td bgcolor="#CCCCCC" align="center"><a id="tarifas{$temporadas[i].id}"></a>{if $temporadas[i].activa eq "0"} <a onclick="javascript: return confirmar('&iquest; Seguro desea publicar &eacute;ste temporada?');" href="editar3	.php?id={$temporadas[i].id}&valor=1&back={$id}" title="Publicar"> <img src="/imagenes/no.png" width="20" height="20" border="0" /></a> {else} <a onclick="javascript: return confirmar('&iquest; Seguro desea ocultar &eacute;ste temporada?');" href="editar3.php?id={$temporadas[i].id}&valor=0&back={$id}" title="Ocultar"> <img src="/imagenes/si.png" width="20" height="20" border="0" /></a> {/if} </td>
-    	        <td class="titulo_alt" colspan="8" bgcolor="#CCCCCC">
+    	        <td class="titulo_alt" colspan="6" bgcolor="#CCCCCC">
                 <form action="editar_plan3.php" method="post" name="form{$temporadas[i].id}" id="form{$temporadas[i].id}">
                 <strong>Temporada Del
     	          <input readonly="readonly" class="interno_fecha editar_ajax3{$temporadas[i].id}" type="text" name="desde" id="fecha_inicio{$temporadas[i].id}" value="{$temporadas[i].fecha_inicio}" />
@@ -254,7 +267,7 @@
   	        </tr>
             {if $temporadas[i].rangokids neq ""}
             <tr  bgcolor="#eee">
-            	<td colspan="10" class="titulo_alt">
+            	<td colspan="8" class="titulo_alt">
                      {section name=j loop=$temporadas[i].rangokids}
                 	 {$temporadas[i].rangokids[j].etiqueta_ran} de {$temporadas[i].rangokids[j].min_ran} a {$temporadas[i].rangokids[j].max_ran} a&ntilde;os, Bs. {$temporadas[i].rangokids[j].precio_ran} |
                      {/section}
@@ -263,21 +276,18 @@
             </tr>
             {else}
             	<tr>
-                	<td colspan='10' align='center' class='error'>No hay rango de tarifas de ni&ntilde;os asignadas a esta temporada!</td>
+                	<td colspan='8' align='center' class='error'>No hay rango de tarifas de ni&ntilde;os asignadas a esta temporada!</td>
                     <td colspan="2" align="center" class='error'><a href="lista_rangos.php?temp={$temporadas[i].id}&id={$id}" title="Tarifas Niños"><img src="/imagenes/editar.png" width="25" height="25" border="0" /></a></td>
                 </tr>
             {/if}
     	      <tr>
     	        <td width="10" align="center" class="subtituloWeb3">P&uacute;blico</td>
     	        <td width="20" class="subtituloWeb3">N&ordm; Adultos</td>
-    	        <td width="90" class="subtituloWeb3">Habitaci&oacute;n</td>
+    	        <td width="280" class="subtituloWeb3">Habitaci&oacute;n</td>
                 <td width="80" class="subtituloWeb3">R&eacute;gimen</td>
-    	        <td width="80" class="subtituloWeb3">Pax Adicional Max</td>
-                <td width="80" class="subtituloWeb3">Precio Pax Adicional</td>
                 <td width="80" class="subtituloWeb3">Tipo Tarifa</td>
-    	        <td width="80" class="subtituloWeb3">Semana</td>
-                <td width="80" class="subtituloWeb3">Fin Semana</td>
-    	        <td width="50" class="subtituloWeb3">Orden</td>
+    	        <td width="110" class="subtituloWeb3">Semana</td>
+    	        <td width="20" class="subtituloWeb3">Orden</td>
     	        <td colspan="3" align="center" class="subtituloWeb3">Acciones</td>
   	        </tr>
     	      {if $mensaje3 eq ""}
@@ -305,19 +315,10 @@
                 	<select name="regimen_plan" id="regimen_plan" class="interno_select editar_ajax{$temporadas[i].habitacion[j].id}">
                         <option {if $temporadas[i].habitacion[j].regimen eq "Todo Incluido"} selected='selected'{/if} value="Todo Incluido">Todo Incluido</option>
                         <option {if $temporadas[i].habitacion[j].regimen eq "Solo Desayuno"} selected='selected'{/if} value="Solo Desayuno">Solo Desayuno</option>
-                        <option {if $temporadas[i].habitacion[j].regimen eq "Solo Hospedaje"} selected='selected'{/if} value="Solo Hospedaje">Solo Hospedaje</option>
-                        <option {if $temporadas[i].habitacion[j].regimen eq "Desayuno / Almuerzo / Cena"} selected='selected'{/if} value="Desayuno / Almuerzo / Cena">Desayuno / Almuerzo / Cena</option>
+                        <option {if $temporadas[i].habitacion[j].regimen eq "Desayuno Y Cena"} selected='selected'{/if} value="Desayuno Y Cena">Desayuno Y Cena</option>
                         <option {if $temporadas[i].habitacion[j].regimen eq "Pension Completa"} selected='selected'{/if} value="Pension Completa">Pensi&oacute;n Completa</option>
                   	</select>
                 </td>
-
-                  <td class="adminContenido">
-                      <input class="interno editar_ajax{$temporadas[i].habitacion[j].id}" type="text" name="maxAdc" id="maxAdc" value="{$temporadas[i].habitacion[j].maxNumPaxAdic}" />
-                  </td>
-
-                  <td class="adminContenido">
-                      <input class="interno editar_ajax{$temporadas[i].habitacion[j].id}" type="text" name="precioAdc" id="precioAdc" value="{$temporadas[i].habitacion[j].precio_pax_adic}" />
-                  </td>
                 
                 <td class="adminContenido">
                 	<select name="tipotarifa_plan" id="tipotarifa_plan" class="interno_select editar_ajax{$temporadas[i].habitacion[j].id}">
@@ -330,12 +331,8 @@
     	          <input onkeypress="javascript: return validarnum(event);" class="interno_precio editar_ajax{$temporadas[i].habitacion[j].id}" type="text" name="precio_plan" id="precio_plan" value="{$temporadas[i].habitacion[j].precio}" />
                 </td>
                 
-                <td class="adminContenido">Bs.
-    	          <input onkeypress="javascript: return validarnum(event);" class="interno_precio editar_ajax{$temporadas[i].habitacion[j].id}" type="text" name="weekend_plan" id="weekend_plan" value="{$temporadas[i].habitacion[j].weekend}" />
-                </td>
-                
     	        <td class="adminContenido">
-                	<input onkeypress="javascript: return validarnum(event);" class="interno_precio editar_ajax{$temporadas[i].habitacion[j].id}" type="text" name="prioridad" id="prioridad" value="{$temporadas[i].habitacion[j].orden}" />
+                	<input onkeypress="javascript: return validarnum(event);" class="interno_precio editar_ajax{$temporadas[i].habitacion[j].id}" type="text" name="prioridad" id="prioridad" value="{$temporadas[i].habitacion[j].orden}"/>
                 </td>
                 
     	        <td width="30" align="center">
@@ -397,18 +394,9 @@
                     <select name="regimen_plan" id="regimen_plan{$temporadas[i].id}" class="interno_select">
                         <option selected='selected' value="Todo Incluido">Todo Incluido</option>
                         <option value="Solo Desayuno">Solo Desayuno</option>
-                        <option value="Solo Hospedaje">Solo Hospedaje</option>
-                        <option value="Desayuno / Almuerzo / Cena">Desayuno / Almuerzo / Cena</option>
+                        <option value="Desayuno Y Cena">Desayuno Y Cena</option>
                         <option value="Pension Completa">Pensi&oacute;n Completa</option>
                       </select>
-                  </td>
-
-                  <td class="adminContenido">
-                      <input class="interno" type="text" name="maxAdc" id="maxAdc{$temporadas[i].id}" value="" placeholder="Pax Adc. Max" />
-                  </td>
-
-                  <td class="adminContenido">
-                      <input class="interno" type="text" name="precioAdc" id="precioAdc{$temporadas[i].id}" value="" placeholder="Precio Pax Adc" />
                   </td>
                 
                   <td class="adminContenido">
@@ -422,17 +410,13 @@
     	          	<input onkeypress="javascript: return validarnum(event);" class="interno_precio" type="text" name="precio_plan" id="precio_plan{$temporadas[i].id}" value="" placeholder="Precio" />
                   </td>
                   
-                  <td class="adminContenido">Bs. 
-    	          	<input onkeypress="javascript: return validarnum(event);" class="interno_precio" type="text" name="weekend_plan" id="weekend_plan{$temporadas[i].id}" value="" placeholder="Precio" />
-                  </td>
-                  
     	          <td class="adminContenido"><input onkeypress="javascript: return validarnum(event);" class="interno_precio" type="text" name="prioridad" id="prioridad{$temporadas[i].id}" value="" placeholder="Num" /></td>
     	       <td width="30" align="center">
                 
                 <img id="spinner_{$temporadas[i]}"src="/imagenes/loading_back.gif" width="22" height="21" align="absmiddle" style="display: none;" /></td>
     	        <td width="30" align="center">
                 
-                <a  onclick="return validar_insertar_plan({$temporadas[i].id});" href="#tarifas{$temporadas[i].id}" title="Insertar"><img  src="/imagenes/guardar.png" width="25" height="24" border="0" /></a>
+                <a  onclick="javascript: return validar_insertar_plan({$temporadas[i].id});" href="#tarifas{$temporadas[i].id}" title="Insertar"><img  src="/imagenes/guardar.png" width="25" height="24" border="0" /></a>
                 
                 </td>
     	        <td width="30" align="center"><!-- class="insertar_ajax{$temporadas[i].id}" -->
@@ -489,7 +473,7 @@
   <tr>
     <td colspan="3" align="center">&nbsp;</td>
   </tr>
-    {include '../layout/pie.tpl'}
+  {include '../layout/pie.tpl'}
 </table>
 <script type="text/javascript">
 swfobject.registerObject("FlashID");

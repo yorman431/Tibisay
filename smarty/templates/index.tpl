@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<div lang="es">
 <div lang="es"></div>
   <head>
     {include './layout/header.tpl'}
@@ -93,24 +94,16 @@
         </div>
 
         <div class="clearfix"></div>
-
-        <div class="col-xs-6 col-xs-offset-3" style="border: 1px solid #ccc;">
-          <a class="btn btn-default btn-block" title="Reservar Hotel" href="#" onClick="mostrar_formulario_reserva();"> <i class="fa fa-calendar-check-o"></i> Solicitar Reserva</a>
-        </div>
-
-        <a id="reserva"></a>
-
-        <hr class="divider" />
-
-        <div id="formulario_reserva" class="row" hidden="">
+        <form action="" name="formreservas" id="formreservastibisay" class="form-horizontal">
+        <div id="formulario_reserva" class="row">
           <div class="col-xs-8 col-xs-offset-2">
-            <h3>Solicitud de Reserva {$nombre_hotel}</h3>
+            <h3>Solicitud de Reserva</h3>
 
             <div class="row">
               <div class="col-sm-4">
                 <div class="form-group">
                   <label for="numero_habitaciones">Seleccione Nº de Habitaciones:</label>
-                  <select class="form-control" name="numero_habitaciones" id="numero_habitaciones" onchange="asignNumeroHabitacion();">
+                  <select class="form-control form-contacto" name="numero_habitaciones" id="numero_habitaciones" onchange="asignNumeroHabitacion();">
                     <option selected hidden value="">Seleccione Habitación</option>
                     <option value="1">1 Habitación</option>
                     <option value="2">2 Habitaciones</option>
@@ -128,10 +121,8 @@
                 <div class="form-group">
                   <label for="llegada">Fecha de entrada</label>
                   <div class='input-group date' id='datetimepicker1'>
-                    <input type="text" class="form-control" name="llegada" id="llegada" placeholder="Fecha de entrada*" value="{$llegada}">
-                    <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-calendar"></span>
-                                </span>
+                    <input type="text" class="form-control form-contacto" name="llegada" id="llegada" placeholder="Fecha de entrada*" value="{$llegada}">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
                   </div>
                 </div>
               </div>
@@ -140,7 +131,7 @@
                 <div class="form-group">
                   <label for="salida">Fecha de salida</label>
                   <div class='input-group date' id='datetimepicker2'>
-                    <input type="text" class="form-control" name="salida" id="salida" placeholder="Fecha de salida*" value="{$salida}">
+                    <input type="text" class="form-control form-contacto" name="salida" id="salida" placeholder="Fecha de salida*" value="{$salida}">
                     <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
                                 </span>
@@ -221,12 +212,18 @@
             <div class="col-xs-12 text-right" id="total">
             </div>
 
-            <input name="id_hotel" id="id_hotel" type="hidden" value="{$id}">
+            <input name="id_hotel" id="id_hotel" type="hidden" value="1">
 
 
           </div><!-- End Row -->
 
         </div>
+
+        <a id="reserva"></a>
+
+        <hr class="divider" />
+
+        </form>
       </div>
     </div>
 

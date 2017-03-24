@@ -24,7 +24,6 @@ $cquery= mysql_query($query);
 $rquery= mysql_fetch_array($cquery);
 
 $hotel = $rquery['nombre_hot'];
-$maxAdultos = $_POST['ocupacion'];
 $adultos = $_POST['adultos'];
 $ninos= $_POST['cantidadNinos'];
 $fechaninos= $_POST['ninos'];
@@ -41,9 +40,76 @@ for($i=1; $i <= $ninos; $i++){
 }
 
 $dias = (strtotime($fecha_s) - strtotime($fecha_i))/86400;
+$dias = round($dias);
 
 for ($i = 1; $i <= $dias; $i++){
-	if ($dia == "Monday" || $dia == "Tuesday" || $dia == "Wednesday" || $dia == "Thursday" ){
+  
+  $sql="SELECT precio, maxAdultos, tipotarifa, nombre, precio_chd FROM habitaciones WHERE nombre = '$ocupacion' AND regimen = '$regimen' AND maxAdultos = '$adultos' AND
+				id_temporada = (SELECT id from temporadas	WHERE id_alojamiento = '$id_hot' AND '$fecha_actual' BETWEEN fecha_inicio AND fecha_fin)";
+  
+  $consulta = mysql_query($sql);
+  $resultado = mysql_fetch_array($consulta);
+  
+  if($ninos != "" && $ninos != 0){
+    
+    for($j=0; $j < $ninos; $j++){
+      $edad= $edadninos[$j];
+      $sql2="SELECT min_ran, max_ran FROM rango_ninos WHERE '$edad' BETWEEN min_ran AND max_ran AND temporada_ran = (SELECT id FROM temporadas WHERE '$fecha_actual' BETWEEN fecha_inicio AND fecha_fin)";
+      $consulta2= mysql_query($sql2);
+      $resultado2= mysql_fetch_array($consulta2);
+      if($edadninos[$j] >= $resultado2['min_ran'] && $edadninos[$j] <= $resultado2['max_ran']){
+        if($i == 1){
+          
+          $resultado2['etiqueta_ran'] = utf8_encode($resultado2['etiqueta_ran']);
+          if($resultado2['etiqueta_ran'] == 'Niño'){
+            if(isset($resultado2['precio_ran'])){
+              $descripcion['preciochd']= $resultado2['precio_ran'];
+            }else{
+              $descripcion['preciochd']= 0;
+            }
+            $chd= $chd + 1;
+          }
+          
+          if($resultado2['etiqueta_ran'] == 'Infante'){
+            if(isset($resultado2['precio_ran'])){
+              $descripcion['precioinf']= $resultado2['precio_ran'];
+            }else{
+              $descripcion['precioinf']= 0;
+            }
+            $inf = $inf +1;
+          }
+          
+        }
+      }else{
+        if($i == 1){
+          $adultos = $adultos + 1;
+        }
+      }
+    }
+    if ($chd != 0){
+      $descripcion['ninos'] = $chd;
+    }
+    
+    if($inf != 0){
+      $descripcion['infantes']= $inf;
+    }
+    
+    $edad= "";
+    $sql2= "";
+    $consulta2= "";
+    $resultado2= "";
+  }
+  
+  $descripcion['hotel'] = $hotel;
+  $descripcion['adultos']= $adultos;
+  $descripcion['ocupacion']= $resultado['nombre'];
+  $descripcion['regimen'] = $regimen;
+  $descripcion['fecha'] = date("d-m-Y",strtotime($fecha_actual));
+  $descripcion['dia'] = $dia;
+  $descripcion['precio'] = $resultado['precio'];
+  $descripcion['tipotarifa']= $resultado['tipotarifa'];
+  
+  /*if ($dia == "Monday" || $dia == "Tuesday" || $dia == "Wednesday" || $dia == "Thursday" ){
 		$sql="SELECT precio, maxAdultos, tipotarifa, nombre FROM habitaciones WHERE id_alojamiento = '$id_hot' AND 
 				maxAdultos = '$maxAdultos' AND 
 				id_temporada = (SELECT id from temporadas 
@@ -179,7 +245,8 @@ for ($i = 1; $i <= $dias; $i++){
 		$descripcion['tipotarifa']= $resultado['tipotarifa'];
 
 
-	}
+	}*/
+	
 	$fecha_actual = strtotime($fecha_actual) + 86400;
 	$fecha_actual = date("Y-m-d", $fecha_actual);
 	$dia = "";
@@ -236,5 +303,3 @@ if ($resultado['tipotarifa'] == "Habitacion"){
 
 	$total = $total * $dias;
 }*/
-
-?>
