@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<div lang="es">
-<div lang="es"></div>
+<html lang="es">
   <head>
     {include './layout/header.tpl'}
   </head>
@@ -520,7 +519,7 @@
               {section i $promocion}
                 <div class="col-md-3 col-xs-12" {if $cont >= '4'} id="visible3" style="display:none;"{/if}>
                   <div class="panel panel-default panelP">
-                    <div class="panel-body no_padding no_padding2"">
+                    <div class="panel-body no_padding no_padding2">
                       <a href="/contenido.php?id={$promocion[i].id_con}"><img class="img-responsive center-block banner" src="/imagenes/{$promocion[i].directorio_image}"/></a>
                     </div>
                   </div>

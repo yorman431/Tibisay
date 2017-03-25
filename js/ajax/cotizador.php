@@ -53,17 +53,18 @@ for ($i = 1; $i <= $dias; $i++){
   if($ninos != "" && $ninos != 0){
     
     for($j=0; $j < $ninos; $j++){
+
       $edad= $edadninos[$j];
-      $sql2="SELECT min_ran, max_ran FROM rango_ninos WHERE '$edad' BETWEEN min_ran AND max_ran AND temporada_ran = (SELECT id FROM temporadas WHERE '$fecha_actual' BETWEEN fecha_inicio AND fecha_fin)";
+      $sql2="SELECT min_ran, max_ran, etiqueta_ran FROM rango_ninos WHERE '$edad' BETWEEN min_ran AND max_ran AND temporada_ran = (SELECT id FROM temporadas WHERE id_alojamiento = '$id_hot' AND '$fecha_actual' BETWEEN fecha_inicio AND fecha_fin)";
       $consulta2= mysql_query($sql2);
       $resultado2= mysql_fetch_array($consulta2);
       if($edadninos[$j] >= $resultado2['min_ran'] && $edadninos[$j] <= $resultado2['max_ran']){
         if($i == 1){
-          
           $resultado2['etiqueta_ran'] = utf8_encode($resultado2['etiqueta_ran']);
+
           if($resultado2['etiqueta_ran'] == 'Niño'){
-            if(isset($resultado2['precio_ran'])){
-              $descripcion['preciochd']= $resultado2['precio_ran'];
+            if(isset($resultado['precio_chd'])){
+              $descripcion['preciochd']= $resultado['precio_chd'];
             }else{
               $descripcion['preciochd']= 0;
             }
@@ -71,8 +72,8 @@ for ($i = 1; $i <= $dias; $i++){
           }
           
           if($resultado2['etiqueta_ran'] == 'Infante'){
-            if(isset($resultado2['precio_ran'])){
-              $descripcion['precioinf']= $resultado2['precio_ran'];
+            if(isset($resultado['precio_chd'])){
+              $descripcion['precioinf']= 0;
             }else{
               $descripcion['precioinf']= 0;
             }
@@ -262,6 +263,12 @@ for($row=0; $row < count($_SESSION['reserva']); $row++){
 	for($col = 0; $col < count($_SESSION['reserva'][$row]); $col++){
 		if ($_SESSION['reserva'][$row][$col]['tipotarifa'] == "Habitacion"){
 			$subtotal = $subtotal + $_SESSION['reserva'][$row][$col]['precio'];
+            if(isset($_SESSION['reserva'][$row][$col]['ninos'])){
+                $subtotal = $subtotal + $_SESSION['reserva'][$row][$col]['preciochd'] * $_SESSION['reserva'][$row][$col]['ninos'];
+            }
+            if (isset($_SESSION['reserva'][$row][$col]['infantes'])) {
+                $subtotal = $subtotal + $_SESSION['reserva'][$row][$col]['precioinf'] * $_SESSION['reserva'][$row][$col]['infantes'];
+            }
 		}elseif($_SESSION['reserva'][$row][$col]['tipotarifa'] == "Persona"){
 			$subtotal = $subtotal + $_SESSION['reserva'][$row][$col]['precio'] * $_SESSION['reserva'][$row][$col]['adultos'];
 			if(isset($_SESSION['reserva'][$row][$col]['ninos'])){
