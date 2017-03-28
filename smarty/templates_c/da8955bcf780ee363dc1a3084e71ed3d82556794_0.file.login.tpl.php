@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-16 00:06:52
+/* Smarty version 3.1.30, created on 2017-03-26 15:47:06
   from "D:\Websites\tibisay\smarty\templates\admin\login.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58c9c90c59ae85_70670558',
+  'unifunc' => 'content_58d7c65aa77931_43276733',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'da8955bcf780ee363dc1a3084e71ed3d82556794' => 
     array (
       0 => 'D:\\Websites\\tibisay\\smarty\\templates\\admin\\login.tpl',
-      1 => 1489548360,
+      1 => 1490283022,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58c9c90c59ae85_70670558 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58d7c65aa77931_43276733 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">

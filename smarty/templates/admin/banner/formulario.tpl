@@ -85,8 +85,8 @@
                   *</td>
               </tr>
               <tr>
-                <td align="left" class="subtituloWeb3">Vinculo:</td>
-                <td class="normalContenido"><input name="vinculo" type="text" id="vinculo" value="{$vinculo}" size="71" maxlength="100" /></td>
+                <td align="left" class="subtituloWeb3">Prioridad:</td>
+                <td class="normalContenido"><input name="prioridad" type="text" id="prioridad" value="{$prioridad}" size="71" maxlength="100" /></td>
               </tr>
               <tr>
                 <td align="left" class="subtituloWeb3">Imagen:</td>

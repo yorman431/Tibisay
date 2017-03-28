@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-17 15:39:35
+/* Smarty version 3.1.30, created on 2017-03-27 22:57:06
   from "D:\Websites\tibisay\smarty\templates\admin\contenido\lista_contenido.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58cbf527c89928_44584476',
+  'unifunc' => 'content_58d97ca2f187d5_92481686',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b55ab7772ba140fea1484a60882fa5c7b83b60ff' => 
     array (
       0 => 'D:\\Websites\\tibisay\\smarty\\templates\\admin\\contenido\\lista_contenido.tpl',
-      1 => 1489549604,
+      1 => 1490283022,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../layout/pie.tpl' => 1,
   ),
 ),false)) {
-function content_58cbf527c89928_44584476 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58d97ca2f187d5_92481686 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_modifier_truncate')) require_once 'D:\\Websites\\tibisay\\smarty\\libs\\plugins\\modifier.truncate.php';
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

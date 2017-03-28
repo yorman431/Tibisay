@@ -6,12 +6,13 @@
 <!-- Fin Cabecera
 ================================================== -->
   <body id="INICIO">
+
   <!-- Acotinuación se emplea clase bootstrap para hacer fixed la barra de navegación-->
   {include './layout/botonera.tpl'}
-      {include './layout/banner.tpl'}
+  {include './layout/banner.tpl'}
 
-    <div class="container-fluid">
-      <div class="row HABITACIONES" id="HABITACIONES">
+  <div class="container-fluid">
+    <div class="row HABITACIONES" id="HABITACIONES">
         <div class="col-xs-12" align="center">
           <h2 class="tituloSeccion">HABITACIONES</h2>
         </div>
@@ -22,9 +23,8 @@
         <div class="clearfix"></div>
         {section i $habitacion}
           <div class="col-xs-12">
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-md-6 col-xs-12">
+            <div class="row">
+              <div class="col-md-6 col-xs-12">
                   <div class="col-md-2 col-xs-hidden"></div>
                   <div class="col-md-10 col-xs-12 texto">
                     <h3 class="titulo"><strong>{$habitacion[i].nombre_con}</strong></h3>
@@ -38,8 +38,7 @@
                     </div>
                   </div>
                 </div>
-
-                <div class="col-md-6 col-xs-12">
+              <div class="col-md-6 col-xs-12">
                   <div class="col-md-10 col-xs-12">
                     <div id="habitacion{$habitacion[i].id_con}" class="carousel slide" data-ride="carousel">
 
@@ -65,7 +64,7 @@
                   </div>
                   <div class="col-md-2 col-xs-hidden"></div>
                 </div>
-                <div class="clearfix"></div>
+              <div class="clearfix"></div>
                 {if $cont < $habitacion|@count}
                   <div class="col-md-4 col-md-offset-4 col-xs-6 col-xs-offset-3">
                     <div class="col-md-8 col-md-offset-2 col-xs-12 sepHabitacion">
@@ -75,159 +74,156 @@
                 {else}
                   <div class="col-xs-12 sepHabitacion"></div>
                 {/if}
-              </div>
             </div>
           </div>
           <div class="clearfix"></div>
         {/section}
       </div>
-    </div>
 
-    <div class="container-fluid ">
-      <div class="row RESERVAS" id="RESERVAS">
-        <div class="col-xs-12 text-center">
-          <h2 class="tituloSeccion">RESERVAS</h2>
-        </div>
-        <div class="col-xs-12 separacion-row">
-          <img class="center-block" src="/imagenes/reservaBanda.png" alt="Reservas">
-        </div>
+    <div class="row RESERVAS" id="RESERVAS">
+          <div class="col-xs-12 text-center">
+              <h2 class="tituloSeccion">RESERVAS</h2>
+          </div>
+          <div class="col-xs-12 separacion-row">
+              <img class="center-block" src="/imagenes/reservaBanda.png" alt="Reservas">
+          </div>
 
-        <div class="clearfix"></div>
-        <form action="" name="formreservas" id="formreservastibisay" class="form-horizontal">
-        <div id="formulario_reserva" class="row">
-          <div class="col-xs-8 col-xs-offset-2">
-            <h3>Solicitud de Reserva</h3>
+          <div class="clearfix"></div>
+            <div class="col-xs-12">
+              <div class="contanier-fluid">
+                <div id="formulario_reserva" class="row">
+                  <form action="" name="formreservas" id="formreservastibisay" class="form-horizontal">
+                      <div class="col-xs-8 col-xs-offset-2">
+                          <div class="container-fluid">
+                              <div class="row">
+                                  <div class="col-xs-12">
+                                      <h3>Solicitud de Reserva</h3>
+                                  </div>
+                                  <div class="col-sm-4">
+                                      <div class="form-group">
+                                          <label for="numero_habitaciones">Seleccione Nº de Habitaciones:</label>
+                                          <select class="form-control form-contacto" name="numero_habitaciones" id="numero_habitaciones" onchange="asignNumeroHabitacion();">
+                                              <option selected hidden value="">Seleccione Habitación</option>
+                                              <option value="1">1 Habitación</option>
+                                              <option value="2">2 Habitaciones</option>
+                                              <option value="3">3 Habitaciones</option>
+                                              <option value="4">4 Habitaciones</option>
+                                              <option value="5">5 Habitaciones</option>
+                                              <option value="6">6 Habitaciones</option>
+                                              <option value="7">7 Habitaciones</option>
+                                              <option value="8">8 Habitaciones</option>
+                                          </select>
+                                      </div>
+                                  </div>
 
-            <div class="row">
-              <div class="col-sm-4">
-                <div class="form-group">
-                  <label for="numero_habitaciones">Seleccione Nº de Habitaciones:</label>
-                  <select class="form-control form-contacto" name="numero_habitaciones" id="numero_habitaciones" onchange="asignNumeroHabitacion();">
-                    <option selected hidden value="">Seleccione Habitación</option>
-                    <option value="1">1 Habitación</option>
-                    <option value="2">2 Habitaciones</option>
-                    <option value="3">3 Habitaciones</option>
-                    <option value="4">4 Habitaciones</option>
-                    <option value="5">5 Habitaciones</option>
-                    <option value="6">6 Habitaciones</option>
-                    <option value="7">7 Habitaciones</option>
-                    <option value="8">8 Habitaciones</option>
-                  </select>
-                </div>
-              </div>
+                                  <div class="col-sm-4">
+                                      <div class="form-group">
+                                          <label for="llegada">Fecha de entrada</label>
+                                          <div class='input-group date' id='datetimepicker1'>
+                                              <input type="text" class="form-control form-contacto" name="llegada" id="llegada" placeholder="Fecha de entrada*" value="{$llegada}">
+                                              <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                          </div>
+                                      </div>
+                                  </div>
 
-              <div class="col-sm-4">
-                <div class="form-group">
-                  <label for="llegada">Fecha de entrada</label>
-                  <div class='input-group date' id='datetimepicker1'>
-                    <input type="text" class="form-control form-contacto" name="llegada" id="llegada" placeholder="Fecha de entrada*" value="{$llegada}">
-                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-sm-4">
-                <div class="form-group">
-                  <label for="salida">Fecha de salida</label>
-                  <div class='input-group date' id='datetimepicker2'>
-                    <input type="text" class="form-control form-contacto" name="salida" id="salida" placeholder="Fecha de salida*" value="{$salida}">
-                    <span class="input-group-addon">
+                                  <div class="col-sm-4">
+                                      <div class="form-group">
+                                          <label for="salida">Fecha de salida</label>
+                                          <div class='input-group date' id='datetimepicker2'>
+                                              <input type="text" class="form-control form-contacto" name="salida" id="salida" placeholder="Fecha de salida*" value="{$salida}">
+                                              <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-calendar"></span>
                                 </span>
-                  </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+
+                          <div class="modal fade" id="reservacion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
+                              <div class="modal-dialog" role="document">
+                                  <div class="modal-content">
+
+                                      <div class="modal-body">
+                                          <div class="row">
+                                              <div class="col-xs-12 text-center titulo-modal">Informacion Personal</div>
+
+                                              <form class="form-horizontal" action="" name="reservacion" method="post">
+
+                                                  <div class="col-xs-12">
+                                                      <div class="form-group">
+                                                          <input type="text" class="form-control form-contacto form-group-contacto" name="nombre" placeholder="Nombre" value="" required>
+                                                      </div>
+                                                  </div>
+                                                  <div class="col-xs-12">
+                                                      <div class="form-group">
+                                                          <input type="text" class="form-control form-contacto form-group-contacto" name="apellido" placeholder="Apellido" value="" required>
+                                                      </div>
+                                                  </div>
+                                                  <div class="col-xs-12">
+                                                      <div class="form-group">
+                                                          <input type="number" class="form-control form-contacto form-group-contacto" name="telefono" placeholder="Número Telefónico" value="" required>
+                                                      </div>
+                                                  </div>
+                                                  <div class="col-xs-12">
+                                                      <div class="form-group">
+                                                          <input type="text" class="form-control form-contacto form-group-contacto" name="correo" placeholder="Correo Electronico" value="" required>
+                                                      </div>
+                                                  </div>
+                                                  <div class="col-xs-12">
+                                                      <div class="form-group">
+                                                          <input type="number" class="form-control form-contacto form-group-contacto" min="18" max="90" name="edad" placeholder="Edad" required>
+                                                      </div>
+                                                  </div>
+                                                  <div class="col-xs-12">
+                                                      <div class="form-group">
+                                                          <input type="text" class="form-control form-contacto form-group-contacto" placeholder="Pais" name="pais" required>
+                                                      </div>
+                                                  </div>
+                                                  <div class="col-xs-12">
+                                                      <div class="form-group">
+                                                          <input type="text" class="form-control form-contacto form-group-contacto" placeholder="Estado" name="estado" required>
+                                                      </div>
+                                                  </div>
+                                                  <div class="col-xs-12">
+                                                      <div class="form-group">
+                                                          <input type="text" class="form-control form-group-contacto form-contacto" name="direccion" placeholder="Direccion" required>
+                                                      </div>
+                                                  </div>
+                                                  <div class="col-xs-12">
+                                                      <div class="col-xs-6 no_padding">
+                                                          <button type="button" class="form-control btn btn-default" data-dismiss="modal" >Cancel</button>
+                                                      </div>
+                                                      <div class="col-xs-6 no_padding">
+                                                          <input type="hidden" name="envio" value="Guardar">
+                                                          <input type="submit" class="form-control btn btn-success" value="RESERVAR">
+                                                      </div>
+                                                  </div>
+                                              </form>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+
+                          <div id="panel_habitacion"></div>
+
+                          <div class="col-xs-12 text-right" id="total"></div>
+
+                          <input name="id_hotel" id="id_hotel" type="hidden" value="1">
+                      </div>
+                  </form>
                 </div>
               </div>
-
             </div>
 
-            <div class="modal fade" id="reservacion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
+              <a id="reserva"></a>
 
-                  <div class="modal-body">
-                    <div class="row">
-                      <div class="col-xs-12 text-center titulo-modal">Informacion Personal</div>
+              <hr class="divider" />
 
-                      <form class="form-horizontal" action="" name="reservacion" method="post">
-
-                        <div class="col-xs-12">
-                          <div class="form-group">
-                            <input type="text" class="form-control form-contacto form-group-contacto" name="nombre" placeholder="Nombre" value="" required>
-                          </div>
-                        </div>
-                        <div class="col-xs-12">
-                          <div class="form-group">
-                            <input type="text" class="form-control form-contacto form-group-contacto" name="apellido" placeholder="Apellido" value="" required>
-                          </div>
-                        </div>
-                        <div class="col-xs-12">
-                          <div class="form-group">
-                            <input type="number" class="form-control form-contacto form-group-contacto" name="telefono" placeholder="Número Telefónico" value="" required>
-                          </div>
-                        </div>
-                        <div class="col-xs-12">
-                          <div class="form-group">
-                            <input type="text" class="form-control form-contacto form-group-contacto" name="correo" placeholder="Correo Electronico" value="" required>
-                          </div>
-                        </div>
-                        <div class="col-xs-12">
-                          <div class="form-group">
-                            <input type="number" class="form-control form-contacto form-group-contacto" min="18" max="90" name="edad" placeholder="Edad" required>
-                          </div>
-                        </div>
-                        <div class="col-xs-12">
-                          <div class="form-group">
-                            <input type="text" class="form-control form-contacto form-group-contacto" placeholder="Pais" name="pais" required>
-                          </div>
-                        </div>
-                        <div class="col-xs-12">
-                          <div class="form-group">
-                            <input type="text" class="form-control form-contacto form-group-contacto" placeholder="Estado" name="estado" required>
-                          </div>
-                        </div>
-                        <div class="col-xs-12">
-                          <div class="form-group">
-                            <input type="text" class="form-control form-group-contacto form-contacto" name="direccion" placeholder="Direccion" required>
-                          </div>
-                        </div>
-                        <div class="col-xs-12">
-                          <div class="col-xs-6 no_padding">
-                            <button type="button" class="form-control btn btn-default" data-dismiss="modal" >Cancel</button>
-                          </div>
-                          <div class="col-xs-6 no_padding">
-                            <input type="hidden" name="envio" value="Guardar">
-                            <input type="submit" class="form-control btn btn-success" value="RESERVAR">
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div id="panel_habitacion"></div>
-
-            <div class="col-xs-12 text-right" id="total">
-            </div>
-
-            <input name="id_hotel" id="id_hotel" type="hidden" value="1">
-
-
-          </div><!-- End Row -->
-
-        </div>
-
-        <a id="reserva"></a>
-
-        <hr class="divider" />
-
-        </form>
       </div>
-    </div>
 
-    <div class="container-fluid ">
-      <div class="row SERVICIOS" id="SERVICIOS">
+    <div class="row SERVICIOS" id="SERVICIOS">
         <div class="col-xs-12 text-center">
           <h2 class="tituloSeccion">SERVICIOS</h2>
         </div>
@@ -238,9 +234,9 @@
 
             <div class="col-md-10 col-md-offset-1 col-xs-12 pills separacion-row">
               <ul class="nav nav-pills centrarNav" role="tablist">
-                <li role="presentation"><a href="#gastronomia" aria-controls="gastronomia" role="tab" data-toggle="tab">GASTRONOMÍA</a></li>
-                <li role="presentation"><a href="#gimnasio" aria-controls="gimnasio" role="tab" data-toggle="tab">GIMNASIO</a></li>
-                <li role="presentation"><a href="#peluqueria" aria-controls="peluqueria" role="tab" data-toggle="tab">PELUQUERÍA</a></li>
+                <li role="presentation"><a href="#gastronomia" aria-controls="gastronomia" role="tab" data-toggle="tab">LA BARCA BAR RESTAURANT</a></li>
+                <li role="presentation"><a href="#gimnasio" aria-controls="gimnasio" role="tab" data-toggle="tab">GYM / ÁREA DE MASAJE</a></li>
+                <li role="presentation"><a href="#peluqueria" aria-controls="peluqueria" role="tab" data-toggle="tab">SALÓN DE BELLEZA</a></li>
                 <li role="presentation"><a href="#tiendas" aria-controls="tiendas" role="tab" data-toggle="tab">TIENDAS</a></li>
               </ul>
             </div>
@@ -278,12 +274,10 @@
         </div>
       </div>
     </div>
-    </div>
 
-    <div class="container-fluid">
-      <div class="row TESTIMONIO" id="TESTIMONIOS">
+    <div class="row TESTIMONIO" id="TESTIMONIOS">
         <div class="col-xs-12 text-center">
-          <h2 class="tituloSeccion">TESTIMONIOS</h2>
+          <h2 class="tituloSeccion">TESTIMONIOS / COMENTANOS TU EXPERIENCIA</h2>
         </div>
         <div class="col-xs-12">
           <hr class="seccion">
@@ -294,9 +288,18 @@
           <img src="/imagenes/tripadvisor1.jpg" alt="Trip Advisor Reward 2016" class="img-responsive center-block">
         </div>
 
-        <div class="col-md-4 col-xs-12">
-          <div class="row">
-            <div class="col-sm-12 col-md-9">
+        <div class="col-xs-12 visible-xs-block">
+          <div id="TA_selfserveprop906" class="TA_selfserveprop">
+            <ul id="ZgnhIgmWCB" class="TA_links 9gVSpH3kZ7">
+              <li id="oBOmwi" class="TMSR9gu0">
+                <a target="_blank" href="https://www.tripadvisor.com.ve/"><img src="https://www.tripadvisor.com.ve/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor"/></a>
+              </li>
+            </ul>
+          </div>
+            {literal}<script src="https://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=906&amp;locationId=4275246&amp;lang=es_VE&amp;rating=true&amp;nreviews=5&amp;writereviewlink=true&amp;popIdx=false&amp;iswide=false&amp;border=false&amp;display_version=2"></script>{/literal}
+        </div>
+
+        <div class="col-md-4 hidden-xs">
               <div id="TA_selfserveprop821" class="TA_selfserveprop">
                 <ul id="pTBWv2MdeA" class="TA_links ZBL8etZ">
                   <li id="OfnFiSw" class="FXTxRsM">
@@ -305,18 +308,14 @@
                 </ul>
               </div>
               {literal}<script src="https://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=821&amp;locationId=4275246&amp;lang=es_VE&amp;rating=true&amp;nreviews=4&amp;writereviewlink=true&amp;popIdx=false&amp;iswide=true&amp;border=false&amp;display_version=2"></script>{/literal}
-            </div>
-          </div>
         </div>
 
         <div class="col-md-4 col-xs-12">
           <img src="/imagenes/tripadvisor2.jpg" alt="" class="img-responsive center-block">
         </div>
       </div>
-    </div>
 
-    <div class="container-fluid">
-      <div class="row GALERIA" id="GALERIAS">
+    <div class="row GALERIA" id="GALERIAS">
         <div class="col-xs-12 text-center">
           <h2 class="tituloSeccion">GALERIA</h2>
         </div>
@@ -325,7 +324,6 @@
         </div>
 
         <div class="clearfix"></div>
-
         <div class="col-xs-12">
           <div class="container">
             {assign cont "0"}
@@ -335,7 +333,7 @@
                   {assign var="cont" value= 0}
                 {/if}
                 {if $cont == 0}
-                  <div class="col-xs-6 no_padding" style="overflow: hidden;">
+                  <div class="col-md-6 col-xs-12 no_padding" style="overflow: hidden;">
                     <div class="col-xs-12 efecto-hover" style="background: url('/imagenes/{$galeria[i].directorio_image}') center no-repeat;   background-size: cover;">
                       <a href="/imagenes/{$galeria[i].directorio_image}" data-toggle="lightbox" data-footer="{$galeria[i].nombre_image}" data-gallery="GALERIA">
                         <img src="/imagenes/col-xs-6.png" alt="" class="img-responsive fullHeigh">
@@ -344,7 +342,7 @@
                   </div>
                 {/if}
                 {if $cont == 1}
-                  <div class="col-xs-2 no_padding" style="overflow: hidden">
+                  <div class="col-md-2 col-xs-12 no_padding" style="overflow: hidden">
                     <div class="col-xs-12 efecto-hover" style="background: url('/imagenes/{$galeria[i].directorio_image}') center no-repeat; background-size: cover;">
                       <a href="/imagenes/{$galeria[i].directorio_image}" data-toggle="lightbox" data-footer="{$galeria[i].nombre_image}" data-gallery="GALERIA">
                         <img src="/imagenes/col-xs-2.png" alt="" class="img-responsive fullHeigh">
@@ -353,17 +351,16 @@
                   </div>
                 {/if}
                 {if $cont == 2}
-                  <div class="col-xs-4 no_padding" style="overflow: hidden;">
+                  <div class="col-md-4 col-xs-12 no_padding" style="overflow: hidden;">
                     <div class="col-xs-12 efecto-hover" style="background: url('/imagenes/{$galeria[i].directorio_image}') center no-repeat; background-size: cover;">
                       <a href="/imagenes/{$galeria[i].directorio_image}" data-toggle="lightbox" data-footer="{$galeria[i].nombre_image}" data-gallery="GALERIA">
                         <img src="/imagenes/col-xs-4.png" alt="" class="img-responsive fullHeigh">
                       </a>
                     </div>
-
                   </div>
                 {/if}
                 {if $cont == 3}
-                  <div class="col-xs-10 no_padding" style="overflow: hidden;">
+                  <div class="col-md-10 col-xs-12 no_padding" style="overflow: hidden;">
                     <div class="col-xs-12 efecto-hover" style="background: url('/imagenes/{$galeria[i].directorio_image}') center no-repeat; background-size: cover;">
                       <a href="/imagenes/{$galeria[i].directorio_image}" data-toggle="lightbox" data-footer="{$galeria[i].nombre_image}" data-gallery="GALERIA">
                         <img src="/imagenes/col-xs-10.png" alt="" class="img-responsive fullHeigh">
@@ -372,7 +369,7 @@
                   </div>
                 {/if}
                 {if $cont == 4}
-                  <div class="col-xs-2 no_padding" style="overflow: hidden;">
+                  <div class="col-md-2 col-xs-12 no_padding" style="overflow: hidden;">
                     <div class="col-xs-12 efecto-hover" style="background: url('/imagenes/{$galeria[i].directorio_image}') center no-repeat; background-size: cover;">
                       <a href="/imagenes/{$galeria[i].directorio_image}" data-toggle="lightbox" data-footer="{$galeria[i].nombre_image}" data-gallery="GALERIA">
                         <img src="/imagenes/col-xs-2-2.png" alt="" class="img-responsive fullHeigh">
@@ -381,7 +378,7 @@
                   </div>
                 {/if}
                 {if $cont == 5}
-                  <div class="col-xs-4 no_padding" style="overflow: hidden;">
+                  <div class="col-md-4 col-xs-12 no_padding" style="overflow: hidden;">
                     <div class="col-xs-12 efecto-hover" style="background: url('/imagenes/{$galeria[i].directorio_image}') center no-repeat; background-size: cover;">
                       <a href="/imagenes/{$galeria[i].directorio_image}" data-toggle="lightbox" data-footer="{$galeria[i].nombre_image}" data-gallery="GALERIA">
                         <img src="/imagenes/col-xs-4.png" alt="" class="img-responsive fullHeigh">
@@ -390,7 +387,7 @@
                   </div>
                 {/if}
                 {if $cont == 6}
-                  <div class="col-xs-2 no_padding" style="overflow: hidden;">
+                  <div class="col-md-2 col-xs-12 no_padding" style="overflow: hidden;">
                     <div class="col-xs-12 efecto-hover" style="background: url('/imagenes/{$galeria[i].directorio_image}') center no-repeat; background-size: cover;">
                       <a href="/imagenes/{$galeria[i].directorio_image}" data-toggle="lightbox" data-footer="{$galeria[i].nombre_image}" data-gallery="GALERIA">
                         <img src="/imagenes/col-xs-2.png" alt="" class="img-responsive fullHeigh">
@@ -399,13 +396,12 @@
                   </div>
                 {/if}
                 {if $cont == 7}
-                  <div class="col-xs-6 no_padding" style="overflow: hidden;">
+                  <div class="col-md-6 col-xs-12 no_padding" style="overflow: hidden;">
                     <div class="col-xs-12 efecto-hover" style="background: url('/imagenes/{$galeria[i].directorio_image}') center no-repeat; background-size: cover;">
                       <a href="/imagenes/{$galeria[i].directorio_image}" data-toggle="lightbox" data-footer="{$galeria[i].nombre_image}" data-gallery="GALERIA">
                         <img src="/imagenes/col-xs-6.png" alt="" class="img-responsive fullHeigh">
                       </a>
                     </div>
-
                   </div>
                 {/if}
                 {assign var="cont" value=$cont + 1}
@@ -414,12 +410,10 @@
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="container-fluid">
-      <div class="row BODAS separacion-row" id="BODAS">
+    <div class="row BODAS separacion-row" id="BODAS">
         <div class="col-xs-12 no_padding">
-          <img class="img-responsive center-block banner" src="/imagenes/Bodas.png" alt="Bodas">
+          <img class="img-responsive center-block banner" src="/imagenes/Bodas.jpg" alt="Bodas">
         </div>
 
         <div class="clearfix"></div>
@@ -448,9 +442,26 @@
                       <div class="container-fluid">
                         <div class="row">
                           <div class="col-md-10 col-xs-12">
-                              {section j $boda[i].imagen}
-                                <img class="img-responsive center-block" src="/imagenes/{$boda[i].imagen[j].directorio_image}" alt="">
-                              {/section}
+                            <div id="boda{$boda[i].id_con}" class="carousel slide" data-ride="carousel">
+                              <div class="carousel-inner" role="listbox" style="min-height: 350px;">
+                                  {assign var="cont2" value=0}
+                                  {section j $boda[i].imagen}
+                                    <div {if $cont2 eq "0"} class="item active" {else} class="item" {/if}>
+                                      <img class="img-responsive" alt="{$boda[i].imagen[j].nombre_image}" src="/imagenes/{$boda[i].imagen[j].directorio_image}">
+                                    </div>
+                                      {assign var="cont2" value=$cont2+1}
+                                  {/section}
+                              </div>
+
+                              <a class="left carousel-control" href="#boda{$boda[i].id_con}" role="button" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                              </a>
+                              <a class="right carousel-control" href="#boda{$boda[i].id_con}" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                              </a>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -461,9 +472,27 @@
                       <div class="container-fluid">
                         <div class="row">
                           <div class="col-md-10 col-md-offset-2 col-xs-12">
-                              {section j $boda[i].imagen}
-                                <img class="img-responsive center-block" src="/imagenes/{$boda[i].imagen[j].directorio_image}" alt="">
-                              {/section}
+                            <div id="boda{$boda[i].id_con}" class="carousel slide" data-ride="carousel">
+
+                              <div class="carousel-inner" role="listbox" style="min-height: 350px;">
+                                  {assign var="cont2" value=0}
+                                  {section j $boda[i].imagen}
+                                    <div {if $cont2 eq "0"} class="item active" {else} class="item" {/if}>
+                                      <img class="img-responsive" alt="{$boda[i].imagen[j].nombre_image}" src="/imagenes/{$boda[i].imagen[j].directorio_image}">
+                                    </div>
+                                      {assign var="cont2" value=$cont2+1}
+                                  {/section}
+                              </div>
+
+                              <a class="left carousel-control" href="#boda{$boda[i].id_con}" role="button" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                              </a>
+                              <a class="right carousel-control" href="#boda{$boda[i].id_con}" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                              </a>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -499,10 +528,8 @@
         </div>
           {/if}
       </div>
-    </div>
 
-    <div class="container-fluid">
-      <div id="PROMOCIONES" class="row PROMOCIONES paddingLg">
+    <div id="PROMOCIONES" class="row PROMOCIONES paddingLg">
         <div class="col-xs-12 text-center">
           <h2 class="tituloSeccion">PROMOCIONES</h2>
         </div>
@@ -543,14 +570,13 @@
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="container-fluid">
-      <div class="row PUBLICIDAD paddingLg">
+    <div class="row PUBLICIDAD paddingLg">
         <div class="col-md-10 col-md-offset-1 col-xs-12">
           <div class="container-fluid">
             <div class="row">
-              <div class="col-md-6 col-xs-12 separacion-superior">
+              <div class="col-md-6 col-xs-12 separacion-superior text-center">
+                <h3 class="titulo2">CONOZCA NUESTROS ALIADOS</h3>
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
                   <ol class="carousel-indicators" style="display:none;">
                       {assign var="cont" value=0}
@@ -571,7 +597,8 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 col-xs-12 separacion-superior">
+              <div class="col-md-6 col-xs-12 separacion-superior text-center">
+                <h3 class="titulo2">CONOZCA NUESTROS HOTELES</h3>
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
                   <ol class="carousel-indicators" style="display:none;">
                       {assign var="cont" value=0}
@@ -596,9 +623,7 @@
           </div>
         </div>
       </div>
-    </div>
 
-  <div class="container-fluid">
     <div class="row EMPRESA" id="EMPRESA">
       <div class="col-xs-12 text-center">
         <h2 class="tituloSeccion">HOTEL</h2>
@@ -620,10 +645,8 @@
         </div>
       </div>
     </div>
-  </div>
 
-    <div class="container-fluid">
-      <div class="row CONTACTO" id="CONTACTO">
+    <div class="row CONTACTO" id="CONTACTO">
         <div class="col-xs-12 text-center">
           <h2 class="tituloSeccion">CONTACTO</h2>
         </div>
@@ -677,7 +700,7 @@
                   <strong>Gerentes de Eventos y Banquetes: </strong><br>
                   <i class="fa fa-envelope"></i> eventos@tibisayhotelboutique.com<br>
                   <strong>Coordinadora de Banquetes: </strong><br>
-                  <i class="fa fa-envelope"></i> ventas1@tibisayhotelboutique.com<br>
+                  <i class="fa fa-envelope"></i> eventos1@tibisayhotelboutique.com<br>
                 </blockquote>
               </address>
             </div>
@@ -691,7 +714,7 @@
           </div>
         </div>
       </div>
-    </div>
+  </div>
 
   <footer>
     <div class="container-fluid">

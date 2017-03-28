@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-17 15:39:41
+/* Smarty version 3.1.30, created on 2017-03-27 19:52:04
   from "D:\Websites\tibisay\smarty\templates\admin\contenido\detalle.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58cbf52dc65d00_57704164',
+  'unifunc' => 'content_58d95144529a30_84976037',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '588c25820bfa68ef1a1dc10a4cd0f1e907ecdeb0' => 
     array (
       0 => 'D:\\Websites\\tibisay\\smarty\\templates\\admin\\contenido\\detalle.tpl',
-      1 => 1489549778,
+      1 => 1490283021,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../layout/pie.tpl' => 1,
   ),
 ),false)) {
-function content_58cbf52dc65d00_57704164 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58d95144529a30_84976037 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/plantilla_admin.dwt" codeOutsideHTMLIsLocked="false" -->

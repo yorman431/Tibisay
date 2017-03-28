@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-04 19:44:44
+/* Smarty version 3.1.30, created on 2017-03-27 19:07:35
   from "D:\Websites\tibisay\smarty\templates\admin\banner\lista_banner.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58bb0b1cac6c21_38098312',
+  'unifunc' => 'content_58d946d73d66c9_06992592',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6862dce77ee6e50e5f73722503a0b43411ff937c' => 
     array (
       0 => 'D:\\Websites\\tibisay\\smarty\\templates\\admin\\banner\\lista_banner.tpl',
-      1 => 1487191152,
+      1 => 1490634409,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../layout/pie.tpl' => 1,
   ),
 ),false)) {
-function content_58bb0b1cac6c21_38098312 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58d946d73d66c9_06992592 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/plantilla_admin.dwt" codeOutsideHTMLIsLocked="false" -->
@@ -62,12 +62,12 @@ function content_58bb0b1cac6c21_38098312 (Smarty_Internal_Template $_smarty_tpl)
           </form></th>
         </tr>
         <tr>
-          <td width="180" class="subtituloWeb3">Image</td>
-          <td width="180" class="subtituloWeb3">Label</tdael>
-          <td width="180" class="subtituloWeb3">Link</td>
-          <td width="100" class="subtituloWeb3">type</td>
-          <td width="80" class="subtituloWeb3">Efect</td>
-          <td colspan="3" align="center" class="subtituloWeb3">Actions</td>
+          <td width="180" class="subtituloWeb3">Imagen</td>
+          <td width="180" class="subtituloWeb3">Etiqueta</tdael>
+          <td width="180" class="subtituloWeb3">Prioridad</td>
+          <td width="100" class="subtituloWeb3">Tipo</td>
+          <td width="80" class="subtituloWeb3">Efecto</td>
+          <td colspan="3" align="center" class="subtituloWeb3">Acciones</td>
         </tr>
         <?php if ($_smarty_tpl->tpl_vars['mensaje']->value == '') {?>
         <?php $_smarty_tpl->_assignInScope('cont', 0);
@@ -93,7 +93,7 @@ for ($__section_i_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']-
 " width="200" border="0" class="fotos opacidad" /></a></td>
       <td class="adminContenido"><?php echo $_smarty_tpl->tpl_vars['listado']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['etiqueta_ban'];?>
 </td>
-    <td class="adminContenido"><?php echo $_smarty_tpl->tpl_vars['listado']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['vinculo_ban'];?>
+    <td class="adminContenido"><?php echo $_smarty_tpl->tpl_vars['listado']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['prioridad_ban'];?>
 </td>
     <td class="adminContenido"><?php echo $_smarty_tpl->tpl_vars['listado']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['tipo_ban'];?>
 </td>
@@ -128,8 +128,8 @@ $_smarty_tpl->tpl_vars['__smarty_section_i'] = $__section_i_0_saved;
   </tr>
   <tr>
   <td width="25%" align="center"><a href="/admin/panel_central.php">Panel <img src="/imagenes/atras.png" width="25" height="25" border="0" align="absmiddle" /></a></td>
-    <td width="50%" align="center">&nbsp;<a href="insertar.php">Add Banner<img src="/imagenes/nuevo.png" width="25" height="25" border="0" align="absmiddle" /></a></td>
-    <td width="25%" align="center"><a href="/admin/cerrar_session.php">Logout <img src="/imagenes/cerrar.png" width="25" height="25" border="0" align="absmiddle" /></a></td>
+    <td width="50%" align="center">&nbsp;<a href="insertar.php">Agregar Banner<img src="/imagenes/nuevo.png" width="25" height="25" border="0" align="absmiddle" /></a></td>
+    <td width="25%" align="center"><a href="/admin/cerrar_session.php">Cerrar Sesión <img src="/imagenes/cerrar.png" width="25" height="25" border="0" align="absmiddle" /></a></td>
   </tr>
   <tr>
     <td colspan="3" align="center">&nbsp;</td>

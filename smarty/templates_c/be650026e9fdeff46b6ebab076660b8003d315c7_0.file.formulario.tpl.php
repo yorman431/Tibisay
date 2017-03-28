@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-09 16:25:03
+/* Smarty version 3.1.30, created on 2017-03-27 19:52:37
   from "D:\Websites\tibisay\smarty\templates\admin\contenido\formulario.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58c173cfa94527_72765365',
+  'unifunc' => 'content_58d95165d2e8b5_94733667',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'be650026e9fdeff46b6ebab076660b8003d315c7' => 
     array (
       0 => 'D:\\Websites\\tibisay\\smarty\\templates\\admin\\contenido\\formulario.tpl',
-      1 => 1489073030,
+      1 => 1490283022,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../layout/pie.tpl' => 1,
   ),
 ),false)) {
-function content_58c173cfa94527_72765365 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58d95165d2e8b5_94733667 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/plantilla_admin.dwt" codeOutsideHTMLIsLocked="false" -->
@@ -101,13 +101,13 @@ function content_58c173cfa94527_72765365 (Smarty_Internal_Template $_smarty_tpl)
               <?php echo $_smarty_tpl->tpl_vars['mensaje']->value;?>
 
                   <tr>
-                    <td align="left" class="subtituloWeb3">Name</td>
+                    <td align="left" class="subtituloWeb3">Nombre</td>
                     <td align="left" class="normalContenido"><input name="nombre" type="text" class="normalContenido" id="nombre" value="<?php echo $_smarty_tpl->tpl_vars['nombres']->value;?>
 " size="71" maxlength="100" />
                     *</td>
                   </tr>
                 <tr>
-    <td align="left" class="subtituloWeb3">Link:</td>
+    <td align="left" class="subtituloWeb3">Enlace:</td>
     <td align="left" class="normalContenido">
     <select name="enlace" id="enlace" onchange="javascripts: document.form1.submit();">
               <?php
@@ -132,7 +132,7 @@ $_smarty_tpl->tpl_vars['__smarty_section_i'] = $__section_i_0_saved;
       *</td>
   </tr>
   <tr>
-    <td align="left" class="subtituloWeb3">Sub-Link:</td>
+    <td align="left" class="subtituloWeb3">Sub-Enlace:</td>
     <td align="left" class="normalContenido"><select name="subenlace" id="subenlace">
     			<option value="0">None(Principal)</option>
               <?php
@@ -156,19 +156,19 @@ $_smarty_tpl->tpl_vars['__smarty_section_j'] = $__section_j_1_saved;
               </select></td>
   </tr>
   <tr>
-    <td align="left" class="subtituloWeb3">Date:</td>
+    <td align="left" class="subtituloWeb3">Fecha:</td>
     <td align="left" class="normalContenido"><span class="normalContenido">
       <input name="fecha" type="text" class="normalContenido" id="f_date_c"   value="<?php echo $_smarty_tpl->tpl_vars['fecha']->value;?>
 " size="30" maxlength="50" readonly="readonly" />
 		</span><img src="/calendario/img.gif" name="f_trigger_c" width="20" height="14" align="absmiddle" id="f_trigger_c" style="cursor: pointer; border: 1px solid #005B7D;" title="Select Date" onmouseover="this.style.background='#005B7D';" onmouseout="this.style.background=''" /> *</td>
   </tr>
   <tr>
-    <td align="left" valign="top" class="subtituloWeb3">Priority:</td>
+    <td align="left" valign="top" class="subtituloWeb3">Prioridad:</td>
     <td align="left" class="normalContenido"><input onkeypress="javascrip: return validarletrasnum(event);" name="prioridad" type="text" class="normalContenido" id="prioridad" value="<?php echo $_smarty_tpl->tpl_vars['prioridad']->value;?>
 " size="71" maxlength="100" /></td>
   </tr>
   <tr>
-    <td align="left" valign="top" class="subtituloWeb3">Content:</td>
+    <td align="left" valign="top" class="subtituloWeb3">Contenido:</td>
     <td align="left" class="normalContenido">&nbsp;</td>
   </tr>
   <tr>
@@ -176,10 +176,10 @@ $_smarty_tpl->tpl_vars['__smarty_section_j'] = $__section_j_1_saved;
 </textarea></td>
     </tr>
   <tr>
-    <td colspan="2" align="center" class="normalContenido"><input name="envio" type="submit" class="componentes" id="button" onclick="javascript: return validarcontenido('Are you sure you want to save?');" value="Guardar" />
+    <td colspan="2" align="center" class="normalContenido"><input name="envio" type="submit" class="componentes" id="button" onclick="javascript: return validarcontenido('¿Está seguro que desea guardar?');" value="Guardar" />
       &nbsp;
       <input type="button" name="Submit3"  class="normalContenido" value="Cancelar" onclick="javascripts: location.href='/admin/contenido/'" />
-      (*) Required Data</td>
+      (*) Datos Requeridos</td>
     </tr>
             </table></td>
           </tr>

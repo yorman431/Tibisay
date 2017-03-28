@@ -1,29 +1,26 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-14 04:36:17
+/* Smarty version 3.1.30, created on 2017-03-26 15:47:45
   from "D:\Websites\tibisay\smarty\templates\admin\hotel\lista_hotel.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58c7653150cf52_57921201',
+  'unifunc' => 'content_58d7c681d61b66_59653315',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8af60b480e4b7d2620cd4acc643c10b5be763d35' => 
     array (
       0 => 'D:\\Websites\\tibisay\\smarty\\templates\\admin\\hotel\\lista_hotel.tpl',
-      1 => 1489462429,
+      1 => 1490043959,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
-    'file:../layout/header.tpl' => 1,
-    'file:../layout/cabezera.tpl' => 1,
-    'file:../layout/pie.tpl' => 1,
   ),
 ),false)) {
-function content_58c7653150cf52_57921201 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58d7c681d61b66_59653315 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_modifier_truncate')) require_once 'D:\\Websites\\tibisay\\smarty\\libs\\plugins\\modifier.truncate.php';
 if (!is_callable('smarty_function_paginate_prev')) require_once 'D:\\Websites\\tibisay\\smarty\\libs\\plugins\\function.paginate_prev.php';
 if (!is_callable('smarty_function_paginate_middle')) require_once 'D:\\Websites\\tibisay\\smarty\\libs\\plugins\\function.paginate_middle.php';
@@ -32,19 +29,58 @@ if (!is_callable('smarty_function_paginate_next')) require_once 'D:\\Websites\\t
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/plantilla_admin.dwt" codeOutsideHTMLIsLocked="false" --> 
 <head>
-  <?php $_smarty_tpl->_subTemplateRender("file:../layout/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Scape Travel - Panel Administrativo</title> 
+<link href="/css/estilos.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="/imagenes/icono.ico" />
+<?php echo '<script'; ?>
+ type="text/javascript" language="javascript" src="/js/validar.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="/Scripts/swfobject_modified.js" type="text/javascript"><?php echo '</script'; ?>
+>
+<!-- InstanceBeginEditable name="head" -->
+<link  href="/font-awesome-4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<!-- InstanceEndEditable -->
 
 </head>  
 <body>
 <br />
 <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0" class="marco">
   <tr>
-    <td colspan="3" align="left" background="/imagenes/fondo_admin.jpg" class="subtituloWeb3">
-        <?php $_smarty_tpl->_subTemplateRender("file:../layout/cabezera.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
-
-    </td>
+    <td colspan="3" align="left" background="/imagenes/fondo_admin.jpg" class="subtituloWeb3"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="42%"><img src="/imagenes/logo.jpg" width="400" height="122" /> </td>
+          <td width="56%" align="right" valign="middle" class="normalContenido">Panel Central de Utilidades - <span class="subtituloWeb3">Usuario:</span> <?php echo $_smarty_tpl->tpl_vars['nombre']->value;?>
+ <?php echo $_smarty_tpl->tpl_vars['apellido']->value;?>
+ <img src="/imagenes/user.png" width="30" height="30" align="absmiddle" />
+            <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="597" height="48">
+              <param name="movie" value="/swf/redes_hora2.swf" />
+              <param name="quality" value="high" />
+              <param name="wmode" value="transparent" />
+              <param name="swfversion" value="6.0.65.0" />
+              <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don’t want users to see the prompt. -->
+              <param name="expressinstall" value="/Scripts/expressInstall.swf" />
+              <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
+              <!--[if !IE]>-->
+              <object type="application/x-shockwave-flash" data="/swf/redes_hora2.swf" width="597" height="48">
+                <!--<![endif]--> 
+                <param name="quality" value="high" />
+                <param name="wmode" value="transparent" />
+                <param name="swfversion" value="6.0.65.0" />
+                <param name="expressinstall" value="/Scripts/expressInstall.swf" />
+                <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
+                <div>
+                  <h4>Content on this page requires a newer version of Adobe Flash Player.</h4>
+                  <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" width="112" height="33" /></a></p>
+                </div>
+                <!--[if !IE]>-->
+              </object>
+              <!--<![endif]-->
+          </object></td>
+          <td width="2%" align="right" valign="middle" class="normalContenido2">&nbsp;</td>
+        </tr>
+    </table></td>
   </tr>
  
   <tr>
@@ -74,7 +110,7 @@ if (!is_callable('smarty_function_paginate_next')) require_once 'D:\\Websites\\t
           <td width="100" class="subtituloWeb3">Pa&iacute;s</td>
           <td width="58" class="subtituloWeb3">Prioridad</td>
           <td width="58" class="subtituloWeb3">Estado</td>
-          <td colspan="3" align="center" class="subtituloWeb3">Acciones</td>
+          <td colspan="4" align="center" class="subtituloWeb3">Acciones</td>
         </tr>
         <?php if ($_smarty_tpl->tpl_vars['mensaje']->value == '') {?>
         <?php $_smarty_tpl->_assignInScope('cont', 0);
@@ -148,11 +184,13 @@ $_smarty_tpl->tpl_vars['__smarty_section_j'] = $__section_j_1_saved;
 </td>
     <td class="adminContenido"><?php echo $_smarty_tpl->tpl_vars['listado']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['estado_hot'];?>
 </td>
-    <td width="40" align="center"><a href="detalle.php?id=<?php echo $_smarty_tpl->tpl_vars['listado']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['id_hot'];?>
+    <td width="30" align="center"><a href="actualizar.php?id=<?php echo $_smarty_tpl->tpl_vars['listado']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['id_hot'];?>
+" title="Actualizar"> <i class="fa fa-upload fa-lg"></i></a></td>
+    <td width="30" align="center"><a href="detalle.php?id=<?php echo $_smarty_tpl->tpl_vars['listado']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['id_hot'];?>
 " title="Detalles"><img src="/imagenes/detalle.png" width="30" height="25" border="0" /></a></td>
-    <td width="40" align="center"><a href="editar.php?id=<?php echo $_smarty_tpl->tpl_vars['listado']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['id_hot'];?>
+    <td width="30" align="center"><a href="editar.php?id=<?php echo $_smarty_tpl->tpl_vars['listado']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['id_hot'];?>
 " title="Editar"><img src="/imagenes/editar.png" width="25" height="25" border="0" /></a></td>
-    <td width="40" align="center"><a onclick="javascript: return confirmar('&iquest;Seguro desea eliminar este registro?')" href="eliminar.php?id=<?php echo $_smarty_tpl->tpl_vars['listado']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['id_hot'];?>
+    <td width="30" align="center"><a onclick="return confirmar('&iquest;Seguro desea eliminar este registro?')" href="eliminar.php?id=<?php echo $_smarty_tpl->tpl_vars['listado']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['id_hot'];?>
 " title="Eliminar"><img src="/imagenes/delete.png" width="25" height="25" border="0" /></a></td>
   </tr>
         <?php
@@ -198,9 +236,10 @@ $_smarty_tpl->tpl_vars['__smarty_section_i'] = $__section_i_0_saved;
   <tr>
     <td colspan="3" align="center">&nbsp;</td>
   </tr>
-      <?php $_smarty_tpl->_subTemplateRender("file:../layout/pie.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
-
+  <tr>
+    <td colspan="3" align="center" class="pie">
+    Scape Travel | Marketing C.A | Copyright&copy; 2016 Todos los Derechos Reservados - Venezuela</td>
+  </tr>
 </table>
 <?php echo '<script'; ?>
  type="text/javascript">

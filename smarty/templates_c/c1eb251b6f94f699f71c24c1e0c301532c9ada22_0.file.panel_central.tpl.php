@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-17 20:02:43
+/* Smarty version 3.1.30, created on 2017-03-27 22:53:54
   from "D:\Websites\tibisay\smarty\templates\admin\panel_central.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58cc32d3745311_22114029',
+  'unifunc' => 'content_58d97be27fcd43_02670573',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c1eb251b6f94f699f71c24c1e0c301532c9ada22' => 
     array (
       0 => 'D:\\Websites\\tibisay\\smarty\\templates\\admin\\panel_central.tpl',
-      1 => 1489548310,
+      1 => 1490283022,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:./layout/pie.tpl' => 1,
   ),
 ),false)) {
-function content_58cc32d3745311_22114029 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58d97be27fcd43_02670573 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/plantilla_admin.dwt" codeOutsideHTMLIsLocked="false" -->

@@ -1,42 +1,42 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-17 19:56:00
+/* Smarty version 3.1.30, created on 2017-03-28 14:09:04
   from "D:\Websites\tibisay\smarty\templates\contenido.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58cc3140786a01_53488629',
+  'unifunc' => 'content_58da5260810670_95022999',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '543366c99538cf7cc02178f63264208c0bc2a0ae' => 
     array (
       0 => 'D:\\Websites\\tibisay\\smarty\\templates\\contenido.tpl',
-      1 => 1489776952,
+      1 => 1490668688,
       2 => 'file',
     ),
     '9a3e520260453c80091977efd0e94ebd4896a78e' => 
     array (
       0 => 'D:\\Websites\\tibisay\\smarty\\templates\\layout\\header.tpl',
-      1 => 1489769067,
+      1 => 1490647166,
       2 => 'file',
     ),
     '948f10cc339ad88ca43f7ea9d9683f32dabbe644' => 
     array (
       0 => 'D:\\Websites\\tibisay\\smarty\\templates\\layout\\botonera2.tpl',
-      1 => 1489764560,
+      1 => 1490283024,
       2 => 'file',
     ),
     '0e078d480fae897c630805204355f635627441af' => 
     array (
       0 => 'D:\\Websites\\tibisay\\smarty\\templates\\layout\\banner.tpl',
-      1 => 1487191152,
+      1 => 1490283024,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 3600,
 ),true)) {
-function content_58cc3140786a01_53488629 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58da5260810670_95022999 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -83,11 +83,6 @@ function content_58cc3140786a01_53488629 (Smarty_Internal_Template $_smarty_tpl)
 <link rel="stylesheet" type="text/css" href="/fonts/style.css">
 <link  href="/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 
-
-<!-- InstanceBeginEditable name="head" -->
-
-<!-- InstanceEndEditable -->
-
  </head>
 <!-- Fin Cabecera
 ================================================== -->
@@ -127,10 +122,10 @@ function content_58cc3140786a01_53488629 (Smarty_Internal_Template $_smarty_tpl)
             <!--<li class="dropdown">
               <a title="SERVICIOS" href="contenido.php?cont=3" class="dropdown-toggle" id="efecto" data-toggle="dropdown" role="button" aria-expanded="false">&nbsp;&nbsp;<span style="vertical-align:bottom; letter-spacing:0.2em;">SERVICIOS</span><span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                                  <li><a class="transicion" title="SERVICIOS" href="#gastronomia">gastronomia</a></li>
-                                  <li><a class="transicion" title="SERVICIOS" href="#gimnasio">gimnasio</a></li>
-                                  <li><a class="transicion" title="SERVICIOS" href="#peluqueria">peluqueria</a></li>
-                                  <li><a class="transicion" title="SERVICIOS" href="#tiendas">tiendas</a></li>
+                                  <li><a class="transicion" title="SERVICIOS" href="#LA BARCA BAR RESTAURANT">LA BARCA BAR RESTAURANT</a></li>
+                                  <li><a class="transicion" title="SERVICIOS" href="#GYM / ÁREA DE MASAJE">GYM / ÁREA DE MASAJE</a></li>
+                                  <li><a class="transicion" title="SERVICIOS" href="#SALÓN DE BELLEZA">SALÓN DE BELLEZA</a></li>
+                                  <li><a class="transicion" title="SERVICIOS" href="#TIENDAS">TIENDAS</a></li>
                               </ul>
             </li>-->
 
@@ -196,15 +191,47 @@ function content_58cc3140786a01_53488629 (Smarty_Internal_Template $_smarty_tpl)
   <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1" ></li>
+        <li data-target="#myCarousel" data-slide-to="2" ></li>
+        <li data-target="#myCarousel" data-slide-to="3" ></li>
+        <li data-target="#myCarousel" data-slide-to="4" ></li>
+        <li data-target="#myCarousel" data-slide-to="5" ></li>
+        <li data-target="#myCarousel" data-slide-to="6" ></li>
+        <li data-target="#myCarousel" data-slide-to="7" ></li>
+        <li data-target="#myCarousel" data-slide-to="8" ></li>
+        <li data-target="#myCarousel" data-slide-to="9" ></li>
       </ol>
 
   <div class="carousel-inner" role="listbox">
 
         <div class="item active">
-      <img class="img-responsive" alt="BANNER1" src="/imagenes/banner/1488652995.jpg">
+      <img class="img-responsive" alt="Tibisay Hotel Boutique" src="/imagenes/banner/1490455419.jpg">
     </div>
         <div class="item">
-      <img class="img-responsive" alt="BANNER2" src="/imagenes/banner/1488652978.jpg">
+      <img class="img-responsive" alt="Tibisay Hotel Boutique" src="/imagenes/banner/1490455326.jpg">
+    </div>
+        <div class="item">
+      <img class="img-responsive" alt="Tibisay Hotel Boutique" src="/imagenes/banner/1490455366.jpg">
+    </div>
+        <div class="item">
+      <img class="img-responsive" alt="Tibisay Hotel Boutique" src="/imagenes/banner/1490454651.jpg">
+    </div>
+        <div class="item">
+      <img class="img-responsive" alt="Tibisay Hotel Boutique" src="/imagenes/banner/1490455447.jpg">
+    </div>
+        <div class="item">
+      <img class="img-responsive" alt="Tibisay Hotel Boutique" src="/imagenes/banner/1490455479.jpg">
+    </div>
+        <div class="item">
+      <img class="img-responsive" alt="Tibisay Hotel Boutique" src="/imagenes/banner/1490455498.jpg">
+    </div>
+        <div class="item">
+      <img class="img-responsive" alt="Tibisay Hotel Boutique" src="/imagenes/banner/1490455514.jpg">
+    </div>
+        <div class="item">
+      <img class="img-responsive" alt="Tibisay Hotel Boutique" src="/imagenes/banner/1490455537.jpg">
+    </div>
+        <div class="item">
+      <img class="img-responsive" alt="Tibisay Hotel Boutique" src="/imagenes/banner/1490455585.jpg">
     </div>
     
   </div>
@@ -233,89 +260,95 @@ function content_58cc3140786a01_53488629 (Smarty_Internal_Template $_smarty_tpl)
                   </div>
                   <div class="clearfix"></div>
                   <div class="col-xs-6">
-                      <h3>MÁS VACACIONES DE VERANO</h3>
+                      <h3>MARGARITA 4X3</h3>
                       <img src="/imagenes/divisionPromo.png" alt="" class="img-responsive-imgMarginDivision">
                       <p>
-	<span style="color:#545454;"><span style="font-size:20px;"><span style="font-family:century gothic,serif;">Nam congue mauris id risus vestibulum, vitae blandit erat scelerisque. Morbi dapibus justo quis neque consequat sodales. Morbi at dui et nulla pharetra pretium. Pellentesque sit amet quam a tellus porttitor lobortis. Nunc diam tortor, semper eget sagittis nec, vulputate nec diam. Integer eu dolor tellus. Pellentesque molestie turpis in lectus interdum iaculis. Vivamus suscipit diam non sapien aliquet porta. Nullam iaculis lectus non sodales porta. Duis tincidunt gravida nibh quis vehicula. Nam sit amet enim quis magna accumsan ornare. Cras dictum, nisi a efficitur vestibulum, lorem est blandit ante, nec varius eros urna vitae enim. Proin vel scelerisque felis. Suspendisse dictum orci sit amet erat auctor tempor vel nec neque. Suspendisse laoreet, nunc eget fringilla egestas, magna nisi congue urna, non vulputate massa nisl sit amet est.</span></span></span></p>
+	<span style="color:#545454;"><span style="font-size:20px;"><span style="font-family:century gothic,serif;">Volvemos con las mejores promociones del mercado, en esta oportunidad si usted reserva una estad&iacute;a por 4 noches solo pagar&aacute; 3 y si reserva por 5 noches solo pagar&aacute; 4, Tibisay Hotel Boutique te obsequia una noche, adem&aacute;s te llevamos a la playa y a los 3 centros comerciales m&aacute;s importantes de la isla sin costo adicional, los ni&ntilde;os hasta 7 a&ntilde;os totalmente gratis, al llegar te obsequiamos 2 cocteles de bienvenida&nbsp; y si llegas muy temprano y te quieres ir m&aacute;s tarde te damos la posibilidad de hacerlo seg&uacute;n nuestra disponibilidad, pregunta en recepci&oacute;n y reserva ya tu early check in o late check out sin costo, pregunta tambi&eacute;n por nuestros planes de financiamiento.</span></span></span></p>
+<p>
+	<span style="color:#545454;"><span style="font-size:20px;"><span style="font-family:century gothic,serif;">Condiciones: no aplica en temporada alta, no se puede fumar en las habitaciones, el paquete debe estar completamente pagado antes de la fecha de entrada.</span></span></span></p>
 
                   </div>
                   <div class="col-xs-6">
                       <div class="panel panel-default">
-                          <div class="panel-body"><img src="/imagenes/contenido/1489250307.png" alt="" class="img-responsive center-block" style="width: 100%;"></div>
+                          <div class="panel-body"><img src="/imagenes/contenido/1490465135.jpg" alt="" class="img-responsive center-block" style="width: 100%;"></div>
                       </div>
                   </div>
+                      <div class="col-xs-4 col-xs-offset-4 form-horizontal separacion-superior" >
+                          <a class="btn btn-default btn-block " href="#" onclick="history.back()">Volver</a>
+                      </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="row CONTACTO" id="CONTACTO">
+      <div class="col-xs-12 text-center">
+          <h2 class="tituloSeccion">CONTACTO</h2>
+      </div>
+      <div class="col-xs-12 separacion-row">
+          <img class="center-block" src="/imagenes/contactoBanda.png" alt="Contacto">
+      </div>
+      <div class="col-md-4 col-xs-12 formulario">
+          <form action="" method="post" class="form-horizontal" name="contacto" role="form">
+              <div class="form-group no_margin">
+                  <div class="col-xs-12 padding-off" style="margin-top: 15px;">
+                      <input type="text" class="form-control form-contacto" placeholder="Nombre" name="nombre" id="nombre" value="">
+                  </div>
+              </div>
+              <div class="form-group no_margin">
+                  <div class="col-xs-12 padding-off">
+                      <input type="email" placeholder="Correo" class="form-control form-contacto" name="email" id="email" value="">
+                  </div>
+              </div>
+              <div class="form-group no_margin">
+                  <div class="col-xs-12 padding-off">
+                      <input type="number" placeholder="Teléfono" class="form-control form-contacto" name="telefono" id="telefono" value="">
+                  </div>
+              </div>
+              <div class="form-group no_margin">
+                  <div class="col-xs-12 padding-off">
+                      <textarea class="form-control form-contacto" placeholder="Comentario" name="comentario" id="comentario" rows="3"></textarea>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <div class="col-xs-12">
+                      <button type="submit" class="form-control btn btn-contacto btn-block" name="envio" value="Enviar">Enviar <i class="fa fa-check-circle pull-right"></i> </button>
+                  </div>
+              </div>
+          </form>
+      </div>
+      <div class="col-md-4 col-xs-12">
+          <div class="panel panel-default">
+              <div class="panel-body mapa">
+                  <address>
+                      <i class="fa fa-map-marker"></i> Playa Moreno - Margarita, Venezuela<br>
+                      <i class="fa fa-phone"></i> (58) 0295-500.07.00 Ext -2017 Ext -2010<br>
+                      <strong>Contactos:</strong><br>
+                      <blockquote>
+                          <strong>Reservas:</strong><br>
+                          <i class="fa fa-envelope"></i> reservas@tibisayhotelboutique.com<br>
+                          <i class="fa fa-envelope"></i> auxreservas@tibisayhotelboutique.com<br>
+                          <strong>Gerentes de Ventas: </strong><br>
+                          <i class="fa fa-envelope"></i> ventas@tibisayhotelboutique.com<br>
+                          <strong>Asistente de Ventas: </strong><br>
+                          <i class="fa fa-envelope"></i> ventas1@tibisayhotelboutique.com<br>
+                          <strong>Gerentes de Eventos y Banquetes: </strong><br>
+                          <i class="fa fa-envelope"></i> eventos@tibisayhotelboutique.com<br>
+                          <strong>Coordinadora de Banquetes: </strong><br>
+                          <i class="fa fa-envelope"></i> eventos1@tibisayhotelboutique.com<br>
+                      </blockquote>
+                  </address>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-4 col-xs-12">
+          <div class="panel panel-default">
+              <div class="panel-body padding-off">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.6604688213447!2d-63.807106484669106!3d10.988980192177527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c318fa7df3644c3%3A0x85b01b7a86a556ea!2sHotel+Tibisay+Boutique!5e0!3m2!1ses!2sve!4v1489199303064" width="100%" height="424" frameborder="0" style="border:0" allowfullscreen></iframe>
               </div>
           </div>
       </div>
   </div>
 
-  <div class="container-fluid">
-      <div class="row CONTACTO" id="CONTACTO">
-          <div class="col-xs-12 text-center">
-              <h2 class="tituloSeccion">CONTACTO</h2>
-          </div>
-          <div class="col-xs-12 separacion-row">
-              <img class="center-block" src="/imagenes/contactoBanda.png" alt="Contacto">
-          </div>
-          <div class="col-md-3 col-md-offset-2 col-xs-12 formulario">
-              <form action="" method="post" class="form-horizontal" name="contacto" role="form">
-                  <div class="form-group no_margin">
-                      <div class="col-xs-12 padding-off" style="margin-top: 15px;">
-                          <input type="text" class="form-control form-contacto" placeholder="Nombre" name="nombre" id="nombre" value="">
-                      </div>
-                  </div>
-                  <div class="form-group no_margin">
-                      <div class="col-xs-12 padding-off">
-                          <input type="email" placeholder="Correo" class="form-control form-contacto" name="email" id="email" value="">
-                      </div>
-                  </div>
-                  <div class="form-group no_margin">
-                      <div class="col-xs-12 padding-off">
-                          <input type="number" placeholder="Teléfono" class="form-control form-contacto" name="telefono" id="telefono" value="">
-                      </div>
-                  </div>
-                  <div class="form-group no_margin">
-                      <div class="col-xs-12 padding-off">
-                          <textarea class="form-control form-contacto" placeholder="Comentario" name="comentario" id="comentario" rows="3"></textarea>
-                      </div>
-                  </div>
-                  <div class="form-group">
-                      <div class="col-xs-12">
-                          <button type="submit" class="form-control btn btn-contacto btn-block" name="envio" value="Enviar">Enviar <i class="fa fa-check-circle pull-right"></i> </button>
-                      </div>
-                  </div>
-              </form>
-          </div>
-          <div class="col-md-5 col-md-offset-1 col-xs-12">
-              <div class="panel panel-default">
-                  <div class="panel-body mapa">
-                      <address>
-                          <i class="fa fa-map-marker"></i> Playa Moreno - Margarita, Venezuela<br>
-                          <i class="fa fa-phone"></i> (58) 0295-500.07.00 Ext -2017 Ext -2010<br>
-                          <strong>Contactos:</strong><br>
-                          <blockquote>
-                              <strong>Reservas:</strong><br>
-                              <i class="fa fa-envelope"></i> reservas@tibisayhotelboutique.com<br>
-                              <i class="fa fa-envelope"></i> auxreservas@tibisayhotelboutique.com<br>
-                              <strong>Gerentes de Ventas: </strong><br>
-                              <i class="fa fa-envelope"></i> ventas@tibisayhotelboutique.com<br>
-                              <strong>Asistente de Ventas: </strong><br>
-                              <i class="fa fa-envelope"></i> ventas1@tibisayhotelboutique.com<br>
-                              <strong>Gerentes de Eventos y Banquetes: </strong><br>
-                              <i class="fa fa-envelope"></i> eventos@tibisayhotelboutique.com<br>
-                              <strong>Coordinadora de Banquetes: </strong><br>
-                              <i class="fa fa-envelope"></i> ventas@tibisayhotelboutique.com<br>
-                          </blockquote>
-                          <i class="fa fa-mail-reply fa-rotate-180"></i> www.hoteltibisaymerida.com.ve
-                      </address>
-
-                  </div>
-                  <div class="panel-body padding-off">
-                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.6604688213447!2d-63.807106484669106!3d10.988980192177527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c318fa7df3644c3%3A0x85b01b7a86a556ea!2sHotel+Tibisay+Boutique!5e0!3m2!1ses!2sve!4v1489199303064" width="100%" height="343" frameborder="0" style="border:0" allowfullscreen></iframe>
-                  </div>
-              </div>
-          </div>
-      </div>
   </div>
 
   <footer>

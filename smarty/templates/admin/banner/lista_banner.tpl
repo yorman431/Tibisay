@@ -32,7 +32,7 @@
         <tr>
           <td width="180" class="subtituloWeb3">Imagen</td>
           <td width="180" class="subtituloWeb3">Etiqueta</tdael>
-          <td width="180" class="subtituloWeb3">Vinculo</td>
+          <td width="180" class="subtituloWeb3">Prioridad</td>
           <td width="100" class="subtituloWeb3">Tipo</td>
           <td width="80" class="subtituloWeb3">Efecto</td>
           <td colspan="3" align="center" class="subtituloWeb3">Acciones</td>
@@ -47,7 +47,7 @@
       <td class="adminContenido"><a href="/imagenes/banner/{$listado[i].url_ban}" title="{$listado[i].etiqueta_ban}" rel="lightbox[roadtrip]" >
     <img src="/imagenes/banner/{$listado[i].url_ban}" width="200" border="0" class="fotos opacidad" /></a></td>
       <td class="adminContenido">{$listado[i].etiqueta_ban}</td>
-    <td class="adminContenido">{$listado[i].vinculo_ban}</td>
+    <td class="adminContenido">{$listado[i].prioridad_ban}</td>
     <td class="adminContenido">{$listado[i].tipo_ban}</td>
     <td class="adminContenido">{$listado[i].efecto_ban}</td>
     <td width="40" align="center"><a href="detalle.php?id={$listado[i].id_ban}" title="Detalles"><img src="/imagenes/detalles.png" width="30" height="25" border="0" /></a></td>

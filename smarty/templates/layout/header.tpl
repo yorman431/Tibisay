@@ -39,8 +39,3 @@
 <link href="/css/personalizado/personalizado.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="/fonts/style.css">
 <link  href="/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
-
-
-<!-- InstanceBeginEditable name="head" -->
-
-<!-- InstanceEndEditable -->

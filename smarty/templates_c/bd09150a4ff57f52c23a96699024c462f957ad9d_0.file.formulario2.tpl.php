@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-09 15:41:02
+/* Smarty version 3.1.30, created on 2017-03-27 22:49:26
   from "D:\Websites\tibisay\smarty\templates\admin\link\formulario2.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58c1697ebc23a4_08542521',
+  'unifunc' => 'content_58d97ad6e20f25_20445233',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bd09150a4ff57f52c23a96699024c462f957ad9d' => 
     array (
       0 => 'D:\\Websites\\tibisay\\smarty\\templates\\admin\\link\\formulario2.tpl',
-      1 => 1487191152,
+      1 => 1490283022,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../layout/pie.tpl' => 1,
   ),
 ),false)) {
-function content_58c1697ebc23a4_08542521 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58d97ad6e20f25_20445233 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/plantilla_admin.dwt" codeOutsideHTMLIsLocked="false" -->
@@ -60,19 +60,19 @@ function content_58c1697ebc23a4_08542521 (Smarty_Internal_Template $_smarty_tpl)
           <tr>
             <td align="right" class="subtituloWeb3"><table width="40%" border="0" align="center" cellpadding="0" cellspacing="0">
               <tr>
-                <td width="74" align="left" class="subtituloWeb3">Name:</td>
+                <td width="74" align="left" class="subtituloWeb3">Nombre:</td>
                 <td width="313"><input name="nombre" type="text" class="componentes" id="nombre"  value="<?php echo $_smarty_tpl->tpl_vars['nombres']->value;?>
 " size="45" maxlength="50" /></td>
               </tr>
               <tr>
-                <td align="left" class="subtituloWeb3">Priority:</td>
+                <td align="left" class="subtituloWeb3">Prioridad:</td>
                 <td><input name="prioridad" type="text" class="componentes" id="prioridad" onkeypress="javascripts: return validarletrasnum(event);" value="<?php echo $_smarty_tpl->tpl_vars['prioridad']->value;?>
 " size="45" maxlength="20" /></td>
               </tr>
               <?php echo $_smarty_tpl->tpl_vars['mensaje']->value;?>
 
   <tr>
-    <td colspan="2" align="center"><input name="envio" type="submit" class="componentes" id="button" onclick="javascript: return confirmar('Are you sure you want to save?');" value="Guardar" />
+    <td colspan="2" align="center"><input name="envio" type="submit" class="componentes" id="button" onclick="javascript: return confirmar('¿Está seguro que desea guardar?');" value="Guardar" />
       &nbsp;&nbsp;
       <input name="button2" type="button" class="componentes" id="button2" onclick="javascript: location.href='/admin/link/sublink_lista.php'" value="Cancelar" /></td>
   </tr>

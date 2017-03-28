@@ -298,7 +298,7 @@ class Link{
 			$id=$_GET['id'];
 			$this->asignar_valores();
 			$sql="SELECT * FROM sublink WHERE nombre_sub='$this->nombre' AND id_sub!='$id'";
-			$sql="UPDATE sublink SET nombre_sub='$this->nombre', etiqueta_sub='$this->etiqueta', prioridad_sub='$this->prioridad' WHERE id_sub='$id'";
+			$sql="UPDATE sublink SET nombre_sub='$this->nombre', prioridad_sub='$this->prioridad' WHERE id_sub='$id'";
 				$consulta=mysql_query($sql) or die(mysql_error());
 				header("location:/admin/link/sublink_lista.php");
 			

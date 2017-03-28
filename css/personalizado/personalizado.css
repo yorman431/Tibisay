@@ -189,7 +189,7 @@ p{
 }
 
 .centrarNav{
-  padding-left: 18%;
+  padding-left: 6%;
 }
 /*--Fin SERVICIOS--*/
 
@@ -234,6 +234,10 @@ p{
 
 .banner{
   width: 100%;
+}
+
+.separacion-img-bodas{
+  margin-top: 20px;
 }
 /*--Fin BODAS--*/
 
@@ -341,8 +345,12 @@ input, textarea{
 }
 
 .btn{
-  border: transparent;
   border-radius:0;
+}
+
+.btn-default{
+  border: #545454 solid 1px;
+  color: #545454;
 }
 /*--Fin CONTACTOS--*/
 
@@ -359,6 +367,15 @@ input, textarea{
 /*--PUBLICIDAD--*/
 .PUBLICIDAD{
   background: #d0c8a6;
+}
+
+.titulo2{
+  margin-top: 0;
+  color: #FFFFFF;
+}
+
+.PUBLICIDAD .separacion-superior {
+  margin-top: 10px;
 }
 /*--Fin PUBLICIDAD--*/
 
@@ -959,11 +976,6 @@ footer > .container-fluid > .row > span{
   color: #fff;
   background-color: #00f9c3;
   border-color: #6d9102;
-}
-
-.fondo_verde .btn-default {
-  float:right;
-  margin-right:10px;
 }
 
 /* Featurettes

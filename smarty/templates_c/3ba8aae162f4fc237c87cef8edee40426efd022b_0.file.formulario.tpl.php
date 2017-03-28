@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-04 19:37:04
+/* Smarty version 3.1.30, created on 2017-03-27 19:07:12
   from "D:\Websites\tibisay\smarty\templates\admin\banner\formulario.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58bb095022daa7_08803978',
+  'unifunc' => 'content_58d946c0653881_63611135',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3ba8aae162f4fc237c87cef8edee40426efd022b' => 
     array (
       0 => 'D:\\Websites\\tibisay\\smarty\\templates\\admin\\banner\\formulario.tpl',
-      1 => 1487191152,
+      1 => 1490634331,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../layout/pie.tpl' => 1,
   ),
 ),false)) {
-function content_58bb095022daa7_08803978 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58d946c0653881_63611135 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/plantilla_admin.dwt" codeOutsideHTMLIsLocked="false" -->
@@ -101,13 +101,13 @@ function content_58bb095022daa7_08803978 (Smarty_Internal_Template $_smarty_tpl)
             <?php echo $_smarty_tpl->tpl_vars['mensaje']->value;?>
 
               <tr>
-                <td width="15%" align="left" class="subtituloWeb3">Label:</td>
+                <td width="15%" align="left" class="subtituloWeb3">Etiqueta:</td>
                 <td width="75%"><input name="etiqueta" type="text" id="etiqueta" value="<?php echo $_smarty_tpl->tpl_vars['etiqueta']->value;?>
 " size="71" maxlength="100" />
                 *</td>
               </tr>
               <tr>
-                <td align="left" class="subtituloWeb3">Efect:</td>
+                <td align="left" class="subtituloWeb3">Efecto:</td>
                 <td><select name="efecto" id="efecto">
 <option value="showBars" <?php if ($_smarty_tpl->tpl_vars['efecto']->value == "showBars") {?> selected='selected' <?php }?>>Show Bars</option>
 <option value="cube" <?php if ($_smarty_tpl->tpl_vars['efecto']->value == "cube") {?> selected='selected' <?php }?>>Cube</option>
@@ -131,18 +131,18 @@ function content_58bb095022daa7_08803978 (Smarty_Internal_Template $_smarty_tpl)
                   *</td>
               </tr>
               <tr>
-                <td align="left" class="subtituloWeb3">Link:</td>
-                <td class="normalContenido"><input name="vinculo" type="text" id="vinculo" value="<?php echo $_smarty_tpl->tpl_vars['vinculo']->value;?>
+                <td align="left" class="subtituloWeb3">Prioridad:</td>
+                <td class="normalContenido"><input name="prioridad" type="text" id="prioridad" value="<?php echo $_smarty_tpl->tpl_vars['prioridad']->value;?>
 " size="71" maxlength="100" /></td>
               </tr>
               <tr>
-                <td align="left" class="subtituloWeb3">Image:</td>
+                <td align="left" class="subtituloWeb3">Imagen:</td>
                 <td class="normalContenido"><input type="file" name="documento" id="documento" />
                   *
                   (512 Kb m&aacute;x)</td>
               </tr>
               <tr>
-                <td align="left" valign="top" class="subtituloWeb3">Content:</td>
+                <td align="left" valign="top" class="subtituloWeb3">Descripción:</td>
                 <td align="left" class="normalContenido">&nbsp;</td>
               </tr>
               <tr>
@@ -150,10 +150,10 @@ function content_58bb095022daa7_08803978 (Smarty_Internal_Template $_smarty_tpl)
 </textarea></td>
     </tr>
               <tr>
-                <td colspan="2" align="center"><input name="envio" type="submit" id="envio" onclick="javascript: return validarbanner('Are you sure you want to save?');" value="Guardar"/>
+                <td colspan="2" align="center"><input name="envio" type="submit" id="envio" onclick="javascript: return validarbanner('¿Está seguro que desea guardar?');" value="Guardar"/>
                   &nbsp;
                   <input type="button" name="Submit" value="Cancelar" onclick="javascripts: location.href='/admin/banner'" />
-                  (*) Required Data</td>
+                  (*) Datos Requeridos</td>
                 </tr>
             </table></td>
           </tr>

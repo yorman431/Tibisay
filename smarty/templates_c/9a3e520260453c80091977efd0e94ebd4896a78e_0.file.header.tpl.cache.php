@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-23 23:30:58
+/* Smarty version 3.1.30, created on 2017-03-28 14:38:55
   from "D:\Websites\tibisay\smarty\templates\layout\header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58d44ca220dbe8_15843812',
+  'unifunc' => 'content_58da595f2c2531_29621127',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9a3e520260453c80091977efd0e94ebd4896a78e' => 
     array (
       0 => 'D:\\Websites\\tibisay\\smarty\\templates\\layout\\header.tpl',
-      1 => 1490283024,
+      1 => 1490647166,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58d44ca220dbe8_15843812 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '46758d44ca2206ab9_89516127';
+function content_58da595f2c2531_29621127 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '2261358da595f2bb608_06646469';
 ?>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -87,10 +87,5 @@ $_smarty_tpl->compiled->nocache_hash = '46758d44ca2206ab9_89516127';
 <link href="/css/personalizado/personalizado.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="/fonts/style.css">
 <link  href="/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
-
-
-<!-- InstanceBeginEditable name="head" -->
-
-<!-- InstanceEndEditable -->
 <?php }
 }
