@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-28 14:09:04
+/* Smarty version 3.1.30, created on 2017-03-29 03:23:01
   from "D:\Websites\tibisay\smarty\templates\contenido.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58da52603ac961_33660261',
+  'unifunc' => 'content_58db0c75005db5_69779214',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '543366c99538cf7cc02178f63264208c0bc2a0ae' => 
     array (
       0 => 'D:\\Websites\\tibisay\\smarty\\templates\\contenido.tpl',
-      1 => 1490668688,
+      1 => 1490750577,
       2 => 'file',
     ),
   ),
@@ -23,8 +23,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:./layout/banner.tpl' => 1,
   ),
 ),false)) {
-function content_58da52603ac961_33660261 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '1238858da52601fb4a1_79683564';
+function content_58db0c75005db5_69779214 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '1349158db0c74eea551_37972636';
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -68,8 +68,8 @@ $_smarty_tpl->compiled->nocache_hash = '1238858da52601fb4a1_79683564';
 " alt="" class="img-responsive center-block" style="width: 100%;"></div>
                       </div>
                   </div>
-                      <div class="col-xs-4 col-xs-offset-4 form-horizontal separacion-superior" >
-                          <a class="btn btn-default btn-block " href="#" onclick="history.back()">Volver</a>
+                      <div class="col-xs-12 separacion-superior" align="center">
+                          <a class="btn btn-default" href="#" onclick="history.back()"><h4 class="no_margin2"><strong>Volver</strong></h4></a>
                       </div>
               </div>
           </div>

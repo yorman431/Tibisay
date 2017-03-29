@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-28 14:38:54
+/* Smarty version 3.1.30, created on 2017-03-29 05:25:44
   from "D:\Websites\tibisay\smarty\templates\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58da595e73daf9_86338104',
+  'unifunc' => 'content_58db29388b24d4_62778654',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8502e2c667bdaf4aa27202a8d7c0209ac6fe7727' => 
     array (
       0 => 'D:\\Websites\\tibisay\\smarty\\templates\\index.tpl',
-      1 => 1490704731,
+      1 => 1490757931,
       2 => 'file',
     ),
   ),
@@ -23,8 +23,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:./layout/banner.tpl' => 1,
   ),
 ),false)) {
-function content_58da595e73daf9_86338104 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '180458da595e4e7383_09593997';
+function content_58db29388b24d4_62778654 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '2817858db2937c661e5_29334018';
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -149,7 +149,6 @@ $_smarty_tpl->tpl_vars['__smarty_section_i'] = $__section_i_0_saved;
 ?>
       </div>
 
-      <!--TODO: Arreglar el problema de widescreen, el error está en reservas-->
     <div class="row RESERVAS" id="RESERVAS">
           <div class="col-xs-12 text-center">
               <h2 class="tituloSeccion">RESERVAS</h2>
@@ -405,7 +404,8 @@ $_smarty_tpl->tpl_vars['__smarty_section_i'] = $__section_i_5_saved;
 
     <div class="row TESTIMONIO" id="TESTIMONIOS">
         <div class="col-xs-12 text-center">
-          <h2 class="tituloSeccion">TESTIMONIOS / COMENTANOS TU EXPERIENCIA</h2>
+          <h2 class="tituloSeccion">TESTIMONIOS</h2>
+          <h2 class="tituloSeccion">COMÉNTANOS TU EXPERIENCIA</h2>
         </div>
         <div class="col-xs-12">
           <hr class="seccion">
@@ -609,7 +609,7 @@ for ($__section_i_7_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']-
                           <div class="col-md-10 col-md-offset-2 col-xs-12">
                             <h3 class="titulo"><?php echo $_smarty_tpl->tpl_vars['boda']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['nombre_con'];?>
 </h3>
-                            <div class="col-md-4 col-xs-6 no_padding">
+                            <div class="col-xs-6 no_padding">
                               <hr class="habitacionT"><i class="fa fa-circle habitacion2T" aria-hidden="true"></i>
                             </div>
                             <div class="clearfix"></div>
@@ -626,7 +626,7 @@ for ($__section_i_7_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']-
                           <div class="col-md-10 col-xs-12">
                             <div id="boda<?php echo $_smarty_tpl->tpl_vars['boda']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['id_con'];?>
 " class="carousel slide" data-ride="carousel">
-                              <div class="carousel-inner" role="listbox" style="min-height: 350px;">
+                              <div class="carousel-inner" role="listbox" style="min-height: 300px; max-height: 300px;">
                                   <?php $_smarty_tpl->_assignInScope('cont2', 0);
 ?>
                                   <?php
@@ -678,7 +678,7 @@ $_smarty_tpl->tpl_vars['__smarty_section_j'] = $__section_j_8_saved;
                             <div id="boda<?php echo $_smarty_tpl->tpl_vars['boda']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['id_con'];?>
 " class="carousel slide" data-ride="carousel">
 
-                              <div class="carousel-inner" role="listbox" style="min-height: 350px;">
+                              <div class="carousel-inner" role="listbox" style="min-height: 300px; max-height: 300px;">
                                   <?php $_smarty_tpl->_assignInScope('cont2', 0);
 ?>
                                   <?php
@@ -727,7 +727,7 @@ $_smarty_tpl->tpl_vars['__smarty_section_j'] = $__section_j_9_saved;
                           <div class="col-md-10 col-xs-12">
                             <h3 class="titulo"><?php echo $_smarty_tpl->tpl_vars['boda']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['nombre_con'];?>
 </h3>
-                            <div class="col-md-4 col-xs-6 no_padding">
+                            <div class="col-xs-6 no_padding">
                               <hr class="habitacionT"><i class="fa fa-circle habitacion2T" aria-hidden="true"></i>
                             </div>
                             <div class="clearfix"></div>
@@ -825,7 +825,7 @@ $_smarty_tpl->tpl_vars['__smarty_section_i'] = $__section_i_10_saved;
           <div class="container-fluid">
             <div class="row">
               <div class="col-md-6 col-xs-12 separacion-superior text-center">
-                <h3 class="titulo2">CONOZCA NUESTROS ALIADOS</h3>
+                  <h3 class="titulo2"><strong>CONOZCA NUESTROS ALIADOS</strong></h3>
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
                   <ol class="carousel-indicators" style="display:none;">
                       <?php $_smarty_tpl->_assignInScope('cont', 0);
@@ -880,7 +880,7 @@ $_smarty_tpl->tpl_vars['__smarty_section_i'] = $__section_i_12_saved;
                 </div>
               </div>
               <div class="col-md-6 col-xs-12 separacion-superior text-center">
-                <h3 class="titulo2">CONOZCA NUESTROS HOTELES</h3>
+                  <h3 class="titulo2"><strong>CONOZCA NUESTROS HOTELES</strong></h3>
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
                   <ol class="carousel-indicators" style="display:none;">
                       <?php $_smarty_tpl->_assignInScope('cont', 0);

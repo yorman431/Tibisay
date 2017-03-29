@@ -317,7 +317,7 @@ class Auth extends Config{
 	    //metodo para el envio desde el formulario de contacto
 		$this->mostrar_config(1);
 		$this->asignar_ingreso();
-		$cuerpo ="<img src='".$this->website."http://tibisay.diazcreativos.net.ve/imagenes/logon.png' /><br /><br />
+		$cuerpo ="<img src='http://tibisay.diazcreativos.net.ve/imagenes/logon.png' /><br /><br />
 		<u>DATOS INGRESADOS:</u><br />";
 		$cuerpo .="<br />";
 		$cuerpo .= "<strong>Nombre: </strong>".$this->nombre."<br />" ;
@@ -330,9 +330,9 @@ class Auth extends Config{
 		$subject= "Contacto ".$this->empresa;
 		$subject2= "Contacto desde Web ".$this->empresa;
 		$basemailfor=$this->correo;
-		$basemailfor2="adri220487@gmail.com";
+		$basemailfor2="ventas@tibisayhotelboutique.com";
 		$basemailfrom = $this->email;
-		$respuesta ="<img src='".$this->website."/imagenes/logon.png' /><br /><br />
+		$respuesta ="<img src='http://tibisay.diazcreativos.net.ve/imagenes/logon.png' /><br /><br />
 
 		<strong>Estimado(a) ".$this->nombre."</strong>,<br /><br />
 
@@ -342,7 +342,7 @@ class Auth extends Config{
 
 		Atentamente,<br />
 		Departamento de Ventas ".$this->empresa."<br />
-		Teléfonos: +58 274 2441729 / 2444455 <br />
+		Teléfonos: (+58) 0295-500.07.00 Ext -2017 Ext -2010 <br />
 		Facebook: <a href='https://www.facebook.com/tibisayhotelboutique'>Tibisay Hotel Boutique</a><br />
 		Twitter: <a href='https://twitter.com/TibisayHotel'>@TibisayHotel</a><br />
 		Instagram: <a href='https://www.instagram.com/tibisayhotelboutique/'>tibisayhotelboutique</a>";

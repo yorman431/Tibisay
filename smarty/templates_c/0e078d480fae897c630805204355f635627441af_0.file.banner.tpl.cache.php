@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-28 14:38:55
+/* Smarty version 3.1.30, created on 2017-03-29 05:25:45
   from "D:\Websites\tibisay\smarty\templates\layout\banner.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58da595f44be17_68513630',
+  'unifunc' => 'content_58db2939843dd5_77663633',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58da595f44be17_68513630 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '2953158da595f42d536_14238583';
+function content_58db2939843dd5_77663633 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '1295358db2939818ca1_48762617';
 ?>
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->

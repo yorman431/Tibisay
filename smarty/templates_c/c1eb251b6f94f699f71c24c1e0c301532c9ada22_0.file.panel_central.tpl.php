@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-27 22:53:54
+/* Smarty version 3.1.30, created on 2017-03-29 04:45:37
   from "D:\Websites\tibisay\smarty\templates\admin\panel_central.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58d97be27fcd43_02670573',
+  'unifunc' => 'content_58db1fd19a9484_98078940',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:./layout/pie.tpl' => 1,
   ),
 ),false)) {
-function content_58d97be27fcd43_02670573 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58db1fd19a9484_98078940 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/plantilla_admin.dwt" codeOutsideHTMLIsLocked="false" -->

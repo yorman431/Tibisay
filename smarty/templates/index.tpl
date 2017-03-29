@@ -277,7 +277,8 @@
 
     <div class="row TESTIMONIO" id="TESTIMONIOS">
         <div class="col-xs-12 text-center">
-          <h2 class="tituloSeccion">TESTIMONIOS / COMENTANOS TU EXPERIENCIA</h2>
+          <h2 class="tituloSeccion">TESTIMONIOS</h2>
+          <h2 class="tituloSeccion">COMÉNTANOS TU EXPERIENCIA</h2>
         </div>
         <div class="col-xs-12">
           <hr class="seccion">
@@ -428,7 +429,7 @@
                         <div class="row">
                           <div class="col-md-10 col-md-offset-2 col-xs-12">
                             <h3 class="titulo">{$boda[i].nombre_con}</h3>
-                            <div class="col-md-4 col-xs-6 no_padding">
+                            <div class="col-xs-6 no_padding">
                               <hr class="habitacionT"><i class="fa fa-circle habitacion2T" aria-hidden="true"></i>
                             </div>
                             <div class="clearfix"></div>
@@ -443,7 +444,7 @@
                         <div class="row">
                           <div class="col-md-10 col-xs-12">
                             <div id="boda{$boda[i].id_con}" class="carousel slide" data-ride="carousel">
-                              <div class="carousel-inner" role="listbox" style="min-height: 350px;">
+                              <div class="carousel-inner" role="listbox" style="min-height: 300px; max-height: 300px;">
                                   {assign var="cont2" value=0}
                                   {section j $boda[i].imagen}
                                     <div {if $cont2 eq "0"} class="item active" {else} class="item" {/if}>
@@ -474,7 +475,7 @@
                           <div class="col-md-10 col-md-offset-2 col-xs-12">
                             <div id="boda{$boda[i].id_con}" class="carousel slide" data-ride="carousel">
 
-                              <div class="carousel-inner" role="listbox" style="min-height: 350px;">
+                              <div class="carousel-inner" role="listbox" style="min-height: 300px; max-height: 300px;">
                                   {assign var="cont2" value=0}
                                   {section j $boda[i].imagen}
                                     <div {if $cont2 eq "0"} class="item active" {else} class="item" {/if}>
@@ -503,7 +504,7 @@
                         <div class="row">
                           <div class="col-md-10 col-xs-12">
                             <h3 class="titulo">{$boda[i].nombre_con}</h3>
-                            <div class="col-md-4 col-xs-6 no_padding">
+                            <div class="col-xs-6 no_padding">
                               <hr class="habitacionT"><i class="fa fa-circle habitacion2T" aria-hidden="true"></i>
                             </div>
                             <div class="clearfix"></div>
@@ -576,7 +577,7 @@
           <div class="container-fluid">
             <div class="row">
               <div class="col-md-6 col-xs-12 separacion-superior text-center">
-                <h3 class="titulo2">CONOZCA NUESTROS ALIADOS</h3>
+                  <h3 class="titulo2"><strong>CONOZCA NUESTROS ALIADOS</strong></h3>
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
                   <ol class="carousel-indicators" style="display:none;">
                       {assign var="cont" value=0}
@@ -598,7 +599,7 @@
                 </div>
               </div>
               <div class="col-md-6 col-xs-12 separacion-superior text-center">
-                <h3 class="titulo2">CONOZCA NUESTROS HOTELES</h3>
+                  <h3 class="titulo2"><strong>CONOZCA NUESTROS HOTELES</strong></h3>
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
                   <ol class="carousel-indicators" style="display:none;">
                       {assign var="cont" value=0}

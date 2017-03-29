@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-28 14:09:04
+/* Smarty version 3.1.30, created on 2017-03-29 03:23:01
   from "D:\Websites\tibisay\smarty\templates\contenido.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58da5260810670_95022999',
+  'unifunc' => 'content_58db0c7522ac93_54142847',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '543366c99538cf7cc02178f63264208c0bc2a0ae' => 
     array (
       0 => 'D:\\Websites\\tibisay\\smarty\\templates\\contenido.tpl',
-      1 => 1490668688,
+      1 => 1490750577,
       2 => 'file',
     ),
     '9a3e520260453c80091977efd0e94ebd4896a78e' => 
@@ -36,7 +36,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 3600,
 ),true)) {
-function content_58da5260810670_95022999 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58db0c7522ac93_54142847 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -260,21 +260,21 @@ function content_58da5260810670_95022999 (Smarty_Internal_Template $_smarty_tpl)
                   </div>
                   <div class="clearfix"></div>
                   <div class="col-xs-6">
-                      <h3>MARGARITA 4X3</h3>
+                      <h3>TIBISAY DE NUEVO TE SORPRENDE 3X2 DE DOMINGO A JUEVES</h3>
                       <img src="/imagenes/divisionPromo.png" alt="" class="img-responsive-imgMarginDivision">
                       <p>
-	<span style="color:#545454;"><span style="font-size:20px;"><span style="font-family:century gothic,serif;">Volvemos con las mejores promociones del mercado, en esta oportunidad si usted reserva una estad&iacute;a por 4 noches solo pagar&aacute; 3 y si reserva por 5 noches solo pagar&aacute; 4, Tibisay Hotel Boutique te obsequia una noche, adem&aacute;s te llevamos a la playa y a los 3 centros comerciales m&aacute;s importantes de la isla sin costo adicional, los ni&ntilde;os hasta 7 a&ntilde;os totalmente gratis, al llegar te obsequiamos 2 cocteles de bienvenida&nbsp; y si llegas muy temprano y te quieres ir m&aacute;s tarde te damos la posibilidad de hacerlo seg&uacute;n nuestra disponibilidad, pregunta en recepci&oacute;n y reserva ya tu early check in o late check out sin costo, pregunta tambi&eacute;n por nuestros planes de financiamiento.</span></span></span></p>
+	<span style="color:#545454;"><span style="font-size:20px;"><span style="font-family:century gothic,serif;">Tibisay Hotel Boutique te ofrece una promoci&oacute;n que cautivar&aacute; tus sentidos, si usted reserva una habitaci&oacute;n para 2 personas de domingo a jueves por 3 noches usted solo pagar&aacute; 2 noches la tercera Tibisay te la obsequia porque usted es importante para nosotros, pero no solo le obsequiamos una noche tambi&eacute;n un ni&ntilde;o hasta 7 a&ntilde;os completamente gratis, pregunte por nuestro plan de financiamiento, &iquest;qu&eacute; espera? reserve ya Tibisay Hotel Boutique cautivar&aacute; tus sentidos.</span></span></span></p>
 <p>
 	<span style="color:#545454;"><span style="font-size:20px;"><span style="font-family:century gothic,serif;">Condiciones: no aplica en temporada alta, no se puede fumar en las habitaciones, el paquete debe estar completamente pagado antes de la fecha de entrada.</span></span></span></p>
 
                   </div>
                   <div class="col-xs-6">
                       <div class="panel panel-default">
-                          <div class="panel-body"><img src="/imagenes/contenido/1490465135.jpg" alt="" class="img-responsive center-block" style="width: 100%;"></div>
+                          <div class="panel-body"><img src="/imagenes/contenido/1490465425.jpg" alt="" class="img-responsive center-block" style="width: 100%;"></div>
                       </div>
                   </div>
-                      <div class="col-xs-4 col-xs-offset-4 form-horizontal separacion-superior" >
-                          <a class="btn btn-default btn-block " href="#" onclick="history.back()">Volver</a>
+                      <div class="col-xs-12 separacion-superior" align="center">
+                          <a class="btn btn-default" href="#" onclick="history.back()"><h4 class="no_margin2"><strong>Volver</strong></h4></a>
                       </div>
               </div>
           </div>

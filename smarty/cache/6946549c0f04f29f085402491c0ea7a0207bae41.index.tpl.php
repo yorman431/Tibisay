@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-28 14:38:55
+/* Smarty version 3.1.30, created on 2017-03-29 05:25:45
   from "D:\Websites\tibisay\smarty\templates\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58da595f512dc4_26991356',
+  'unifunc' => 'content_58db2939963c07_38695384',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8502e2c667bdaf4aa27202a8d7c0209ac6fe7727' => 
     array (
       0 => 'D:\\Websites\\tibisay\\smarty\\templates\\index.tpl',
-      1 => 1490704731,
+      1 => 1490757931,
       2 => 'file',
     ),
     '9a3e520260453c80091977efd0e94ebd4896a78e' => 
@@ -36,7 +36,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 3600,
 ),true)) {
-function content_58da595f512dc4_26991356 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58db2939963c07_38695384 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -560,7 +560,6 @@ function content_58da595f512dc4_26991356 (Smarty_Internal_Template $_smarty_tpl)
           <div class="clearfix"></div>
               </div>
 
-      <!--TODO: Arreglar el problema de widescreen, el error está en reservas-->
     <div class="row RESERVAS" id="RESERVAS">
           <div class="col-xs-12 text-center">
               <h2 class="tituloSeccion">RESERVAS</h2>
@@ -742,20 +741,26 @@ function content_58da595f512dc4_26991356 (Smarty_Internal_Template $_smarty_tpl)
 
 
                 <div role="tabpanel" class="tab-pane fade" id="gimnasio">
-                                            <p>
-	<img alt="" class="img-responsive" src="/imagenes/galeria/images/Gimnasio-2.jpg" style="width: 400px; height: 267px; border-width: 0px; border-style: solid; margin: 6px; float: right;" /><span style="color:#fff;"><span style="font-size:20px;"><span style="font-family:century gothic,serif;">El hotel cuenta con un &aacute;rea destinada para aquellas personas que se quieren ejercitar, en un espacio c&oacute;modo y confortable con equipos modernos dise&ntilde;ado para su bienestar, buscando ofrecerle un plus adicional dise&ntilde;amos un espacio para que las personas pudiesen disfrutar de diferentes tipos de masajes desde relajantes, pasando por piedras calientes, drenaje linf&aacute;tico, reductores, etc, elaborados por un profesional en un ambiente que lo har&aacute; relajarse y disfrutar a plenitud.&nbsp;</span></span></span></p>
+                                            <div class="col-md-8 col-xs-12">
+	<span style="font-size:20px;"><span style="font-family:century gothic,serif; color:#FFFFFF;">El hotel cuenta con un &aacute;rea destinada para aquellas personas que se quieren ejercitar, en un espacio c&oacute;modo y confortable con equipos modernos dise&ntilde;ado para su bienestar, buscando ofrecerle un plus adicional dise&ntilde;amos un espacio para que las personas pudiesen disfrutar de diferentes tipos de masajes desde relajantes, pasando por piedras calientes, drenaje linf&aacute;tico, reductores, etc, elaborados por un profesional en un ambiente que lo har&aacute; relajarse y disfrutar a plenitud.&nbsp;</span></span></div>
+<div class="col-md-4 col-xs-12">
+	<img alt="" class="img-responsive center-block separacion-row" src="/imagenes/galeria/images/Gimnasio-2.jpg" /> <img alt="" class="img-responsive center-block" src="/imagenes/galeria/images/Spa.jpg" /></div>
 
                                     </div>
 
                 <div role="tabpanel" class="tab-pane fade" id="peluqueria">
-                                            <p>
-	<span style="color:#fff;">Con estilistas de mucha experiencia y reconocida trayectoria , V.I.P EL ATELIER no es cualquier sal&oacute;n de belleza, esta dirigido a una clientela muy exigente por ello&nbsp;contamos con estilistas con una amplia trayectoria en el mundo de estilismo certificados de la casa L&rsquo;Oreal Profesional. Brindamos la mejor atenci&oacute;n al cliente desde su llegada hasta finalizado el servicio en el sal&oacute;n. En V.I.P buscamos la belleza integral, siempre con la premisa de &ldquo;la salud es belleza&rdquo;. En nuestro espacio &nbsp;ofrecemos &nbsp;a los clientes tratamientos para el embellecimiento, conservaci&oacute;n, higiene tanto del&nbsp; cabello como de la piel y las &nbsp;u&ntilde;as, con el fin primordial de alcanzar una imagen saludable y hermosa.&nbsp;En VIP siempre estamos a la &nbsp;vanguardia de las tendencias a nivel mundial en cuanto a cortes, `peinados , colores, maquillajes,&nbsp;pues siempre nos mantenemos actualizados y en constate preparaci&oacute;n.&nbsp; Es importante destacar que en nuestro sal&oacute;n siempre contamos con productos de primera calidad, principalmente de la casa L&rsquo;Oreal reconocida internacionalmente por sus altos est&aacute;ndares de calidad.</span></p>
+                                            <div class="col-md-4 col-xs-12">
+	<img alt="" class="img-responsive center-block" src="/imagenes/galeria/images/belleza.jpg" /></div>
+<div class="col-md-8 col-xs-12">
+	<span style="font-family:century gothic,serif;"><span style="color:#fff; font-size:20px;">Con estilistas de mucha experiencia y reconocida trayectoria , V.I.P EL ATELIER no es cualquier sal&oacute;n de belleza, esta dirigido a una clientela muy exigente por ello&nbsp;contamos con estilistas con una amplia trayectoria en el mundo de estilismo certificados de la casa L&rsquo;Oreal Profesional. Brindamos la mejor atenci&oacute;n al cliente desde su llegada hasta finalizado el servicio en el sal&oacute;n. En V.I.P buscamos la belleza integral, siempre con la premisa de &ldquo;la salud es belleza&rdquo;. En nuestro espacio &nbsp;ofrecemos &nbsp;a los clientes tratamientos para el embellecimiento, conservaci&oacute;n, higiene tanto del&nbsp; cabello como de la piel y las &nbsp;u&ntilde;as, con el fin primordial de alcanzar una imagen saludable y hermosa.&nbsp;En VIP siempre estamos a la &nbsp;vanguardia de las tendencias a nivel mundial en cuanto a cortes, `peinados , colores, maquillajes,&nbsp;pues siempre nos mantenemos actualizados y en constate preparaci&oacute;n.&nbsp; Es importante destacar que en nuestro sal&oacute;n siempre contamos con productos de primera calidad, principalmente de la casa L&rsquo;Oreal reconocida internacionalmente por sus altos est&aacute;ndares de calidad.</span></span></div>
 
                                     </div>
 
                 <div role="tabpanel" class="tab-pane fade" id="tiendas">
-                                            <p>
-	<span style="color:#fff;"><span style="font-size:20px;"><span style="font-family:century gothic,serif;">Ubicado en el lobby del hotel al lado del centro de negocios se encuentra nuestra tienda de conveniencia donde podr&aacute; encontrar todo lo que usted necesite, productos de calidad y de primera necesidad. </span></span></span></p>
+                                            <div class="col-md-6 col-xs-12">
+	<span style="color:#fff;"><span style="font-size:20px;"><span style="font-family:century gothic,serif;">Ubicado en el lobby del hotel al lado del centro de negocios se encuentra nuestra tienda de conveniencia donde podr&aacute; encontrar todo lo que usted necesite, productos de calidad y de primera necesidad. </span></span></span></div>
+<div class="col-md-6 col-xs-12">
+	<img alt="" class="img-responsive center-block" src="/imagenes/galeria/images/Tiendas.jpg" /></div>
 
                                     </div>
               </div>
@@ -768,7 +773,8 @@ function content_58da595f512dc4_26991356 (Smarty_Internal_Template $_smarty_tpl)
 
     <div class="row TESTIMONIO" id="TESTIMONIOS">
         <div class="col-xs-12 text-center">
-          <h2 class="tituloSeccion">TESTIMONIOS / COMENTANOS TU EXPERIENCIA</h2>
+          <h2 class="tituloSeccion">TESTIMONIOS</h2>
+          <h2 class="tituloSeccion">COMÉNTANOS TU EXPERIENCIA</h2>
         </div>
         <div class="col-xs-12">
           <hr class="seccion">
@@ -893,7 +899,7 @@ function content_58da595f512dc4_26991356 (Smarty_Internal_Template $_smarty_tpl)
                         <div class="row">
                           <div class="col-md-10 col-md-offset-2 col-xs-12">
                             <h3 class="titulo">BODAS Y EVENTOS</h3>
-                            <div class="col-md-4 col-xs-6 no_padding">
+                            <div class="col-xs-6 no_padding">
                               <hr class="habitacionT"><i class="fa fa-circle habitacion2T" aria-hidden="true"></i>
                             </div>
                             <div class="clearfix"></div>
@@ -910,9 +916,15 @@ function content_58da595f512dc4_26991356 (Smarty_Internal_Template $_smarty_tpl)
                         <div class="row">
                           <div class="col-md-10 col-xs-12">
                             <div id="boda8" class="carousel slide" data-ride="carousel">
-                              <div class="carousel-inner" role="listbox" style="min-height: 350px;">
+                              <div class="carousel-inner" role="listbox" style="min-height: 300px; max-height: 300px;">
                                                                                                         <div  class="item active" >
-                                      <img class="img-responsive" alt="EVENTOS CORPORATIVOS" src="/imagenes/contenido/1489247380.png">
+                                      <img class="img-responsive" alt="Pepsico" src="/imagenes/contenido/1490753942.jpg">
+                                    </div>
+                                                                                                            <div  class="item" >
+                                      <img class="img-responsive" alt="Pepsico2" src="/imagenes/contenido/1490753960.jpg">
+                                    </div>
+                                                                                                            <div  class="item" >
+                                      <img class="img-responsive" alt="Pepsico3" src="/imagenes/contenido/1490753975.jpg">
                                     </div>
                                                                                                       </div>
 
@@ -941,9 +953,15 @@ function content_58da595f512dc4_26991356 (Smarty_Internal_Template $_smarty_tpl)
                           <div class="col-md-10 col-md-offset-2 col-xs-12">
                             <div id="boda9" class="carousel slide" data-ride="carousel">
 
-                              <div class="carousel-inner" role="listbox" style="min-height: 350px;">
+                              <div class="carousel-inner" role="listbox" style="min-height: 300px; max-height: 300px;">
                                                                                                         <div  class="item active" >
-                                      <img class="img-responsive" alt="GASTRONOMIA GOURMET" src="/imagenes/contenido/1489247401.png">
+                                      <img class="img-responsive" alt="Eventos" src="/imagenes/contenido/1490754023.jpg">
+                                    </div>
+                                                                                                            <div  class="item" >
+                                      <img class="img-responsive" alt="Eventos 2" src="/imagenes/contenido/1490754039.jpg">
+                                    </div>
+                                                                                                            <div  class="item" >
+                                      <img class="img-responsive" alt="Novios" src="/imagenes/contenido/1490754400.jpg">
                                     </div>
                                                                                                       </div>
 
@@ -966,7 +984,7 @@ function content_58da595f512dc4_26991356 (Smarty_Internal_Template $_smarty_tpl)
                         <div class="row">
                           <div class="col-md-10 col-xs-12">
                             <h3 class="titulo">EVENTOS SOCIALES Y GASTRONOM�A GOURMET</h3>
-                            <div class="col-md-4 col-xs-6 no_padding">
+                            <div class="col-xs-6 no_padding">
                               <hr class="habitacionT"><i class="fa fa-circle habitacion2T" aria-hidden="true"></i>
                             </div>
                             <div class="clearfix"></div>
@@ -1049,7 +1067,7 @@ function content_58da595f512dc4_26991356 (Smarty_Internal_Template $_smarty_tpl)
           <div class="container-fluid">
             <div class="row">
               <div class="col-md-6 col-xs-12 separacion-superior text-center">
-                <h3 class="titulo2">CONOZCA NUESTROS ALIADOS</h3>
+                  <h3 class="titulo2"><strong>CONOZCA NUESTROS ALIADOS</strong></h3>
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
                   <ol class="carousel-indicators" style="display:none;">
                                                                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -1067,7 +1085,7 @@ function content_58da595f512dc4_26991356 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
               </div>
               <div class="col-md-6 col-xs-12 separacion-superior text-center">
-                <h3 class="titulo2">CONOZCA NUESTROS HOTELES</h3>
+                  <h3 class="titulo2"><strong>CONOZCA NUESTROS HOTELES</strong></h3>
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
                   <ol class="carousel-indicators" style="display:none;">
                                                                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>

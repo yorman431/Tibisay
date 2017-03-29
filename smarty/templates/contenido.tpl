@@ -31,8 +31,8 @@
                           <div class="panel-body"><img src="{$contenido.imagen}" alt="" class="img-responsive center-block" style="width: 100%;"></div>
                       </div>
                   </div>
-                      <div class="col-xs-4 col-xs-offset-4 form-horizontal separacion-superior" >
-                          <a class="btn btn-default btn-block " href="#" onclick="history.back()">Volver</a>
+                      <div class="col-xs-12 separacion-superior" align="center">
+                          <a class="btn btn-default" href="#" onclick="history.back()"><h4 class="no_margin2"><strong>Volver</strong></h4></a>
                       </div>
               </div>
           </div>
