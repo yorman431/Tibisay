@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-29 05:25:44
+/* Smarty version 3.1.30, created on 2017-03-30 06:21:45
   from "D:\Websites\tibisay\smarty\templates\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58db29388b24d4_62778654',
+  'unifunc' => 'content_58dc87d93d2098_45223063',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8502e2c667bdaf4aa27202a8d7c0209ac6fe7727' => 
     array (
       0 => 'D:\\Websites\\tibisay\\smarty\\templates\\index.tpl',
-      1 => 1490757931,
+      1 => 1490847694,
       2 => 'file',
     ),
   ),
@@ -23,8 +23,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:./layout/banner.tpl' => 1,
   ),
 ),false)) {
-function content_58db29388b24d4_62778654 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '2817858db2937c661e5_29334018';
+function content_58dc87d93d2098_45223063 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '2230358dc87d91b1e42_67825350';
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -153,7 +153,7 @@ $_smarty_tpl->tpl_vars['__smarty_section_i'] = $__section_i_0_saved;
           <div class="col-xs-12 text-center">
               <h2 class="tituloSeccion">RESERVAS</h2>
           </div>
-          <div class="col-xs-12 separacion-row">
+          <div class="col-xs-12">
               <img class="center-block" src="/imagenes/reservaBanda.png" alt="Reservas">
           </div>
 
@@ -161,16 +161,13 @@ $_smarty_tpl->tpl_vars['__smarty_section_i'] = $__section_i_0_saved;
             <div class="col-xs-12">
               <div class="contanier-fluid">
                 <div id="formulario_reserva" class="row">
-                  <form action="" name="formreservas" id="formreservastibisay" class="form-horizontal">
+                  <form action="" name="formreservas" id="formreservastibisay">
                       <div class="col-xs-8 col-xs-offset-2">
-                          <div class="container-fluid">
+                          <h3>Solicitud de Reserva</h3>
                               <div class="row">
-                                  <div class="col-xs-12">
-                                      <h3>Solicitud de Reserva</h3>
-                                  </div>
                                   <div class="col-sm-4">
                                       <div class="form-group">
-                                          <label for="numero_habitaciones">Seleccione Nº de Habitaciones:</label>
+                                          <label for="numero_habitaciones">Nº de Habitaciones:</label>
                                           <select class="form-control form-contacto" name="numero_habitaciones" id="numero_habitaciones" onchange="asignNumeroHabitacion();">
                                               <option selected hidden value="">Seleccione Habitación</option>
                                               <option value="1">1 Habitación</option>
@@ -209,7 +206,6 @@ $_smarty_tpl->tpl_vars['__smarty_section_i'] = $__section_i_0_saved;
                                       </div>
                                   </div>
                               </div>
-                          </div>
 
                           <div class="modal fade" id="reservacion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
                               <div class="modal-dialog" role="document">
@@ -219,7 +215,7 @@ $_smarty_tpl->tpl_vars['__smarty_section_i'] = $__section_i_0_saved;
                                           <div class="row">
                                               <div class="col-xs-12 text-center titulo-modal">Informacion Personal</div>
 
-                                              <form class="form-horizontal" action="" name="reservacion" method="post">
+                                              <form action="" name="reservacion" method="post">
 
                                                   <div class="col-xs-12">
                                                       <div class="form-group">
@@ -261,13 +257,13 @@ $_smarty_tpl->tpl_vars['__smarty_section_i'] = $__section_i_0_saved;
                                                           <input type="text" class="form-control form-group-contacto form-contacto" name="direccion" placeholder="Direccion" required>
                                                       </div>
                                                   </div>
-                                                  <div class="col-xs-12">
+                                                  <div class="col-xs-12 separacion-row">
                                                       <div class="col-xs-6 no_padding">
-                                                          <button type="button" class="form-control btn btn-default" data-dismiss="modal" >Cancel</button>
+                                                          <button type="button" class="form-control btn btn-default2" data-dismiss="modal" >Cancel</button>
                                                       </div>
                                                       <div class="col-xs-6 no_padding">
                                                           <input type="hidden" name="envio" value="Guardar">
-                                                          <input type="submit" class="form-control btn btn-success" value="RESERVAR">
+                                                          <input type="submit" class="form-control btn btn-default2" value="RESERVAR">
                                                       </div>
                                                   </div>
                                               </form>
@@ -456,12 +452,9 @@ $_smarty_tpl->tpl_vars['__smarty_section_i'] = $__section_i_5_saved;
         </div>
 
         <div class="clearfix"></div>
-        <div class="col-xs-12">
-          <div class="container">
-            <?php $_smarty_tpl->_assignInScope('cont', "0");
+        <?php $_smarty_tpl->_assignInScope('cont', "0");
 ?>
-            <div class="row">
-              <?php
+        <?php
 $__section_i_6_saved = isset($_smarty_tpl->tpl_vars['__smarty_section_i']) ? $_smarty_tpl->tpl_vars['__smarty_section_i'] : false;
 $__section_i_6_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['galeria']->value) ? count($_loop) : max(0, (int) $_loop));
 $__section_i_6_total = $__section_i_6_loop;
@@ -469,24 +462,25 @@ $_smarty_tpl->tpl_vars['__smarty_section_i'] = new Smarty_Variable(array());
 if ($__section_i_6_total != 0) {
 for ($__section_i_6_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] = 0; $__section_i_6_iteration <= $__section_i_6_total; $__section_i_6_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']++){
 ?>
-                <?php if ($_smarty_tpl->tpl_vars['cont']->value > 7) {?>
-                  <?php $_smarty_tpl->_assignInScope('cont', 0);
-?>
-                <?php }?>
-                <?php if ($_smarty_tpl->tpl_vars['cont']->value == 0) {?>
-                  <div class="col-md-6 col-xs-12 no_padding" style="overflow: hidden;">
-                    <div class="col-xs-12 efecto-hover" style="background: url('/imagenes/<?php echo $_smarty_tpl->tpl_vars['galeria']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['directorio_image'];?>
+                <?php if ($_smarty_tpl->tpl_vars['cont']->value == 0 || $_smarty_tpl->tpl_vars['cont']->value > 7) {?>
+                <?php if ($_smarty_tpl->tpl_vars['cont']->value > 7) {?><hr class="galeria-hr visible2" style="display: none;"><?php }?>
+                <div class="col-xs-12 separacion-row <?php if ($_smarty_tpl->tpl_vars['cont']->value > 7) {?>visible2<?php }?>" <?php if ($_smarty_tpl->tpl_vars['cont']->value > '7') {?>style="display:none;"<?php $_smarty_tpl->_assignInScope('cont', 0);
+}?>>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-6 col-xs-12 no_padding border" style="overflow: hidden;">
+                        <div class="col-xs-12 efecto-hover" style="background: url('/imagenes/<?php echo $_smarty_tpl->tpl_vars['galeria']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['directorio_image'];?>
 ') center no-repeat;   background-size: cover;">
-                      <a href="/imagenes/<?php echo $_smarty_tpl->tpl_vars['galeria']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['directorio_image'];?>
+                          <a href="/imagenes/<?php echo $_smarty_tpl->tpl_vars['galeria']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['directorio_image'];?>
 " data-toggle="lightbox" data-footer="<?php echo $_smarty_tpl->tpl_vars['galeria']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['nombre_image'];?>
 " data-gallery="GALERIA">
-                        <img src="/imagenes/col-xs-6.png" alt="" class="img-responsive fullHeigh">
-                      </a>
-                    </div>
-                  </div>
+                            <img src="/imagenes/col-xs-6.png" alt="" class="img-responsive fullHeigh">
+                          </a>
+                        </div>
+                      </div>
                 <?php }?>
                 <?php if ($_smarty_tpl->tpl_vars['cont']->value == 1) {?>
-                  <div class="col-md-2 col-xs-12 no_padding" style="overflow: hidden">
+                  <div class="col-md-2 col-xs-12 no_padding border" style="overflow: hidden">
                     <div class="col-xs-12 efecto-hover" style="background: url('/imagenes/<?php echo $_smarty_tpl->tpl_vars['galeria']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['directorio_image'];?>
 ') center no-repeat; background-size: cover;">
                       <a href="/imagenes/<?php echo $_smarty_tpl->tpl_vars['galeria']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['directorio_image'];?>
@@ -498,7 +492,7 @@ for ($__section_i_6_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']-
                   </div>
                 <?php }?>
                 <?php if ($_smarty_tpl->tpl_vars['cont']->value == 2) {?>
-                  <div class="col-md-4 col-xs-12 no_padding" style="overflow: hidden;">
+                  <div class="col-md-4 col-xs-12 no_padding border" style="overflow: hidden;">
                     <div class="col-xs-12 efecto-hover" style="background: url('/imagenes/<?php echo $_smarty_tpl->tpl_vars['galeria']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['directorio_image'];?>
 ') center no-repeat; background-size: cover;">
                       <a href="/imagenes/<?php echo $_smarty_tpl->tpl_vars['galeria']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['directorio_image'];?>
@@ -510,7 +504,7 @@ for ($__section_i_6_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']-
                   </div>
                 <?php }?>
                 <?php if ($_smarty_tpl->tpl_vars['cont']->value == 3) {?>
-                  <div class="col-md-10 col-xs-12 no_padding" style="overflow: hidden;">
+                  <div class="col-md-10 col-xs-12 no_padding border" style="overflow: hidden;">
                     <div class="col-xs-12 efecto-hover" style="background: url('/imagenes/<?php echo $_smarty_tpl->tpl_vars['galeria']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['directorio_image'];?>
 ') center no-repeat; background-size: cover;">
                       <a href="/imagenes/<?php echo $_smarty_tpl->tpl_vars['galeria']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['directorio_image'];?>
@@ -522,7 +516,7 @@ for ($__section_i_6_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']-
                   </div>
                 <?php }?>
                 <?php if ($_smarty_tpl->tpl_vars['cont']->value == 4) {?>
-                  <div class="col-md-2 col-xs-12 no_padding" style="overflow: hidden;">
+                  <div class="col-md-2 col-xs-12 no_padding border" style="overflow: hidden;">
                     <div class="col-xs-12 efecto-hover" style="background: url('/imagenes/<?php echo $_smarty_tpl->tpl_vars['galeria']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['directorio_image'];?>
 ') center no-repeat; background-size: cover;">
                       <a href="/imagenes/<?php echo $_smarty_tpl->tpl_vars['galeria']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['directorio_image'];?>
@@ -534,7 +528,7 @@ for ($__section_i_6_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']-
                   </div>
                 <?php }?>
                 <?php if ($_smarty_tpl->tpl_vars['cont']->value == 5) {?>
-                  <div class="col-md-4 col-xs-12 no_padding" style="overflow: hidden;">
+                  <div class="col-md-4 col-xs-12 no_padding border" style="overflow: hidden;">
                     <div class="col-xs-12 efecto-hover" style="background: url('/imagenes/<?php echo $_smarty_tpl->tpl_vars['galeria']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['directorio_image'];?>
 ') center no-repeat; background-size: cover;">
                       <a href="/imagenes/<?php echo $_smarty_tpl->tpl_vars['galeria']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['directorio_image'];?>
@@ -546,7 +540,7 @@ for ($__section_i_6_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']-
                   </div>
                 <?php }?>
                 <?php if ($_smarty_tpl->tpl_vars['cont']->value == 6) {?>
-                  <div class="col-md-2 col-xs-12 no_padding" style="overflow: hidden;">
+                  <div class="col-md-2 col-xs-12 no_padding border" style="overflow: hidden;">
                     <div class="col-xs-12 efecto-hover" style="background: url('/imagenes/<?php echo $_smarty_tpl->tpl_vars['galeria']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['directorio_image'];?>
 ') center no-repeat; background-size: cover;">
                       <a href="/imagenes/<?php echo $_smarty_tpl->tpl_vars['galeria']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['directorio_image'];?>
@@ -558,7 +552,7 @@ for ($__section_i_6_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']-
                   </div>
                 <?php }?>
                 <?php if ($_smarty_tpl->tpl_vars['cont']->value == 7) {?>
-                  <div class="col-md-6 col-xs-12 no_padding" style="overflow: hidden;">
+                  <div class="col-md-6 col-xs-12 no_padding border" style="overflow: hidden;">
                     <div class="col-xs-12 efecto-hover" style="background: url('/imagenes/<?php echo $_smarty_tpl->tpl_vars['galeria']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['directorio_image'];?>
 ') center no-repeat; background-size: cover;">
                       <a href="/imagenes/<?php echo $_smarty_tpl->tpl_vars['galeria']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['directorio_image'];?>
@@ -568,19 +562,29 @@ for ($__section_i_6_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']-
                       </a>
                     </div>
                   </div>
+
+                    </div>
+                  </div>
+                </div>
                 <?php }?>
                 <?php $_smarty_tpl->_assignInScope('cont', $_smarty_tpl->tpl_vars['cont']->value+1);
 ?>
-              <?php
+        <?php
 }
 }
 if ($__section_i_6_saved) {
 $_smarty_tpl->tpl_vars['__smarty_section_i'] = $__section_i_6_saved;
 }
 ?>
+        <?php if (count($_smarty_tpl->tpl_vars['galeria']->value) > 8) {?>
+            <div class="container-fluid" id="mostre-todo2">
+                <div class="row">
+                    <div class="col-xs-12 separacion-superior" align="center">
+                        <a class="visible btn btn-default2" onclick="mostrar2()"><h4 class="no_margin2"><strong>Ver Más</strong></h4></a>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
+        <?php }?>
       </div>
 
     <div class="row BODAS separacion-row" id="BODAS">
@@ -609,7 +613,7 @@ for ($__section_i_7_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']-
                           <div class="col-md-10 col-md-offset-2 col-xs-12">
                             <h3 class="titulo"><?php echo $_smarty_tpl->tpl_vars['boda']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['nombre_con'];?>
 </h3>
-                            <div class="col-xs-6 no_padding">
+                            <div class="col-xs-12 no_padding">
                               <hr class="habitacionT"><i class="fa fa-circle habitacion2T" aria-hidden="true"></i>
                             </div>
                             <div class="clearfix"></div>
@@ -623,10 +627,10 @@ for ($__section_i_7_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']-
                     <div class="col-md-6 col-xs-12">
                       <div class="container-fluid">
                         <div class="row">
-                          <div class="col-md-10 col-xs-12">
+                          <div class="col-md-10 col-xs-12 carousel-boda">
                             <div id="boda<?php echo $_smarty_tpl->tpl_vars['boda']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['id_con'];?>
 " class="carousel slide" data-ride="carousel">
-                              <div class="carousel-inner" role="listbox" style="min-height: 300px; max-height: 300px;">
+                              <div class="carousel-inner" role="listbox" style="max-height: 300px;">
                                   <?php $_smarty_tpl->_assignInScope('cont2', 0);
 ?>
                                   <?php
@@ -674,11 +678,11 @@ $_smarty_tpl->tpl_vars['__smarty_section_j'] = $__section_j_8_saved;
                     <div class="col-md-6 col-xs-12">
                       <div class="container-fluid">
                         <div class="row">
-                          <div class="col-md-10 col-md-offset-2 col-xs-12">
+                          <div class="col-md-10 col-md-offset-2 col-xs-12 carousel-boda">
                             <div id="boda<?php echo $_smarty_tpl->tpl_vars['boda']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['id_con'];?>
 " class="carousel slide" data-ride="carousel">
 
-                              <div class="carousel-inner" role="listbox" style="min-height: 300px; max-height: 300px;">
+                              <div class="carousel-inner" role="listbox" style="max-height: 300px;">
                                   <?php $_smarty_tpl->_assignInScope('cont2', 0);
 ?>
                                   <?php
@@ -727,7 +731,7 @@ $_smarty_tpl->tpl_vars['__smarty_section_j'] = $__section_j_9_saved;
                           <div class="col-md-10 col-xs-12">
                             <h3 class="titulo"><?php echo $_smarty_tpl->tpl_vars['boda']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['nombre_con'];?>
 </h3>
-                            <div class="col-xs-6 no_padding">
+                            <div class="col-xs-12 no_padding">
                               <hr class="habitacionT"><i class="fa fa-circle habitacion2T" aria-hidden="true"></i>
                             </div>
                             <div class="clearfix"></div>
@@ -784,7 +788,7 @@ $_smarty_tpl->tpl_vars['__smarty_section_i'] = new Smarty_Variable(array());
 if ($__section_i_10_total != 0) {
 for ($__section_i_10_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] = 0; $__section_i_10_iteration <= $__section_i_10_total; $__section_i_10_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']++){
 ?>
-                <div class="col-md-3 col-xs-12" <?php if ($_smarty_tpl->tpl_vars['cont']->value >= '4') {?> id="visible3" style="display:none;"<?php }?>>
+                <div class="col-md-3 col-xs-12<?php if ($_smarty_tpl->tpl_vars['cont']->value >= '4') {?> visible3<?php }?>" <?php if ($_smarty_tpl->tpl_vars['cont']->value >= '4') {?>style="display:none;"<?php }?>>
                   <div class="panel panel-default panelP">
                     <div class="panel-body no_padding no_padding2">
                       <a href="/contenido.php?id=<?php echo $_smarty_tpl->tpl_vars['promocion']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['id_con'];?>
@@ -863,9 +867,12 @@ if ($__section_i_12_total != 0) {
 for ($__section_i_12_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] = 0; $__section_i_12_iteration <= $__section_i_12_total; $__section_i_12_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']++){
 ?>
                         <div <?php if ($_smarty_tpl->tpl_vars['cont']->value == "0") {?>class="item active" <?php } else { ?> class="item" <?php }?>>
-                          <img class="img-responsive" alt="<?php echo $_smarty_tpl->tpl_vars['publicidad1']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['etiqueta_ban'];?>
+                            <a href="<?php echo $_smarty_tpl->tpl_vars['publicidad1']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['url_dir'];?>
+" target="_blank">
+                            <img class="img-responsive" alt="<?php echo $_smarty_tpl->tpl_vars['publicidad1']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['etiqueta_ban'];?>
 " src="/imagenes/publicidad/<?php echo $_smarty_tpl->tpl_vars['publicidad1']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['directorio_dir'];?>
 ">
+                            </a>
                         </div>
                           <?php $_smarty_tpl->_assignInScope('cont', $_smarty_tpl->tpl_vars['cont']->value+1);
 ?>
@@ -918,9 +925,12 @@ if ($__section_i_14_total != 0) {
 for ($__section_i_14_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] = 0; $__section_i_14_iteration <= $__section_i_14_total; $__section_i_14_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']++){
 ?>
                         <div <?php if ($_smarty_tpl->tpl_vars['cont']->value == "0") {?>class="item active" <?php } else { ?> class="item"<?php }?>>
-                          <img class="img-responsive" alt="<?php echo $_smarty_tpl->tpl_vars['publicidad2']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['etiqueta_ban'];?>
+                            <a href="<?php echo $_smarty_tpl->tpl_vars['publicidad2']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['url_dir'];?>
+">
+                            <img class="img-responsive" alt="<?php echo $_smarty_tpl->tpl_vars['publicidad2']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['etiqueta_ban'];?>
 " src="/imagenes/publicidad/<?php echo $_smarty_tpl->tpl_vars['publicidad2']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)]['directorio_dir'];?>
 ">
+                            </a>
                         </div>
                           <?php $_smarty_tpl->_assignInScope('cont', $_smarty_tpl->tpl_vars['cont']->value+1);
 ?>
@@ -1059,7 +1069,7 @@ $_smarty_tpl->tpl_vars['__smarty_section_i'] = $__section_i_15_saved;
         <div class="col-md-3 hidden-xs text-center" style="padding-top:2.2%; padding-bottom:1.6%; font: 14px 'Century Gothic'; color: #545454;">
           Desarrollado por:
           <a href="http://www.diazcreativos.net" target="_blank" style="font: 14px 'Century Gothic'; color: #545454;">
-            <img src="/imagenes/Logo-DC.png" alt="" width="34" height="33" style="margin-right: 3px;">Diaz Creativos
+            <img src="/imagenes/Logo-DC.png" alt="" width="34" height="33" style="margin-right: 3px;">Díaz Creativos
           </a>
         </div>
         <div class="col-md-6 hidden-xs text-center" style="padding-top:2.3%; padding-bottom:2%;">
@@ -1073,7 +1083,7 @@ $_smarty_tpl->tpl_vars['__smarty_section_i'] = $__section_i_15_saved;
           <a href="http://www.diazcreativos.net" target="_blank">
             <div class="col xs 12">
               <div class="col-xs-4 no_padding" style="margin-top: 15px;"><img src="/imagenes/Logo-DC.png" alt="" class="pull-right" style="margin-right: 3px;" width="34" height="33"></div>
-              <div class="col-xs-8 text-left no_padding"><h4 style="font: 14px 'Century Gothic'; color: #545454; padding-top:7%;">Diaz Creativos</h4></div>
+              <div class="col-xs-8 text-left no_padding"><h4 style="font: 14px 'Century Gothic'; color: #545454; padding-top:7%;">Díaz Creativos</h4></div>
             </div>
           </a>
         </div>
@@ -1159,13 +1169,19 @@ $_smarty_tpl->tpl_vars['__smarty_section_i'] = $__section_i_15_saved;
  type="text/javascript">
 
                     function mostrar2(){
-                        document.getElementById('visible2').style.display = 'block';
+                        var x = document.getElementsByClassName('visible2');
                         document.getElementById('mostre-todo2').style.display = 'none';
+                        for (var i = 0; i < x.length; i++){
+                            x[i].style.display = 'block';
+                        }
                     }
 
                     function mostrar3(){
-                        document.getElementById('visible3').style.display = 'block';
+                        var x =document.getElementsByClassName('visible3');
                         document.getElementById('mostre-todo3').style.display = 'none';
+                        for (var i = 0; i < x.length; i++){
+                            x[i].style.display = 'block';
+                        }
                     }
             	<?php echo '</script'; ?>
 >

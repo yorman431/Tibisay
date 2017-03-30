@@ -31,6 +31,10 @@ if ($_POST){
 		$mensaje2="<tr><td align='center' colspan='2' class='ok'>$acceso->mensaje</td></tr>";
 		$acceso->mensaje="";
 	}
+  
+  if (isset($_POST['envio']) && $_POST['envio'] == "Guardar"){
+    $acceso->enviar_cotizacion();
+  }
 }
 
 if(isset($_GET['msg']) && $_GET['msg']==1){

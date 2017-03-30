@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-29 04:45:37
+/* Smarty version 3.1.30, created on 2017-03-29 22:55:48
   from "D:\Websites\tibisay\smarty\templates\admin\layout\cabezera.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58db1fd1ad8f19_84705533',
+  'unifunc' => 'content_58dc1f544ed408_96070197',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58db1fd1ad8f19_84705533 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58dc1f544ed408_96070197 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>

@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-29 05:25:45
+/* Smarty version 3.1.30, created on 2017-03-30 06:21:46
   from "D:\Websites\tibisay\smarty\templates\layout\botonera.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58db293970b7b9_58485137',
+  'unifunc' => 'content_58dc87da160716_87095790',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,8 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58db293970b7b9_58485137 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '406458db29396b2638_11129082';
+function content_58dc87da160716_87095790 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '3077358dc87da11eda6_90047933';
 ?>
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">

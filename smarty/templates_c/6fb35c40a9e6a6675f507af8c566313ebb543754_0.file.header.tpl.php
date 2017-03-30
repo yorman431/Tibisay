@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-29 04:45:37
+/* Smarty version 3.1.30, created on 2017-03-29 22:55:48
   from "D:\Websites\tibisay\smarty\templates\admin\layout\header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58db1fd1a97068_65862851',
+  'unifunc' => 'content_58dc1f5449b818_56542138',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58db1fd1a97068_65862851 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58dc1f5449b818_56542138 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
 <title>Tibisay Hotel Margarita | Panel Administrativo</title>

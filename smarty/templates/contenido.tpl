@@ -21,12 +21,12 @@
                       <img class="center-block relative" src="/imagenes/promocion.png" alt="Habitaciones">
                   </div>
                   <div class="clearfix"></div>
-                  <div class="col-xs-6">
+                  <div class="col-md-6 col-xs-12">
                       <h3>{$contenido.nombre}</h3>
                       <img src="/imagenes/divisionPromo.png" alt="" class="img-responsive-imgMarginDivision">
                       {$contenido.contenido}
                   </div>
-                  <div class="col-xs-6">
+                  <div class="col-md-6 col-xs-12">
                       <div class="panel panel-default">
                           <div class="panel-body"><img src="{$contenido.imagen}" alt="" class="img-responsive center-block" style="width: 100%;"></div>
                       </div>

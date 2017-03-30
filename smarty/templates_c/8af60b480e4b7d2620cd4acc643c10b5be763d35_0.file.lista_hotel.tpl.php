@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-29 04:45:33
+/* Smarty version 3.1.30, created on 2017-03-29 22:55:48
   from "D:\Websites\tibisay\smarty\templates\admin\hotel\lista_hotel.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58db1fcd2eb566_82164986',
+  'unifunc' => 'content_58dc1f5414c9f6_93826700',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../layout/pie.tpl' => 1,
   ),
 ),false)) {
-function content_58db1fcd2eb566_82164986 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58dc1f5414c9f6_93826700 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_modifier_truncate')) require_once 'D:\\Websites\\tibisay\\smarty\\libs\\plugins\\modifier.truncate.php';
 if (!is_callable('smarty_function_paginate_prev')) require_once 'D:\\Websites\\tibisay\\smarty\\libs\\plugins\\function.paginate_prev.php';
 if (!is_callable('smarty_function_paginate_middle')) require_once 'D:\\Websites\\tibisay\\smarty\\libs\\plugins\\function.paginate_middle.php';

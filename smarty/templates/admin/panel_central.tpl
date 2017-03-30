@@ -26,26 +26,23 @@
           <td width="20%" height="25" align="center" class="subtituloWeb3">Botonera</td>
           <td width="20%" height="25" align="center" class="subtituloWeb3">Contenido</td>
           <td width="20%" height="25" align="center" class="subtituloWeb3">Banner</td>
-          <td width="20%" align="center" class="subtituloWeb3">Categoría</td>
-
+          <td width="20%" height="25" align="center" class="subtituloWeb3">Publicidad</td>
         </tr>
         <tr>
           <td height="25" align="center"><a href="/admin/link/"><img src="/imagenes/botonera.png" width="60" height="60" border="0" /></a></td>
           <td height="25" align="center"><a href="/admin/contenido/"><img src="/imagenes/mi_pedido.png" width="60" height="60" border="0" /></a></td>
           <td height="25" align="center"><a href="/admin/banner/"><img src="/imagenes/evento.png" width="60" height="60" border="0" /></a></td>
-          <td height="25" align="center"><a href="/admin/categoria/"><img src="/imagenes/categoria.png" width="60" height="60" border="0" /></a></td>
+          <td height="25" align="center"><a href="/admin/publicidad/"><img src="/imagenes/pedidos.png" width="60" height="60" border="0" /></a></td>
         </tr>
         <tr>
           <td width="20%" align="center" class="subtituloWeb3">Hotel</td>
           <td width="20%" align="center" class="subtituloWeb3">Administradores</td>
           <td width="20%" height="25" align="center" class="subtituloWeb3">Galería</td>
-          <td width="20%" height="25" align="center" class="subtituloWeb3">Publicidad</td>
         </tr>
         <tr>
           <td height="25" align="center"><a href="/admin/hotel/"><img src="/imagenes/hoteles.png" width="60" height="60" border="0" /></a></td>
           <td height="25" align="center"><a href="/admin/usuario/"><img src="/imagenes/msn.png" width="60" height="60" border="0" /></a></td>
           <td height="25" align="center"><a href="/admin/galeria/"><img src="/imagenes/galeria.png" width="60" height="60" border="0" /></a></td>
-          <td height="25" align="center"><a href="/admin/publicidad/"><img src="/imagenes/pedidos.png" width="60" height="60" border="0" /></a></td>
 
         </tr>
       </table>

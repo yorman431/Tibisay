@@ -144,13 +144,66 @@ p{
 
 
 /*--RESERVAS--*/
+
 .RESERVAS{
   padding-top: 35px;
   background-color: #ccc06e;
 }
 
+.RESERVAS label {
+  color: #fff;
+  font: 20px "Century Gothic";
+}
+
 .RESERVAS > .col-xs-12 > .tituloSeccion{
   color: #FFFFFF;
+}
+
+.RESERVAS .input-group-addon{
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 0;
+}
+
+.RESERVAS .form-contacto {
+  border: 1px solid #fff;
+}
+
+.RESERVAS h3{
+  color: #fff;
+  font: 24px "Century Gothic";
+}
+
+.RESERVAS .btn-default2{
+  font: 20px "Century Gothic";
+}
+
+.RESERVAS .btn-default2:hover, .RESERVAS .btn-default2:focus{
+  color: #CCC;
+}
+
+.table > tbody > tr > th, .table > tbody > tr > td{
+  border-top: 1px solid #fff;
+}
+
+.panel{
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 0;
+}
+
+.titulo-modal {
+  background-color: #ccc06e;
+  font: 18px "Century Gothic";
+  color: #ffffff;
+  padding: 15px 0;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.RESERVAS .modal-content .row{
+  background-color: #ccc06e;
 }
 /*--Fin RESERVAS--*/
 
@@ -211,6 +264,16 @@ p{
   color: #FFFFFF;
 }
 
+.GALERIA .border{
+  border: thin solid #fff;
+}
+
+.galeria-hr{
+  width: 87%;
+  background-color: #fff;
+  margin-bottom: 30px;
+}
+
 .fullHeigh{
   height: 100%;
   transition: all 1s ease;
@@ -218,11 +281,12 @@ p{
 
 .efecto-hover{
   transition: all 1s ease;
+  border: thin solid #fff;
 }
 
 .efecto-hover:hover{
   transform: scale(1.08);
-
+  border: thin solid #fff;
 }
 /*--Fin GALERIA--*/
 
@@ -238,6 +302,10 @@ p{
 
 .separacion-img-bodas{
   margin-top: 20px;
+}
+
+.carousel-boda{
+  padding-top: 25px;
 }
 /*--Fin BODAS--*/
 
@@ -327,6 +395,12 @@ textarea:focus, input:focus {
   font: 20px "Century Gothic";
 }
 
+select{
+  color: #ffffff !important;
+  font: 20px "Century Gothic" !important;
+  background-color: #ccc06e !important;
+}
+
 input, textarea{
   color: #FFFFFF !important;
   font: 20px "Century Gothic" !important;
@@ -351,6 +425,19 @@ input, textarea{
 .btn-default{
   border: #545454 solid 1px;
   color: #545454;
+  background-color: transparent;
+}
+
+.btn-default2{
+  border: #ffffff solid 1px;
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.btn-default2:hover .btn-default2:focus{
+  background-color: transparent;
+  border: #c0c0c0 solid 1px;
+  color: #c0c0c0;
 }
 /*--Fin CONTACTOS--*/
 
@@ -898,14 +985,7 @@ footer > .container-fluid > .row > span{
 
 
 
-.titulo-modal {
-    background-color: #ffea00;
-    font-size: 18px;
-    font-family: "Century Gothic";
-    color: #7c7201;
-    padding: 15px 0;
-    font-weight: bold;
-}
+
 
 .modal-body{
   padding: 0 0;

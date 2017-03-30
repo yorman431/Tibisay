@@ -84,7 +84,7 @@
           <div class="col-xs-12 text-center">
               <h2 class="tituloSeccion">RESERVAS</h2>
           </div>
-          <div class="col-xs-12 separacion-row">
+          <div class="col-xs-12">
               <img class="center-block" src="/imagenes/reservaBanda.png" alt="Reservas">
           </div>
 
@@ -92,16 +92,13 @@
             <div class="col-xs-12">
               <div class="contanier-fluid">
                 <div id="formulario_reserva" class="row">
-                  <form action="" name="formreservas" id="formreservastibisay" class="form-horizontal">
+                  <form action="" name="formreservas" id="formreservastibisay">
                       <div class="col-xs-8 col-xs-offset-2">
-                          <div class="container-fluid">
+                          <h3>Solicitud de Reserva</h3>
                               <div class="row">
-                                  <div class="col-xs-12">
-                                      <h3>Solicitud de Reserva</h3>
-                                  </div>
                                   <div class="col-sm-4">
                                       <div class="form-group">
-                                          <label for="numero_habitaciones">Seleccione Nº de Habitaciones:</label>
+                                          <label for="numero_habitaciones">Nº de Habitaciones:</label>
                                           <select class="form-control form-contacto" name="numero_habitaciones" id="numero_habitaciones" onchange="asignNumeroHabitacion();">
                                               <option selected hidden value="">Seleccione Habitación</option>
                                               <option value="1">1 Habitación</option>
@@ -138,7 +135,6 @@
                                       </div>
                                   </div>
                               </div>
-                          </div>
 
                           <div class="modal fade" id="reservacion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
                               <div class="modal-dialog" role="document">
@@ -148,7 +144,7 @@
                                           <div class="row">
                                               <div class="col-xs-12 text-center titulo-modal">Informacion Personal</div>
 
-                                              <form class="form-horizontal" action="" name="reservacion" method="post">
+                                              <form action="" name="reservacion" method="post">
 
                                                   <div class="col-xs-12">
                                                       <div class="form-group">
@@ -190,13 +186,13 @@
                                                           <input type="text" class="form-control form-group-contacto form-contacto" name="direccion" placeholder="Direccion" required>
                                                       </div>
                                                   </div>
-                                                  <div class="col-xs-12">
+                                                  <div class="col-xs-12 separacion-row">
                                                       <div class="col-xs-6 no_padding">
-                                                          <button type="button" class="form-control btn btn-default" data-dismiss="modal" >Cancel</button>
+                                                          <button type="button" class="form-control btn btn-default2" data-dismiss="modal" >Cancel</button>
                                                       </div>
                                                       <div class="col-xs-6 no_padding">
                                                           <input type="hidden" name="envio" value="Guardar">
-                                                          <input type="submit" class="form-control btn btn-success" value="RESERVAR">
+                                                          <input type="submit" class="form-control btn btn-default2" value="RESERVAR">
                                                       </div>
                                                   </div>
                                               </form>
@@ -325,25 +321,23 @@
         </div>
 
         <div class="clearfix"></div>
-        <div class="col-xs-12">
-          <div class="container">
-            {assign cont "0"}
-            <div class="row">
-              {section i $galeria}
-                {if $cont > 7}
-                  {assign var="cont" value= 0}
-                {/if}
-                {if $cont == 0}
-                  <div class="col-md-6 col-xs-12 no_padding" style="overflow: hidden;">
-                    <div class="col-xs-12 efecto-hover" style="background: url('/imagenes/{$galeria[i].directorio_image}') center no-repeat;   background-size: cover;">
-                      <a href="/imagenes/{$galeria[i].directorio_image}" data-toggle="lightbox" data-footer="{$galeria[i].nombre_image}" data-gallery="GALERIA">
-                        <img src="/imagenes/col-xs-6.png" alt="" class="img-responsive fullHeigh">
-                      </a>
-                    </div>
-                  </div>
+        {assign cont "0"}
+        {section i $galeria}
+                {if $cont == 0 || $cont > 7}
+                {if $cont > 7}<hr class="galeria-hr visible2" style="display: none;">{/if}
+                <div class="col-xs-12 separacion-row {if $cont > 7}visible2{/if}" {if $cont > '7'}style="display:none;"{assign var="cont" value= 0}{/if}>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-6 col-xs-12 no_padding border" style="overflow: hidden;">
+                        <div class="col-xs-12 efecto-hover" style="background: url('/imagenes/{$galeria[i].directorio_image}') center no-repeat;   background-size: cover;">
+                          <a href="/imagenes/{$galeria[i].directorio_image}" data-toggle="lightbox" data-footer="{$galeria[i].nombre_image}" data-gallery="GALERIA">
+                            <img src="/imagenes/col-xs-6.png" alt="" class="img-responsive fullHeigh">
+                          </a>
+                        </div>
+                      </div>
                 {/if}
                 {if $cont == 1}
-                  <div class="col-md-2 col-xs-12 no_padding" style="overflow: hidden">
+                  <div class="col-md-2 col-xs-12 no_padding border" style="overflow: hidden">
                     <div class="col-xs-12 efecto-hover" style="background: url('/imagenes/{$galeria[i].directorio_image}') center no-repeat; background-size: cover;">
                       <a href="/imagenes/{$galeria[i].directorio_image}" data-toggle="lightbox" data-footer="{$galeria[i].nombre_image}" data-gallery="GALERIA">
                         <img src="/imagenes/col-xs-2.png" alt="" class="img-responsive fullHeigh">
@@ -352,7 +346,7 @@
                   </div>
                 {/if}
                 {if $cont == 2}
-                  <div class="col-md-4 col-xs-12 no_padding" style="overflow: hidden;">
+                  <div class="col-md-4 col-xs-12 no_padding border" style="overflow: hidden;">
                     <div class="col-xs-12 efecto-hover" style="background: url('/imagenes/{$galeria[i].directorio_image}') center no-repeat; background-size: cover;">
                       <a href="/imagenes/{$galeria[i].directorio_image}" data-toggle="lightbox" data-footer="{$galeria[i].nombre_image}" data-gallery="GALERIA">
                         <img src="/imagenes/col-xs-4.png" alt="" class="img-responsive fullHeigh">
@@ -361,7 +355,7 @@
                   </div>
                 {/if}
                 {if $cont == 3}
-                  <div class="col-md-10 col-xs-12 no_padding" style="overflow: hidden;">
+                  <div class="col-md-10 col-xs-12 no_padding border" style="overflow: hidden;">
                     <div class="col-xs-12 efecto-hover" style="background: url('/imagenes/{$galeria[i].directorio_image}') center no-repeat; background-size: cover;">
                       <a href="/imagenes/{$galeria[i].directorio_image}" data-toggle="lightbox" data-footer="{$galeria[i].nombre_image}" data-gallery="GALERIA">
                         <img src="/imagenes/col-xs-10.png" alt="" class="img-responsive fullHeigh">
@@ -370,7 +364,7 @@
                   </div>
                 {/if}
                 {if $cont == 4}
-                  <div class="col-md-2 col-xs-12 no_padding" style="overflow: hidden;">
+                  <div class="col-md-2 col-xs-12 no_padding border" style="overflow: hidden;">
                     <div class="col-xs-12 efecto-hover" style="background: url('/imagenes/{$galeria[i].directorio_image}') center no-repeat; background-size: cover;">
                       <a href="/imagenes/{$galeria[i].directorio_image}" data-toggle="lightbox" data-footer="{$galeria[i].nombre_image}" data-gallery="GALERIA">
                         <img src="/imagenes/col-xs-2-2.png" alt="" class="img-responsive fullHeigh">
@@ -379,7 +373,7 @@
                   </div>
                 {/if}
                 {if $cont == 5}
-                  <div class="col-md-4 col-xs-12 no_padding" style="overflow: hidden;">
+                  <div class="col-md-4 col-xs-12 no_padding border" style="overflow: hidden;">
                     <div class="col-xs-12 efecto-hover" style="background: url('/imagenes/{$galeria[i].directorio_image}') center no-repeat; background-size: cover;">
                       <a href="/imagenes/{$galeria[i].directorio_image}" data-toggle="lightbox" data-footer="{$galeria[i].nombre_image}" data-gallery="GALERIA">
                         <img src="/imagenes/col-xs-4.png" alt="" class="img-responsive fullHeigh">
@@ -388,7 +382,7 @@
                   </div>
                 {/if}
                 {if $cont == 6}
-                  <div class="col-md-2 col-xs-12 no_padding" style="overflow: hidden;">
+                  <div class="col-md-2 col-xs-12 no_padding border" style="overflow: hidden;">
                     <div class="col-xs-12 efecto-hover" style="background: url('/imagenes/{$galeria[i].directorio_image}') center no-repeat; background-size: cover;">
                       <a href="/imagenes/{$galeria[i].directorio_image}" data-toggle="lightbox" data-footer="{$galeria[i].nombre_image}" data-gallery="GALERIA">
                         <img src="/imagenes/col-xs-2.png" alt="" class="img-responsive fullHeigh">
@@ -397,19 +391,29 @@
                   </div>
                 {/if}
                 {if $cont == 7}
-                  <div class="col-md-6 col-xs-12 no_padding" style="overflow: hidden;">
+                  <div class="col-md-6 col-xs-12 no_padding border" style="overflow: hidden;">
                     <div class="col-xs-12 efecto-hover" style="background: url('/imagenes/{$galeria[i].directorio_image}') center no-repeat; background-size: cover;">
                       <a href="/imagenes/{$galeria[i].directorio_image}" data-toggle="lightbox" data-footer="{$galeria[i].nombre_image}" data-gallery="GALERIA">
                         <img src="/imagenes/col-xs-6.png" alt="" class="img-responsive fullHeigh">
                       </a>
                     </div>
                   </div>
+
+                    </div>
+                  </div>
+                </div>
                 {/if}
                 {assign var="cont" value=$cont + 1}
-              {/section}
+        {/section}
+        {if $galeria|@count gt 8}
+            <div class="container-fluid" id="mostre-todo2">
+                <div class="row">
+                    <div class="col-xs-12 separacion-superior" align="center">
+                        <a class="visible btn btn-default2" onclick="mostrar2()"><h4 class="no_margin2"><strong>Ver Más</strong></h4></a>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
+        {/if}
       </div>
 
     <div class="row BODAS separacion-row" id="BODAS">
@@ -429,7 +433,7 @@
                         <div class="row">
                           <div class="col-md-10 col-md-offset-2 col-xs-12">
                             <h3 class="titulo">{$boda[i].nombre_con}</h3>
-                            <div class="col-xs-6 no_padding">
+                            <div class="col-xs-12 no_padding">
                               <hr class="habitacionT"><i class="fa fa-circle habitacion2T" aria-hidden="true"></i>
                             </div>
                             <div class="clearfix"></div>
@@ -442,9 +446,9 @@
                     <div class="col-md-6 col-xs-12">
                       <div class="container-fluid">
                         <div class="row">
-                          <div class="col-md-10 col-xs-12">
+                          <div class="col-md-10 col-xs-12 carousel-boda">
                             <div id="boda{$boda[i].id_con}" class="carousel slide" data-ride="carousel">
-                              <div class="carousel-inner" role="listbox" style="min-height: 300px; max-height: 300px;">
+                              <div class="carousel-inner" role="listbox" style="max-height: 300px;">
                                   {assign var="cont2" value=0}
                                   {section j $boda[i].imagen}
                                     <div {if $cont2 eq "0"} class="item active" {else} class="item" {/if}>
@@ -472,10 +476,10 @@
                     <div class="col-md-6 col-xs-12">
                       <div class="container-fluid">
                         <div class="row">
-                          <div class="col-md-10 col-md-offset-2 col-xs-12">
+                          <div class="col-md-10 col-md-offset-2 col-xs-12 carousel-boda">
                             <div id="boda{$boda[i].id_con}" class="carousel slide" data-ride="carousel">
 
-                              <div class="carousel-inner" role="listbox" style="min-height: 300px; max-height: 300px;">
+                              <div class="carousel-inner" role="listbox" style="max-height: 300px;">
                                   {assign var="cont2" value=0}
                                   {section j $boda[i].imagen}
                                     <div {if $cont2 eq "0"} class="item active" {else} class="item" {/if}>
@@ -504,7 +508,7 @@
                         <div class="row">
                           <div class="col-md-10 col-xs-12">
                             <h3 class="titulo">{$boda[i].nombre_con}</h3>
-                            <div class="col-xs-6 no_padding">
+                            <div class="col-xs-12 no_padding">
                               <hr class="habitacionT"><i class="fa fa-circle habitacion2T" aria-hidden="true"></i>
                             </div>
                             <div class="clearfix"></div>
@@ -545,7 +549,7 @@
             <div class="row">
               {assign cont "0"}
               {section i $promocion}
-                <div class="col-md-3 col-xs-12" {if $cont >= '4'} id="visible3" style="display:none;"{/if}>
+                <div class="col-md-3 col-xs-12{if $cont >= '4'} visible3{/if}" {if $cont >= '4'}style="display:none;"{/if}>
                   <div class="panel panel-default panelP">
                     <div class="panel-body no_padding no_padding2">
                       <a href="/contenido.php?id={$promocion[i].id_con}"><img class="img-responsive center-block banner" src="/imagenes/{$promocion[i].directorio_image}"/></a>
@@ -591,7 +595,9 @@
                       {assign var="cont" value=0}
                       {section name=i loop=$publicidad1}
                         <div {if $cont eq "0"}class="item active" {else} class="item" {/if}>
-                          <img class="img-responsive" alt="{$publicidad1[i].etiqueta_ban}" src="/imagenes/publicidad/{$publicidad1[i].directorio_dir}">
+                            <a href="{$publicidad1[i].url_dir}" target="_blank">
+                            <img class="img-responsive" alt="{$publicidad1[i].etiqueta_ban}" src="/imagenes/publicidad/{$publicidad1[i].directorio_dir}">
+                            </a>
                         </div>
                           {assign var="cont" value=$cont+1}
                       {/section}
@@ -613,7 +619,9 @@
                       {assign var="cont" value=0}
                       {section name=i loop=$publicidad2}
                         <div {if $cont eq "0"}class="item active" {else} class="item"{/if}>
-                          <img class="img-responsive" alt="{$publicidad2[i].etiqueta_ban}" src="/imagenes/publicidad/{$publicidad2[i].directorio_dir}">
+                            <a href="{$publicidad2[i].url_dir}">
+                            <img class="img-responsive" alt="{$publicidad2[i].etiqueta_ban}" src="/imagenes/publicidad/{$publicidad2[i].directorio_dir}">
+                            </a>
                         </div>
                           {assign var="cont" value=$cont+1}
                       {/section}
@@ -726,7 +734,7 @@
         <div class="col-md-3 hidden-xs text-center" style="padding-top:2.2%; padding-bottom:1.6%; font: 14px 'Century Gothic'; color: #545454;">
           Desarrollado por:
           <a href="http://www.diazcreativos.net" target="_blank" style="font: 14px 'Century Gothic'; color: #545454;">
-            <img src="/imagenes/Logo-DC.png" alt="" width="34" height="33" style="margin-right: 3px;">Diaz Creativos
+            <img src="/imagenes/Logo-DC.png" alt="" width="34" height="33" style="margin-right: 3px;">Díaz Creativos
           </a>
         </div>
         <div class="col-md-6 hidden-xs text-center" style="padding-top:2.3%; padding-bottom:2%;">
@@ -740,7 +748,7 @@
           <a href="http://www.diazcreativos.net" target="_blank">
             <div class="col xs 12">
               <div class="col-xs-4 no_padding" style="margin-top: 15px;"><img src="/imagenes/Logo-DC.png" alt="" class="pull-right" style="margin-right: 3px;" width="34" height="33"></div>
-              <div class="col-xs-8 text-left no_padding"><h4 style="font: 14px 'Century Gothic'; color: #545454; padding-top:7%;">Diaz Creativos</h4></div>
+              <div class="col-xs-8 text-left no_padding"><h4 style="font: 14px 'Century Gothic'; color: #545454; padding-top:7%;">Díaz Creativos</h4></div>
             </div>
           </a>
         </div>
@@ -817,13 +825,19 @@
               <script type="text/javascript">
 
                     function mostrar2(){
-                        document.getElementById('visible2').style.display = 'block';
+                        var x = document.getElementsByClassName('visible2');
                         document.getElementById('mostre-todo2').style.display = 'none';
+                        for (var i = 0; i < x.length; i++){
+                            x[i].style.display = 'block';
+                        }
                     }
 
                     function mostrar3(){
-                        document.getElementById('visible3').style.display = 'block';
+                        var x =document.getElementsByClassName('visible3');
                         document.getElementById('mostre-todo3').style.display = 'none';
+                        for (var i = 0; i < x.length; i++){
+                            x[i].style.display = 'block';
+                        }
                     }
             	</script>
 
