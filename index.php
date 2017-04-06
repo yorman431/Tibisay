@@ -37,6 +37,16 @@ if ($_POST){
   }
 }
 
+if (isset($_SESSION['mensajeReserva'])){
+  $mensajeReserva = "<div class='alert alert-success text-center' role='alert' style='margin-top: -35px; font-size: 18px;'><strong>".$_SESSION['mensajeReserva']."</strong></div>";
+  unset($_SESSION['mensajeReserva']);
+}
+
+if (isset($_SESSION['mensajeContacto'])){
+  $mensajeContacto = "<div class='alert alert-success text-center' role='alert' style='margin-top: -35px; font-size: 18px;'><strong>".$_SESSION['mensajeContacto']."</strong></div>";
+  unset($_SESSION['mensajeContacto']);
+}
+
 if(isset($_GET['msg']) && $_GET['msg']==1){
 	$mensaje="<tr><td align='center' colspan='2' class='error'>La sesi�n de usuario a caducado! ingrese de nuevo!</td></tr>";
 }else if(isset($_GET['msg']) && $_GET['msg']==2){
@@ -125,7 +135,6 @@ $smarty->assign("mensaje2", $mensaje2);
 $smarty->assign("banner", $banner->listado);
 $smarty->assign("contenido", $contenido->listado);
 $smarty->assign('enlaces_B',$enlaces_B->listado);
-$smarty->assign('enlaces_C',$enlaces_C->listado);
 $smarty->assign('habitacion', $habitaciones);
 $smarty->assign('gastronomia', $gastronomia);
 $smarty->assign('gimnasio', $gimnasio);
@@ -137,6 +146,9 @@ $smarty->assign('publicidad1', $publicidad1);
 $smarty->assign('publicidad2', $publicidad2);
 $smarty->assign('empresa', $empresa);
 $smarty->assign('galeria', $galeria->listado);
+
+$smarty->assign('mensajeReserva', $mensajeReserva);
+$smarty->assign('mensajeContacto', $mensajeContacto);
 $smarty->force_compile=true;
 $smarty->display('index.tpl');
 /* Fin footer para Smarty */

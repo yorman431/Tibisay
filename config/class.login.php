@@ -97,6 +97,7 @@ class Auth extends Config{
 	}
 
 	function asignar_ingreso3(){
+		$this->cedula = $_POST['cedula'];
 		$this->nombre=$_POST['nombre'];
 		$this->apellido=$_POST['apellido'];
 		$this->telefono=$_POST['telefono'];
@@ -317,7 +318,7 @@ class Auth extends Config{
 	    //metodo para el envio desde el formulario de contacto
 		$this->mostrar_config(1);
 		$this->asignar_ingreso();
-		$cuerpo ="<img src='http://tibisay.diazcreativos.net.ve/imagenes/logon.png' /><br /><br />
+		$cuerpo ="<img src='http://tibisayhotelboutique.com/imagenes/logon.png' /><br /><br />
 		<u>DATOS INGRESADOS:</u><br />";
 		$cuerpo .="<br />";
 		$cuerpo .= "<strong>Nombre: </strong>".$this->nombre."<br />" ;
@@ -341,7 +342,7 @@ class Auth extends Config{
 		&iexcl;Gracias por contactarnos!<br /><br />
 
 		Atentamente,<br />
-		Departamento de Ventas ".$this->empresa."<br />
+		Dirección de Ventas ".$this->empresa."<br />
 		Teléfonos: (+58) 0295-500.07.00 Ext -2017 Ext -2010 <br />
 		Facebook: <a href='https://www.facebook.com/tibisayhotelboutique'>Tibisay Hotel Boutique</a><br />
 		Twitter: <a href='https://twitter.com/TibisayHotel'>@TibisayHotel</a><br />
@@ -365,7 +366,10 @@ class Auth extends Config{
 		$mail2->Body = $respuesta;
 		$mail2->AltBody = $respuesta;
 		$mail2->Send();
-
+		
+		$_SESSION['mensajeContacto']= "Su solicitud fue enviada.";
+		header("location: /#CONTACTO");
+		exit();
 		//if(mail ("$basemailfor", "$subject2", "$cuerpo", "From: $basemailfrom\nContent-Type: text/html" )){
 		   //mail ("$basemailfrom", "$subject", "$respuesta", "From: $basemailfor\nContent-Type: text/html" );
 		   //mail ("$basemailfor2", "$subject2", "$cuerpo", "From: $basemailfrom\nContent-Type: text/html" );
@@ -442,44 +446,37 @@ class Auth extends Config{
 	function enviar_cotizacion(){
 	    //metodo para el envio desde el formulario de contacto
 	    $this->asignar_ingreso3();
-		$cuerpo ="<img src='".$this->website."/imagenes/logon.png' /><br /><br />
+	    session_start();
+	    $subtotal = 0;
+		$cuerpo ="<img src='http://tibisayhotelboutique.com/imagenes/logon.png' /><br /><br />
+							Estimado (a) <strong>".$this->nombre." ".$this->apellido.",</strong><br><br>
+							Sirva este correo para saludarle y agradecerle por habernos seleccionado como la opción viable para su hospedaje
+							en la Isla de Margarita. Procesaremos su solicitud a la brevedad posible.
+							Importante es hacer de su conocimiento que esta reservación “no está garantizada”.
+							Durante las próximas horas uno de nuestros representantes, le contactará para corroborar detalles de su solicitud y,
+							los pasos siguientes  para la confirmación de su reserva.<br><br>
+							----  DATOS DE SOLICITUD  ----<br><br>
 		<u>DATOS DEL CLIENTE:</u><br />";
 		$cuerpo .="<br />";
 		$cuerpo .= "<strong>Nombre: </strong>".$this->nombre."<br />" ;
 		$cuerpo .= "<strong>Apellido: </strong>".$this->apellido."<br />";
+		$cuerpo .= "<strong>Cedula - Pasaporte</strong>".$this->cedula."<br>";
 		$cuerpo .= "<strong>Tel&eacute;fono: </strong>".$this->telefono."<br />" ;
 		$cuerpo .= "<strong>E-mail: </strong>".$this->correoc."<br />" ;
 		$cuerpo .= "<strong>Edad: </strong>".$this->edad."<br />";
 		$cuerpo .= "<strong>País: </strong>".$this->pais."<br />";
 		$cuerpo .= "<strong>Estado: </strong>".$this->estado."<br />";
 		$cuerpo .= "<strong>Direccion: </strong>".$this->direccion."<br />";
-		$cuerpo .= "<br />";
-		$cuerpo .="<img src='".$this->website."/imagenes/logon.png' /><br /><br />
-
-		<strong>Estimado(a) ".$this->nombre." ".$this->apellido."</strong>,<br /><br />
-
-		Hemos recibido satisfactoriamente su solicitud y ser&aacute; procesada a la brevedad. Durante las pr&oacute;ximas horas uno de nuestros representantes se comunicar&aacute; con usted para atender directamente su petici&oacute;n.<br /><br />
-
-		&iexcl;Gracias por contactarnos!<br /><br />
-
-		Atentamente,<br />
-		Departamento de Ventas ".$this->empresa."<br />
-		Teléfonos: +58 274 2441729 / 2444455 <br />
-		Facebook: <a href='https://www.facebook.com/tibisayhotelboutique'>Tibisay Hotel Boutique</a><br />
-		Twitter: <a href='https://twitter.com/TibisayHotel'>@TibisayHotel</a><br />
-		Instagram: <a href='https://www.instagram.com/tibisayhotelboutique/'>tibisayhotelboutique</a>";
-		$cuerpo .= "----  DATOS DE SOLICITUD  ----";
-		$cuerpo .= "<br />";
-		$cuerpo .= "<h2><strong>Nombre del Hotel: </strong>".$_SESSION['reserva'][0][0]['hotel']."</h2><br />" ;
-		$cuerpo .= "<br />";
-		$cuerpo .= "<h4>Detalles de la cotización</h4><br />";
+		$cuerpo .= "<br /><br>
+								DETALLES DE LA SOLICITUD<br><br>";
+		
 
 		for($row=0; $row < count($_SESSION['reserva']); $row++){
 			for($col=0; $col < count($_SESSION['reserva'][$row]); $col++){
 				if(isset($_SESSION['reserva'][$row][$col]['regimen'])){
 					if ($col == 0){
 						$num= $row + 1;
-						$cuerpo .= "<h3>HABITACION ".$num."</h3><br />";
+						$cuerpo .= "<h3><strong>HABITACION ".$num."</strong></h3><br />";
 						$cuerpo .= "<strong>Régimen: </strong>".$_SESSION['reserva'][$row][$col]['regimen']."<br />";
 						$cuerpo .= "<strong>Tipo de Habitación: </strong>".$_SESSION['reserva'][$row][$col]['ocupacion']."<br />";
 						$cuerpo .= "<strong> Adultos: </strong>".$_SESSION['reserva'][$row][$col]['adultos']."<br />";
@@ -488,50 +485,46 @@ class Auth extends Config{
 						}elseif (isset($_SESSION['reserva'][$row][$col]['infantes'])) {
 							$cuerpo .= "<strong> Infantes: </strong>".$_SESSION['reserva'][$row][$col]['infantes']."<br />";
 						}
-					}
-					$cuerpo .= "<strong>Día: </strong>".$col."<br />";
-					$cuerpo .= "<strong>Fecha: </strong>".$_SESSION['reserva'][$row][$col]['fecha']."<br />";
-					$cuerpo .= "<strong>Tipo de Tarifa: </strong>".$_SESSION['reserva'][$row][$col]['tipotarifa']."<br />";
-					$cuerpo .= "<strong>Precio Adulto: </strong>".$_SESSION['reserva'][$row][$col]['precio']."<br />";
-					if(isset($_SESSION['reserva'][$row][$col]['preciochd'])){
-						$cuerpo .= "<strong>Precio Niño: </strong>".$_SESSION['reserva'][$row][$col]['preciochd']."<br />";
-					}elseif (isset($_SESSION['reserva'][$row][$col]['precioinf'])) {
-						$cuerpo .= "<strong>Precio Niño: </strong>".$_SESSION['reserva'][$row][$col]['preciochd']."<br />";
-					}
+            $cuerpo .= "<strong>Fecha de Entrada: </strong>".$_SESSION['reserva'][$row]['llegada']."<br />";
+            $cuerpo .= "<strong>Fecha de Salida: </strong>".$_SESSION['reserva'][$row]['salida']."<br />";
+          }
 				}
 				$cuerpo .="<br />";
 			}
 			if (isset($_SESSION['reserva'][$row]['subtotal'])){
-				$cuerpo .= "<strong>Subtotal = ".$_SESSION['reserva'][$row]['subtotal']." Bs.</strong><br /><br />";
+				$cuerpo .= "<strong>Precio: ".$_SESSION['reserva'][$row]['subtotal']." Bs.</strong><br />";
+				$subtotal = $subtotal + $_SESSION['reserva'][$row]['subtotal'];
+				$cuerpo .= "<strong>Subtotal".$num.": ".$subtotal." Bs.</strong><br /><br /><br>";
 			}
 		}
-
-		if(isset($_SESSION['reserva']['traslado'])){
-			$cuerpo .= "<h4>Translado</h4><br />";
-			$cuerpo .= "<strong>Hora: </strong>".$_SESSION['reserva']['traslado']['hora']."<br />";
-			$cuerpo .= "<strong>Dirección: </strong>".$_SESSION['reserva']['traslado']['direccion']."<br />";
-			$cuerpo .= "<strong>Adultos: </strong>".$_SESSION['reserva']['traslado']['adultos']."<br />";
-			if(isset($_SESSION['reserva']['traslado']['ninos'])){
-				$cuerpo .= "<strong>Niños: </strong>".$_SESSION['reserva']['traslado']['ninos']."<br />";
-			}
-			$cuerpo .= "<strong>Ruta: </strong>".$_SESSION['reserva']['traslado']['ruta']."<br />";
-			$cuerpo .= "<strong>Precio Adulto: </strong>".$_SESSION['reserva']['traslado']['costoadt']."<br />";
-			$cuerpo .= "<strong>Precio Niño: </strong>".$_SESSION['reserva']['traslado']['costochd']."<br />";
-			$cuerpo .= "<strong>Subtotal: ".$_SESSION['reserva']['traslado']['subtotal']."</strong><br />";
-		}
-
-		$cuerpo .= "<strong>TOTAL = ".$_SESSION['totalreserva']." Bs </strong>";
+		
+		//Descuento indicado por el hotel
+		$descuento = $_SESSION['totalreserva']*0.18;
+		$granTotal = $_SESSION['totalreserva'] - $descuento;
+		
+		$cuerpo .= "<strong>Subtotal : ".$_SESSION['totalreserva']." Bs <br>
+ 								DESCUENTO (18%) : -".$descuento."<br>
+ 								Total a Pagar: ".$granTotal."</strong>";
 		$cuerpo .= "<br />";
 		$cuerpo .= "----  FIN DATOS  ----";
-		$cuerpo .= "<br />";
+		$cuerpo .= "<br /><br>
+								Seguros de poder superar sus expectativas.<br><br>
+								Atentamente,<br>
+								Departamento de Reservaciones Tibisay Hotel Boutique Margarita<br>
+								Teléfonos: (+58) 0295-500.07.00 Ext -2013.<br>
+								Facebook: <a href='https://www.facebook.com/tibisayhotelboutique/'>Tibisay Hotel Boutique</a><br>
+								Twitter: <a href='https://twitter.com/TibisayHotel'>@TibisayHotel</a><br>
+								Instagram:<a href='https://www.instagram.com/tibisayhotelboutique/'>tibisayhotelboutique</a> ";
 
 		$subject= "Solicitud de Reserva ".$this->empresa;
 		$subject2= "Solicitud de Reserva desde Web ".$this->empresa;
-		$basemailfor=$this->correo;
-		$basemailfrom = "adri220487@gmail.com";
-		
-		$this->mensaje="Su mensaje ha sido enviado satisfactoriamente!";
-
+		$basemailfor=$this->correoc;
+		$basemailfrom = "reservas@tibisayhotelboutique.com";
+		$basemailfrom2 = "ventas@tibisayhotelboutique.com";
+		$basemailfrom3 = "recepcion@tibisayhotelboutique.com";
+    
+    $_SESSION['mensajeReserva']= "Su solicitud fue enviada. Recuerde que la misma NO garantiza su reservación";
+    
 		$mail = new PHPMailer(true);
 		$mail->From = $basemailfrom;
 		$mail->FromName = utf8_decode("Solicitud de Cotizacion desde Web ".$this->empresa);
@@ -548,12 +541,33 @@ class Auth extends Config{
 		$mail2->Subject = utf8_decode("Solicitud de Cotizacion desde Web ".$this->empresa);
 		$mail2->Body = $cuerpo;
 		$mail2->AltBody = $cuerpo;
-		$exito2 = $mail->Send();
-		/*if(mail ("$basemailfor", "$subject2", "$cuerpo", "From: $basemailfrom\nContent-Type: text/html" )){
-		   mail ("$basemailfrom", "$subject", "$respuesta", "From: $basemailfor\nContent-Type: text/html" );
-		   mail ("$basemailfor2", "$subject2", "$cuerpo", "From: $basemailfrom\nContent-Type: text/html" );
+		$exito2 = $mail2->Send();
+		
+		$mail3 = new PHPMailer(true);
+		$mail3->From = $basemailfor;
+		$mail3->FromName = utf8_decode("Solicitud de Cotizacion desde Web ".$this->empresa);
+		$mail3->AddAddress($basemailfrom2, $this->nombre." ".$this->apellido);
+		$mail3->Subject = utf8_decode("Solicitud de Cotizacion desde Web ".$this->empresa);
+		$mail3->Body = $cuerpo;
+		$mail3->AltBody = $cuerpo;
+		$exito2 = $mail2->Send();
+		
+		$mail4 = new PHPMailer(true);
+		$mail4->From = $basemailfor;
+		$mail4->FromName = utf8_decode("Solicitud de Cotizacion desde Web ".$this->empresa);
+		$mail4->AddAddress($basemailfrom3, $this->nombre." ".$this->apellido);
+		$mail4->Subject = utf8_decode("Solicitud de Cotizacion desde Web ".$this->empresa);
+		$mail4->Body = $cuerpo;
+		$mail4->AltBody = $cuerpo;
+		$exito2 = $mail2->Send();
+    
+    header("location: /#RESERVAS");
+    exit();
+    /*if(mail ("$basemailfor", "$subject2", "$cuerpo", "From: $basemailfrom\nContent-Type: text/html" )){
+       mail ("$basemailfrom", "$subject", "$respuesta", "From: $basemailfor\nContent-Type: text/html" );
+       mail ("$basemailfor2", "$subject2", "$cuerpo", "From: $basemailfrom\nContent-Type: text/html" );
 
-		}*/
+    }*/
 	}
 
 

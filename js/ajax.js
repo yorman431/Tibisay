@@ -254,14 +254,18 @@ function cotizarTraslado(){
 }
 
 function mostrarTotal(){
+	var descuento;
+	var granTotal;
 	$.ajax({
 		url: 'js/ajax/mostrarTotal.php',
 		type: 'POST',
 		async: false,
 		dataType: 'html',
 		success: function(data){
+			descuento = data * 0.18;
+			granTotal = data - descuento;
 			$('#total').empty();
-			$('#total').append('<p style="font-size: 16px; font-weight:bolder;">Total Bs.: '+data+'</p>');
+			$('#total').append('<p style="font-size: 16px; font-weight:bolder; color:#fff;">Subtotal Bs. '+data+'<br>Descuento (18%) = -'+descuento+'<br>Total Bs.: '+granTotal+'</p>');
 		}
 	})
 }

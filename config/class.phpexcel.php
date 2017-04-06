@@ -107,17 +107,6 @@ class EXCEL extends PHPExcel{
         $this->limpiarVariables();
       }
       
-      if ($this->canTemp == 41){
-        $j = $i + 1;
-        $control = $this->excelHoja->getCell('B'.$j)->getValue();
-        if ($control != ''){
-          $i = $i + 22;
-        }else{
-          $i = $i + 21;
-        }
-        $j = 0;
-      }
-      
       
     }
     $this->mensaje = "Productos Actualizados: ".$this->cantidadOk." Productos NO Actualizados: ".$this->cantidadNOk;
@@ -161,138 +150,67 @@ class EXCEL extends PHPExcel{
       switch ($i){
         case 1:
           $this->precioHab = $this->excelHoja->getCell('M'.$column)->getValue();
-          $this->precioHab = str_replace('.','',$this->precioHab);
           $this->precioHab = str_replace(',','.',$this->precioHab);
           
           if ($this->precioHab != 0){
-            $nombre = $this->nombreHab." Sencilla";
-            $sql3 = "SELECT id, id_alojamiento, id_temporada, nombre, regimen FROM habitaciones WHERE id_alojamiento = '$this->id_alojamiento' AND id_temporada = '$this->id_temporada' AND nombre = '$nombre' AND regimen = '$this->regimenHab'";
-            $consulta3 = mysql_query($sql3) or die (mysql_error());
-            $filas = mysql_num_rows($consulta3);
-            if ($filas != 0){
-              $resultado = mysql_fetch_array($consulta3);
-              $id = $resultado['id'];
-              echo('');
-              $sql4 = "UPDATE habitaciones SET nombre = '$nombre', regimen = '$this->regimenHab', tipotarifa = '$this->tipotarifa' WHERE id = '$id'";
-              $consulta4 = mysql_query($sql4) or die (mysql_error());
-            }else{
-              $sql4 = "INSERT INTO habitaciones VALUES('', '$this->id_alojamiento', '$this->id_temporada', '$nombre', '$this->regimenHab', '', '$this->listar', '$this->precioHab', '0', NULL, '$this->tipotarifa', '1', '0', '0', '0', '$this->precio_ran')";
-              $consulta4 = mysql_query($sql4) or die (mysql_error());
-            }
+            $nombre = $this->nombreHab;
+            $sql4 = "INSERT INTO habitaciones VALUES('', '$this->id_alojamiento', '$this->id_temporada', '$nombre', '$this->regimenHab', '', '$this->listar', '$this->precioHab', '0', NULL, '$this->tipotarifa', '1', '0', '0', '0', '$this->precio_ran')";
+            $consulta4 = mysql_query($sql4) or die (mysql_error());
           }
           break;
           
         case 2:
           $this->precioHab = $this->excelHoja->getCell('N'.$column)->getValue();
-          $this->precioHab = str_replace('.','',$this->precioHab);
           $this->precioHab = str_replace(',','.',$this->precioHab);
           
           if ($this->precioHab != 0){
-            $nombre = $this->nombreHab." Doble";
-            $sql3 = "SELECT id, id_alojamiento, id_temporada, nombre, regimen FROM habitaciones WHERE id_alojamiento = '$this->id_alojamiento' AND id_temporada = '$this->id_temporada' AND nombre = '$nombre' AND regimen = '$this->regimenHab'";
-            $consulta3 = mysql_query($sql3) or die (mysql_error());
-            $filas = mysql_num_rows($consulta3);
-            if ($filas != 0){
-              $resultado = mysql_fetch_array($consulta3);
-              $id = $resultado['id'];
-              $sql4 = "UPDATE habitaciones SET nombre = '$nombre', regimen = '$this->regimenHab', tipotarifa = '$this->tipotarifa' WHERE id = '$id'";
-              $consulta4 = mysql_query($sql4) or die (mysql_error());
-            }else{
-              $sql4 = "INSERT INTO habitaciones VALUES('', '$this->id_alojamiento', '$this->id_temporada', '$nombre', '$this->regimenHab', '', '$this->listar', '$this->precioHab', '0', NULL, '$this->tipotarifa', '2', '0', '0', '0', '$this->precio_ran')";
-              $consulta4 = mysql_query($sql4) or die (mysql_error());
-            }
+            $nombre = $this->nombreHab;
+            $sql4 = "INSERT INTO habitaciones VALUES('', '$this->id_alojamiento', '$this->id_temporada', '$nombre', '$this->regimenHab', '', '$this->listar', '$this->precioHab', '0', NULL, '$this->tipotarifa', '2', '0', '0', '0', '$this->precio_ran')";
+            $consulta4 = mysql_query($sql4) or die (mysql_error());
           }
           break;
           
         case 3:
           $this->precioHab = $this->excelHoja->getCell('O'.$column)->getValue();
-          $this->precioHab = str_replace('.','',$this->precioHab);
           $this->precioHab = str_replace(',','.',$this->precioHab);
           
           if ($this->precioHab != 0){
-            $nombre = $this->nombreHab." Triple";
-            $sql3 = "SELECT id, id_alojamiento, id_temporada, nombre, regimen FROM habitaciones WHERE id_alojamiento = '$this->id_alojamiento' AND id_temporada = '$this->id_temporada' AND nombre = '$nombre' AND regimen = '$this->regimenHab'";
-            $consulta3 = mysql_query($sql3) or die (mysql_error());
-            $filas = mysql_num_rows($consulta3);
-    
-            if ($filas != 0){
-              $resultado = mysql_fetch_array($consulta3);
-              $id = $resultado['id'];
-              $sql4 = "UPDATE habitaciones SET nombre = '$nombre', regimen = '$this->regimenHab', tipotarifa = '$this->tipotarifa' WHERE id = '$id'";
-              $consulta4 = mysql_query($sql4) or die (mysql_error());
-            }else{
-              $sql4 = "INSERT INTO habitaciones VALUES('', '$this->id_alojamiento', '$this->id_temporada', '$nombre', '$this->regimenHab', '', '$this->listar', '$this->precioHab', '0', NULL, '$this->tipotarifa', '3', '0', '0', '0', '$this->precio_ran')";
-              $consulta4 = mysql_query($sql4) or die (mysql_error());
-            }
+            $nombre = $this->nombreHab;
+            $sql4 = "INSERT INTO habitaciones VALUES('', '$this->id_alojamiento', '$this->id_temporada', '$nombre', '$this->regimenHab', '', '$this->listar', '$this->precioHab', '0', NULL, '$this->tipotarifa', '3', '0', '0', '0', '$this->precio_ran')";
+            $consulta4 = mysql_query($sql4) or die (mysql_error());
           }
           break;
           
         case 4:
           $this->precioHab = $this->excelHoja->getCell('R'.$column)->getValue();
-          $this->precioHab = str_replace('.','',$this->precioHab);
           $this->precioHab = str_replace(',','.',$this->precioHab);
           
           if ($this->precioHab != 0){
-            $nombre = $this->nombreHab." Cuadruple";
-            $sql3 = "SELECT id, id_alojamiento, id_temporada, nombre, regimen FROM habitaciones WHERE id_alojamiento = '$this->id_alojamiento' AND id_temporada = '$this->id_temporada' AND nombre = '$nombre' AND regimen = '$this->regimenHab'";
-            $consulta3 = mysql_query($sql3) or die (mysql_error());
-            $filas = mysql_num_rows($consulta3);
-    
-            if ($filas != 0){
-              $resultado = mysql_fetch_array($consulta3);
-              $id = $resultado['id'];
-              $sql4 = "UPDATE habitaciones SET nombre = '$nombre', regimen = '$this->regimenHab', tipotarifa = '$this->tipotarifa' WHERE id = '$id'";
-              $consulta4 = mysql_query($sql4) or die (mysql_error());
-            }else{
-              $sql4 = "INSERT INTO habitaciones VALUES('', '$this->id_alojamiento', '$this->id_temporada', '$nombre', '$this->regimenHab', '', '$this->listar', '$this->precioHab', '0', NULL, '$this->tipotarifa', '4', '0', '0', '0', '$this->precio_ran')";
-              $consulta4 = mysql_query($sql4) or die (mysql_error());
-            }
+            $nombre = $this->nombreHab;
+            $sql4 = "INSERT INTO habitaciones VALUES('', '$this->id_alojamiento', '$this->id_temporada', '$nombre', '$this->regimenHab', '', '$this->listar', '$this->precioHab', '0', NULL, '$this->tipotarifa', '4', '0', '0', '0', '$this->precio_ran')";
+            $consulta4 = mysql_query($sql4) or die (mysql_error());
           }
           break;
           
         case 5:
           $this->precioHab = $this->excelHoja->getCell('S'.$column)->getValue();
-          $this->precioHab = str_replace('.','',$this->precioHab);
           $this->precioHab = str_replace(',','.',$this->precioHab);
           
           if ($this->precioHab != 0){
-            $nombre = $this->nombreHab." Quintuple";
-            $sql3 = "SELECT id, id_alojamiento, id_temporada, nombre, regimen FROM habitaciones WHERE id_alojamiento = '$this->id_alojamiento' AND id_temporada = '$this->id_temporada' AND nombre = '$nombre' AND regimen = '$this->regimenHab'";
-            $consulta3 = mysql_query($sql3) or die (mysql_error());
-            $filas = mysql_num_rows($consulta3);
-    
-            if ($filas != 0){
-              $resultado = mysql_fetch_array($consulta3);
-              $id = $resultado['id'];
-              $sql4 = "UPDATE habitaciones SET nombre = '$nombre', regimen = '$this->regimenHab', tipotarifa = '$this->tipotarifa' WHERE id = '$id'";
-              $consulta4 = mysql_query($sql4) or die (mysql_error());
-            }else{
-              $sql4 = "INSERT INTO habitaciones VALUES('', '$this->id_alojamiento', '$this->id_temporada', '$nombre', '$this->regimenHab', '', '$this->listar', '$this->precioHab', '0', NULL, '$this->tipotarifa', '5', '0', '0', '0', '$this->precio_ran')";
-              $consulta4 = mysql_query($sql4) or die (mysql_error());
-            }
+            $nombre = $this->nombreHab;
+            $sql4 = "INSERT INTO habitaciones VALUES('', '$this->id_alojamiento', '$this->id_temporada', '$nombre', '$this->regimenHab', '', '$this->listar', '$this->precioHab', '0', NULL, '$this->tipotarifa', '5', '0', '0', '0', '$this->precio_ran')";
+            $consulta4 = mysql_query($sql4) or die (mysql_error());
           }
           break;
           
         case 6:
           $this->precioHab = $this->excelHoja->getCell('V'.$column)->getValue();
-          $this->precioHab = str_replace('.','',$this->precioHab);
           $this->precioHab = str_replace(',','.',$this->precioHab);
           
           if ($this->precioHab != 0){
-            $nombre = $this->nombreHab." Sextuple";
-            $sql3 = "SELECT id, id_alojamiento, id_temporada, nombre, regimen FROM habitaciones WHERE id_alojamiento = '$this->id_alojamiento' AND id_temporada = '$this->id_temporada' AND nombre = '$nombre' AND regimen = '$this->regimenHab'";
-            $consulta3 = mysql_query($sql3) or die (mysql_error());
-            $filas = mysql_num_rows($consulta3);
-    
-            if ($filas != 0){
-              $resultado = mysql_fetch_array($consulta3);
-              $id = $resultado['id'];
-              $sql4 = "UPDATE habitaciones SET nombre = '$nombre', regimen = '$this->regimenHab', tipotarifa = '$this->tipotarifa' WHERE id = '$id'";
-              $consulta4 = mysql_query($sql4) or die (mysql_error());
-            }else{
-              $sql4 = "INSERT INTO habitaciones VALUES('', '$this->id_alojamiento', '$this->id_temporada', '$nombre', '$this->regimenHab', '', '$this->listar', '$this->precioHab', '0', NULL, '$this->tipotarifa', '6', '0', '0', '0', '$this->precio_ran')";
-              $consulta4 = mysql_query($sql4) or die (mysql_error());
-            }
+            $nombre = $this->nombreHab;
+            $sql4 = "INSERT INTO habitaciones VALUES('', '$this->id_alojamiento', '$this->id_temporada', '$nombre', '$this->regimenHab', '', '$this->listar', '$this->precioHab', '0', NULL, '$this->tipotarifa', '6', '0', '0', '0', '$this->precio_ran')";
+            $consulta4 = mysql_query($sql4) or die (mysql_error());
           }
           break;
           

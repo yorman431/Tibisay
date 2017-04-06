@@ -51,18 +51,15 @@ for ($i = 1; $i <= $dias; $i++){
   $resultado = mysql_fetch_array($consulta);
   
   if($ninos != "" && $ninos != 0){
-    
+    $sql2="SELECT desdechd, hastachd, id_hot FROM hotel WHERE id_hot = '$id_hot'";
+    $consulta2= mysql_query($sql2);
+    $resultado2= mysql_fetch_array($consulta2);
     for($j=0; $j < $ninos; $j++){
-
-      $edad= $edadninos[$j];
-      $sql2="SELECT min_ran, max_ran, etiqueta_ran FROM rango_ninos WHERE '$edad' BETWEEN min_ran AND max_ran AND temporada_ran = (SELECT id FROM temporadas WHERE id_alojamiento = '$id_hot' AND '$fecha_actual' BETWEEN fecha_inicio AND fecha_fin)";
-      $consulta2= mysql_query($sql2);
-      $resultado2= mysql_fetch_array($consulta2);
-      if($edadninos[$j] >= $resultado2['min_ran'] && $edadninos[$j] <= $resultado2['max_ran']){
+      
+      if(($edadninos[$j] >= $resultado2['desdechd'] && $edadninos[$j] <= $resultado2['hastachd']) || ($edadninos[$j] < $resultado2['desdechd'])){
         if($i == 1){
-          $resultado2['etiqueta_ran'] = utf8_encode($resultado2['etiqueta_ran']);
 
-          if($resultado2['etiqueta_ran'] == 'Niño'){
+          if($edadninos[$j] >= $resultado2['desdechd'] && $edadninos[$j] <= $resultado2['hastachd']){
             if(isset($resultado['precio_chd'])){
               $descripcion['preciochd']= $resultado['precio_chd'];
             }else{
@@ -70,13 +67,9 @@ for ($i = 1; $i <= $dias; $i++){
             }
             $chd= $chd + 1;
           }
-          
-          if($resultado2['etiqueta_ran'] == 'Infante'){
-            if(isset($resultado['precio_chd'])){
-              $descripcion['precioinf']= 0;
-            }else{
-              $descripcion['precioinf']= 0;
-            }
+  
+          if($edadninos[$j] < $resultado2['desdechd']){
+            $descripcion['precioinf']= 0;
             $inf = $inf +1;
           }
           
@@ -279,11 +272,12 @@ for($row=0; $row < count($_SESSION['reserva']); $row++){
 			}
 		}
 
-
-		$_SESSION['reserva'][$row]['subtotal'] = $subtotal;
+    $_SESSION['reserva'][$row]['llegada'] = date("d-m-Y",strtotime($fecha_i));
+    $_SESSION['reserva'][$row]['salida'] = date("d-m-Y",strtotime($fecha_s));
+		$_SESSION['reserva'][$row]['subtotal'] = round($subtotal, 2);
 	}
 	$total = $total + $_SESSION['reserva'][$row]['subtotal'];
-	$_SESSION['totalreserva']= $total;
+	$_SESSION['totalreserva']= round($total, 2);
 
 	$subtotal = 0;
 }

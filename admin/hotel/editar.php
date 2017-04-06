@@ -68,6 +68,8 @@ $smarty->assign("facilidad", $facilidad->listado);
 $smarty->assign("paises", $paises->listado);
 $smarty->assign("estados", $estados->listado);
 $smarty->assign("sector", $hotel->sector);
+$smarty->assign('desdechd', $hotel->desdechd);
+$smarty->assign('hastachd', $hotel->hastachd);
 
 $smarty->assign("listado", $hotel->listado);
 $smarty->assign("listado2", $hotel->listado2);

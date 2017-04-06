@@ -12,13 +12,13 @@
 	$usuario = "root";
 	$clave = "";
 	$basededatos ="tibisaymargarita";
- /*
+/*
 	$servidor = "localhost";
-	$usuario = "diazcrea_yorman";
+	$usuario = "diazcrea";
 	$clave = "Cagg5kxz.";
-	$basededatos ="diazcrea_tibisay";
-*/
+	$basededatos ="tibisayhotel";
 
+*/
 //$enlace_redine = mysql_connect('127.0.0.1','rmoraos_seiler','Uvt+M+}FyOKO') or die ('Ha fallado la conexi�n: '.mysql_error());
 
 //para Mysql usar este script

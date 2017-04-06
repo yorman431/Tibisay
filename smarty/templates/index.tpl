@@ -81,7 +81,8 @@
       </div>
 
     <div class="row RESERVAS" id="RESERVAS">
-          <div class="col-xs-12 text-center">
+        {$mensajeReserva}
+        <div class="col-xs-12 text-center">
               <h2 class="tituloSeccion">RESERVAS</h2>
           </div>
           <div class="col-xs-12">
@@ -92,7 +93,7 @@
             <div class="col-xs-12">
               <div class="contanier-fluid">
                 <div id="formulario_reserva" class="row">
-                  <form action="" name="formreservas" id="formreservastibisay">
+                  <form action="" name="formreservas" id="formreservastibisay" method="post">
                       <div class="col-xs-8 col-xs-offset-2">
                           <h3>Solicitud de Reserva</h3>
                               <div class="row">
@@ -104,11 +105,6 @@
                                               <option value="1">1 Habitación</option>
                                               <option value="2">2 Habitaciones</option>
                                               <option value="3">3 Habitaciones</option>
-                                              <option value="4">4 Habitaciones</option>
-                                              <option value="5">5 Habitaciones</option>
-                                              <option value="6">6 Habitaciones</option>
-                                              <option value="7">7 Habitaciones</option>
-                                              <option value="8">8 Habitaciones</option>
                                           </select>
                                       </div>
                                   </div>
@@ -135,6 +131,11 @@
                                       </div>
                                   </div>
                               </div>
+                          <div id="panel_habitacion"></div>
+
+                          <div class="col-xs-12 text-right" id="total"></div>
+
+                          <input name="id_hotel" id="id_hotel" type="hidden" value="1">
 
                           <div class="modal fade" id="reservacion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
                               <div class="modal-dialog" role="document">
@@ -142,10 +143,14 @@
 
                                       <div class="modal-body">
                                           <div class="row">
-                                              <div class="col-xs-12 text-center titulo-modal">Informacion Personal</div>
+                                              <div class="col-xs-12 text-center titulo-modal">Información Personal</div>
 
                                               <form action="" name="reservacion" method="post">
-
+                                                  <div class="col-xs-12">
+                                                      <div class="form-group">
+                                                          <input type="text" class="form-control form-contacto form-group-contacto" name="cedula" placeholder="Cédula o Pasaporte" value="" required>
+                                                      </div>
+                                                  </div>
                                                   <div class="col-xs-12">
                                                       <div class="form-group">
                                                           <input type="text" class="form-control form-contacto form-group-contacto" name="nombre" placeholder="Nombre" value="" required>
@@ -163,7 +168,7 @@
                                                   </div>
                                                   <div class="col-xs-12">
                                                       <div class="form-group">
-                                                          <input type="text" class="form-control form-contacto form-group-contacto" name="correo" placeholder="Correo Electronico" value="" required>
+                                                          <input type="text" class="form-control form-contacto form-group-contacto" name="correo" placeholder="Correo Electrónico" value="" required>
                                                       </div>
                                                   </div>
                                                   <div class="col-xs-12">
@@ -173,7 +178,7 @@
                                                   </div>
                                                   <div class="col-xs-12">
                                                       <div class="form-group">
-                                                          <input type="text" class="form-control form-contacto form-group-contacto" placeholder="Pais" name="pais" required>
+                                                          <input type="text" class="form-control form-contacto form-group-contacto" placeholder="País" name="pais" required>
                                                       </div>
                                                   </div>
                                                   <div class="col-xs-12">
@@ -183,7 +188,7 @@
                                                   </div>
                                                   <div class="col-xs-12">
                                                       <div class="form-group">
-                                                          <input type="text" class="form-control form-group-contacto form-contacto" name="direccion" placeholder="Direccion" required>
+                                                          <input type="text" class="form-control form-group-contacto form-contacto" name="direccion" placeholder="Dirección" required>
                                                       </div>
                                                   </div>
                                                   <div class="col-xs-12 separacion-row">
@@ -202,11 +207,6 @@
                               </div>
                           </div>
 
-                          <div id="panel_habitacion"></div>
-
-                          <div class="col-xs-12 text-right" id="total"></div>
-
-                          <input name="id_hotel" id="id_hotel" type="hidden" value="1">
                       </div>
                   </form>
                 </div>
@@ -523,15 +523,6 @@
             </div>
           </div>
         {/section}
-        {if $boda|@count gt 2}
-        <div class="container-fluid" id="mostre-todo2">
-          <div class="row">
-            <div class="col-xs-12 separacion-superior" align="center">
-              <a class="visible btn btn-default" onclick="mostrar2()"><h4 class="no_margin2"><strong>Ver Más</strong></h4></a>
-            </div>
-          </div>
-        </div>
-          {/if}
       </div>
 
     <div id="PROMOCIONES" class="row PROMOCIONES paddingLg">
@@ -543,38 +534,54 @@
           <img class="center-block relative" src="/imagenes/promocion.png" alt="Habitaciones">
         </div>
         <div class="clearfix"></div>
-
-        <div class="col-xs-12">
-          <div class="container-fluid">
-            <div class="row">
-              {assign cont "0"}
-              {section i $promocion}
-                <div class="col-md-3 col-xs-12{if $cont >= '4'} visible3{/if}" {if $cont >= '4'}style="display:none;"{/if}>
-                  <div class="panel panel-default panelP">
-                    <div class="panel-body no_padding no_padding2">
-                      <a href="/contenido.php?id={$promocion[i].id_con}"><img class="img-responsive center-block banner" src="/imagenes/{$promocion[i].directorio_image}"/></a>
+        <div class="col-xs-12 no_padding">
+            <div class="container">
+                <div class="row">
+                    <div id="promociones" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+                            {assign var="cont" value=0}
+                            {$flag = false}
+                            {section i $promocion}
+                                {if ($cont % 4) == "0"}
+                                    {if $flag}
+                                        </div><!-- ./item -->
+                                        </div><!-- ./container-fluid -->
+                                        </div><!-- ./row -->
+                                        {$flag = !$flag}
+                                    {/if}
+                                    <div {if $cont eq "0"} class="item active" {else} class="item" {/if}>
+                                        <div class="container-fluid">
+                                        <div class="row">
+                                    {$flag = !$flag}
+                                {/if}
+                                    <div class="col-xs-3">
+                                        <div class="panel panel-default panelP">
+                                            <div class="panel-body no_padding no_padding2">
+                                                <a href="/contenido.php?id={$promocion[i].id_con}"><img class="img-responsive center-block banner" src="/imagenes/{$promocion[i].directorio_image}"/></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {assign var="cont" value=$cont+1}
+                            {/section}
+                            {if ($cont % 4) != "0"}
+                              </div><!-- ./item -->
+                              </div><!-- ./container-fluid -->
+                              </div><!-- ./row -->
+                            {/if}
+                        </div>
                     </div>
-                  </div>
+                    <a class="left carousel-control" href="#promociones" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#promociones" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
-                  {assign var=cont value=$cont+1}
-                  {if ($cont % 4) == "0"}
-                    <div class="clearfix"></div>
-                  {/if}
-              {/section}
-
-              {if $promocion|@count gt 4}
-                <div class="container-fluid" id="mostre-todo3">
-                  <div class="row">
-                    <div class="col-xs-12 separacion-superior" align="center">
-                      <a class="visible btn btn-default" onclick="mostrar3()"><h4 class="no_margin2"><strong>Ver Más</strong></h4></a>
-                    </div>
-                  </div>
-                </div>
-              {/if}
             </div>
-          </div>
         </div>
-      </div>
+    </div>
 
     <div class="row PUBLICIDAD paddingLg">
         <div class="col-md-10 col-md-offset-1 col-xs-12">
@@ -582,7 +589,7 @@
             <div class="row">
               <div class="col-md-6 col-xs-12 separacion-superior text-center">
                   <h3 class="titulo2"><strong>CONOZCA NUESTROS ALIADOS</strong></h3>
-                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <div id="publicidad1" class="carousel slide" data-ride="carousel">
                   <ol class="carousel-indicators" style="display:none;">
                       {assign var="cont" value=0}
                       {section name=i loop=$publicidad1}
@@ -602,11 +609,19 @@
                           {assign var="cont" value=$cont+1}
                       {/section}
                   </div>
+                  <a class="left carousel-control" href="#publicidad1" role="button" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="right carousel-control" href="#publicidad1" role="button" data-slide="next">
+                      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                  </a>
                 </div>
               </div>
               <div class="col-md-6 col-xs-12 separacion-superior text-center">
                   <h3 class="titulo2"><strong>CONOZCA NUESTROS HOTELES</strong></h3>
-                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <div id="publicidad2" class="carousel slide" data-ride="carousel">
                   <ol class="carousel-indicators" style="display:none;">
                       {assign var="cont" value=0}
                       {section name=i loop=$publicidad1}
@@ -626,6 +641,14 @@
                           {assign var="cont" value=$cont+1}
                       {/section}
                   </div>
+                    <a class="left carousel-control" href="#publicidad2" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#publicidad2" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
               </div>
             </div>
@@ -656,6 +679,7 @@
     </div>
 
     <div class="row CONTACTO" id="CONTACTO">
+        {$mensajeContacto}
         <div class="col-xs-12 text-center">
           <h2 class="tituloSeccion">CONTACTO</h2>
         </div>
@@ -700,16 +724,16 @@
                 <strong>Contactos:</strong><br>
                 <blockquote>
                   <strong>Reservas:</strong><br>
-                  <i class="fa fa-envelope"></i> reservas@tibisayhotelboutique.com<br>
-                  <i class="fa fa-envelope"></i> auxreservas@tibisayhotelboutique.com<br>
+                  <i class="fa fa-envelope"></i> <a href="mailto: reservas@tibisayhotelboutique.com"> reservas@tibisayhotelboutique.com</a><br>
+                  <i class="fa fa-envelope"></i> <a href="mailto: auxreservas@tibisayhotelboutique.com"> auxreservas@tibisayhotelboutique.com</a><br>
                   <strong>Gerentes de Ventas: </strong><br>
-                  <i class="fa fa-envelope"></i> ventas@tibisayhotelboutique.com<br>
+                  <i class="fa fa-envelope"></i><a href="mailto: ventas@tibisayhotelboutique.com"> ventas@tibisayhotelboutique.com</a><br>
                   <strong>Asistente de Ventas: </strong><br>
-                  <i class="fa fa-envelope"></i> ventas1@tibisayhotelboutique.com<br>
+                  <i class="fa fa-envelope"></i><a href="mailto: ventas1@tibisayhotelboutique.com"> ventas1@tibisayhotelboutique.com</a><br>
                   <strong>Gerentes de Eventos y Banquetes: </strong><br>
-                  <i class="fa fa-envelope"></i> eventos@tibisayhotelboutique.com<br>
+                  <i class="fa fa-envelope"></i><a href="mailto: eventos@tibisayhotelboutique.com"> eventos@tibisayhotelboutique.com</a><br>
                   <strong>Coordinadora de Banquetes: </strong><br>
-                  <i class="fa fa-envelope"></i> eventos1@tibisayhotelboutique.com<br>
+                  <i class="fa fa-envelope"></i><a href="mailto: eventos1@tibisayhotelboutique.com"> eventos1@tibisayhotelboutique.com</a><br>
                 </blockquote>
               </address>
             </div>
@@ -723,7 +747,7 @@
           </div>
         </div>
       </div>
-  </div>
+    </div>
 
   <footer>
     <div class="container-fluid">
@@ -773,12 +797,22 @@
        $('a.transicion').click(function(e){
        e.preventDefault();
           var enlace  = $(this).attr('href');
+          console.log($(enlace).offset().top);
           $('html, body').animate({
               scrollTop: $(enlace).offset().top - 81
           }, 1000);
        });
       });
 
+        $(document).ready(function(){
+            var enlace = $(window.location.hash);
+            console.log("antes "+$(enlace).offset().top);
+            var scroll = $(enlace).offset().top + 27;
+            console.log("Despues "+scroll);
+            $('html,body').animate({
+                scrollTop: scroll
+            }, 1000);
+        });
    </script>
 
    <script type="text/javascript">
@@ -827,14 +861,6 @@
                     function mostrar2(){
                         var x = document.getElementsByClassName('visible2');
                         document.getElementById('mostre-todo2').style.display = 'none';
-                        for (var i = 0; i < x.length; i++){
-                            x[i].style.display = 'block';
-                        }
-                    }
-
-                    function mostrar3(){
-                        var x =document.getElementsByClassName('visible3');
-                        document.getElementById('mostre-todo3').style.display = 'none';
                         for (var i = 0; i < x.length; i++){
                             x[i].style.display = 'block';
                         }

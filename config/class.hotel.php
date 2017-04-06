@@ -44,6 +44,8 @@ class Hotel{
 	var $facilidad;
 	var $orden;
 	var $sector;
+	var $desdechd;
+	var $hastachd;
 	//Variables para Temporada
 	var $desde;
 	var $hasta;
@@ -137,6 +139,8 @@ class Hotel{
 		$this->tipo=$_POST['tipo'];
 		$this->precio=$_POST['precio'];
 		$this->sector = $_POST['sector'];
+		$this->desdechd = $_POST['desdechd'];
+		$this->hastachd = $_POST['hastachd'];
 	}
 	
 	function asignar_valores2(){
@@ -381,6 +385,8 @@ class Hotel{
 			$this->fecha=$resultado['fecha_hot'];
 			$this->vistas=$resultado['vistas_hot'];
 			$this->sector=$resultado['sector_hot'];
+			$this->desdechd = $resultado['desdechd'];
+			$this->hastachd = $resultado['hastachd'];
 		} 
 	}
 	function mostrar_hotel_img(){
@@ -486,7 +492,7 @@ class Hotel{
 			$verificar=mysql_query($sql) or die(mysql_error());
 			if(!$resultado = mysql_fetch_array($verificar)){
 				$this->codigo=$this->crear_codigo($this->nombre);
-				$sql="INSERT INTO hotel VALUES ('', '$this->pais', '$this->estado', '$this->ciudad', '$this->categoria', '$this->codigo', '$this->nombre','$this->prioridad', '$this->latitud', '$this->longitud', '$this->ubicacion', '$this->descripcion', '$this->condiciones', '$this->tipo', '$this->claves', '$this->principal', '0', NOW(), '1', '$this->precio', '$this->sector')";
+				$sql="INSERT INTO hotel VALUES ('', '$this->pais', '$this->estado', '$this->ciudad', '$this->categoria', '$this->codigo', '$this->nombre','$this->prioridad', '$this->latitud', '$this->longitud', '$this->ubicacion', '$this->descripcion', '$this->condiciones', '$this->tipo', '$this->claves', '$this->principal', '0', NOW(), '1', '$this->precio', '$this->sector', '$this->desdechd', '$this->hastachd')";
 				$consulta=mysql_query($sql) or die(mysql_error());
 				$id=mysql_insert_id($con);
 				$temp="";
@@ -532,7 +538,7 @@ class Hotel{
 			$this->asignar_valores();
 			
 			$this->fecha=$this->convertir_fecha($this->fecha);
-			$sql="UPDATE hotel SET pais_hot='$this->pais', estado_hot='$this->estado', ciudad_hot='$this->ciudad', categoria_hot='$this->categoria', nombre_hot='$this->nombre', prioridad_hot='$this->prioridad', latitud_hot='$this->latitud', longitud_hot='$this->longitud', ubicacion_hot='$this->ubicacion', descripcion_hot='$this->descripcion', condiciones_hot='$this->condiciones', tarifa_hot='$this->tipo', claves_hot='$this->claves', principal_hot='$this->principal', precio_hot='$this->precio', sector_hot = '$this->sector'  WHERE id_hot='$id'";
+			$sql="UPDATE hotel SET pais_hot='$this->pais', estado_hot='$this->estado', ciudad_hot='$this->ciudad', categoria_hot='$this->categoria', nombre_hot='$this->nombre', prioridad_hot='$this->prioridad', latitud_hot='$this->latitud', longitud_hot='$this->longitud', ubicacion_hot='$this->ubicacion', descripcion_hot='$this->descripcion', condiciones_hot='$this->condiciones', tarifa_hot='$this->tipo', claves_hot='$this->claves', principal_hot='$this->principal', precio_hot='$this->precio', sector_hot = '$this->sector', desdechd = '$this->desdechd', hastachd = '$this->hastachd' WHERE id_hot='$id'";
 			
 			$consulta=mysql_query($sql) or die(mysql_error());
 			

@@ -354,6 +354,15 @@ p{
   border: #FFFFFF solid 1px;
 }
 
+.CONTACTO a{
+  color: #fff;
+}
+
+.CONTACTO a:focus, .CONTACTO a:hover{
+  text-decoration: none;
+  font-weight: bold;
+}
+
 .mapa{
   font: 20px "Century Gothic";
   color: #FFFFFF;
@@ -447,6 +456,25 @@ input, textarea{
   padding: 20px;
   border: #cfb652 solid 1px;
   border-radius: 0;
+}
+
+.PROMOCIONES .carousel .item {
+  background-color: #fff;
+  overflow:hidden;
+}
+
+.PROMOCIONES .carousel-control{
+  color: #cfb652;
+}
+
+.PROMOCIONES .carousel-control.left{
+  background-image: none;
+  left: -4%;
+}
+
+.PROMOCIONES .carousel-control.right{
+  background-image: none;
+  right: -4%;
 }
 /*--Fin PROMOCIONES--*/
 
@@ -718,10 +746,7 @@ footer > .container-fluid > .row > span{
 }*/
 
 /* Declare heights because of positioning of img element */
-.carousel .item {
-  background-color: #777;
-  overflow:hidden;
-}
+
 .carousel-inner > .item > img {
   width:100%;
 }
